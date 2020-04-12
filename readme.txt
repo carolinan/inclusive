@@ -7,7 +7,21 @@ License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Copyright: 2020 Carolina Nymark
 
-Inclusive is theme in black and white with peach and beige accent colors. It has full support for the block editor, several custom block styles, and three block patterns. It has two menus, two widget areas, and a distraction free template.
+Inclusive is a theme in black and white with peach and beige accent colors. It has full support for the block editor, several custom block styles, and three block patterns. It has two menus, two widget areas, and a distraction free template.
+
+== Description ==
+Inclusive is a fast, responsive and accessibility-ready theme with full support for the block editor.
+With this theme, you can place blocks not only in your content but also in the footer and header.
+The theme comes with eight custom block styles and three block patterns. The block patterns are: Event list, split heading with two colors, and a cover block with a beautiful feminine flower background, a heading and a button.
+You can select them in the editor, or copy paste them into your content.
+Inclusive has beautiful typography, large text size, and a font pairing option so that you don’t need to think about whether your fonts will match.
+The theme’s base colors are white and dark grey with a comfortable contrast between the text and background.
+The theme has several options for colors and for showing and hiding post information such as date, tags, and categories.
+For bloggers, the theme offers optional sections for social sharing, author biography, and related posts.
+You can use a full width or boxed layout, and combine it with one or two columns.
+You can show excerpts or the full content, and make use of full width and wide blocks.
+Inclusive has a distraction free page template that is great for presenting long form content and blocks.
+Accessibility features include: Accessible menus, forms and controls. Semantic HTML, sufficient contrast, visible focus outlines, skip to content link, and aria roles.
 
 == Installation ==
 1. Unzip `inclusive.zip` to the `/wp-content/themes/` directory
