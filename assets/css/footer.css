@@ -1,0 +1,71 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+	margin: 3em 0 0 0;
+	background: #fcfcfc;
+}
+
+.site-info {
+	margin: 0 auto;
+	padding: 2.5em;
+	font-size: var(--font-size-small);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0;
+	background: var(--color-theme-site-info);
+}
+
+.site-info a {
+	text-decoration: none;
+}
+
+.site-info a:hover,
+.site-info a:focus {
+	text-decoration: underline;
+}
+
+.go-to-top {
+	display: block;
+	clear: both;
+	grid-column: 2;
+	grid-row: 2;
+	justify-self: end;
+	font-weight: 700;
+	font-family: var(--highlight-font-family);
+	font-size: var(--font-size-smallest);
+	padding: 0.2em 0 0 0;
+}
+
+.go-to-top a {
+	text-decoration: none;
+	outline-offset: 0.5em;
+}
+
+.go-to-top a:hover,
+.go-to-top a:focus {
+	text-decoration: underline;
+}
+
+.footer-copyright {
+	display: block;
+	clear: both;
+	grid-column: 1;
+	grid-row: 2;
+	text-align: left;
+	font-weight: 700;
+	font-family: var(--highlight-font-family);
+	font-size: var(--font-size-smallest);
+	padding: 0.2em 0 0 0;
+}
+
+.footer-privacy-policy a {
+	display: block;
+	text-decoration: underline;
+	padding-top: 0.5em;
+}
+
+.footer-privacy-policy a:focus,
+.footer-privacy-policy a:hover {
+	text-decoration: none;
+}

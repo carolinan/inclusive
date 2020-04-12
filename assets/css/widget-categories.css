@@ -1,0 +1,22 @@
+.widget_categories ul {
+	list-style: none;
+	list-style-type: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.widget_categories ul a {
+	display: block;
+	padding: 0.25em 0;
+}
+
+.widget_categories ul ul {
+	list-style: none;
+	list-style-type: none;
+}
+
+.widget_categories select {
+	width: 100%;
+	padding: 0.5em;
+}

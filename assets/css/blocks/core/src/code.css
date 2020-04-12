@@ -1,0 +1,22 @@
+.wp-block-code {
+	font-family: Menlo, Consolas, monaco, monospace;
+	font-size: var(--font-size-regular);
+	color: currentColor;
+	padding: 0.8em 1em;
+	border: 1px solid #e2e4e7;
+	border-radius: 4px;
+	background: transparent;
+}
+
+@media (min-width: 600px) {
+
+	.wp-block-code .block-editor-plain-text {
+		font-size: var(--font-size-regular);
+	}
+}
+
+.wp-block-code .block-editor-plain-text {
+	font-family: Menlo, Consolas, monaco, monospace;
+	font-size: var(--font-size-regular);
+	color: currentColor;
+}

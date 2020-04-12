@@ -1,0 +1,7 @@
+pre.wp-block-verse {
+	background: none;
+	font-family: var(--highlight-font-family);
+	font-size: var(--font-size-regular);
+	overflow: auto;
+	white-space: pre-wrap;
+}

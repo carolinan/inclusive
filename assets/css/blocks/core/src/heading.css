@@ -1,0 +1,4 @@
+
+.is-style-inclusive-text-shadow {
+	text-shadow: var(--text-shadow);
+}

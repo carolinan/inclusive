@@ -1,0 +1,16 @@
+.page-template-distraction-free-template .type-page .entry-header,
+.post-template-distraction-free-template .type-post .entry-header {
+	padding-top: 5em;
+}
+
+.page-template-distraction-free-template .site-main {
+	padding-bottom: 4em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.page-template-distraction-free-template .author-info,
+.post-template-distraction-free-template .author-info {
+	max-width: var(--content-width);
+	margin: 1.5em auto 4em auto;
+}

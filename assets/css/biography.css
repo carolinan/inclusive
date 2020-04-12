@@ -1,0 +1,34 @@
+
+.author-info {
+	margin: 1.5em 0 1em 0;
+	padding: 1em;
+}
+
+.author-info a {
+	display: inline-block;
+	margin-right: 1.5em;
+}
+
+.author-info .entry-title a:hover,
+.author-info .entry-title a:focus {
+	border-color: inherit;
+}
+
+.author-info .avatar {
+	display: inline-block;
+	border-radius: 50%;
+	vertical-align: top;
+}
+
+.author-info .entry-title {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	font-size: var(--font-size-large);
+	text-shadow: var(--text-shadow);
+}
+
+.author-description {
+	margin-top: 1.5em;
+	font-size: var(--font-size-menu);
+}

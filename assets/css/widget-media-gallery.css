@@ -1,0 +1,7 @@
+.widget.widget_media_gallery {
+	font-size: var(--font-size-small);
+}
+
+.widget.widget_media_gallery a {
+	filter: none;
+}

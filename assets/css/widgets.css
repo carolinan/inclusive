@@ -1,0 +1,25 @@
+.widget-area {
+	width: 100%;
+}
+
+.widget {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+.widget-title {
+	padding-top: 0;
+	margin-top: 0;
+	text-shadow: 0.04em 0.04em 0 rgba(0, 0, 0, 0.1);
+	font-size: var(--font-size-widget-title);
+	font-weight: 400;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+.widget li {
+	padding-bottom: 0.5em;
+	line-height: 1.8em;
+}
