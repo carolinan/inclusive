@@ -69,6 +69,14 @@ class Scripts {
 			INCLUSIVE_VERSION,
 			true
 		);
+
+		wp_enqueue_script(
+			'inclusive-custom',
+			get_template_directory_uri() . '/assets/js/custom.js',
+			[],
+			INCLUSIVE_VERSION,
+			true
+		);
 	}
 
 }

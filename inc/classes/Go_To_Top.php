@@ -74,7 +74,9 @@ class Go_To_Top {
 		if ( get_theme_mod( 'go_to_top', true ) === true ) {
 			?>
 			<div class="go-to-top">
-				<a href="#page"><?php esc_html_e( 'Go to top', 'inclusive' ); ?></a>
+				<a id="toTop" class="go-to-top" href="#" title="<?php esc_attr_e('Go to Top', 'inclusive'); ?>">
+                <?php esc_html_e( 'Go to top', 'inclusive' ); ?>
+            	</a>
 			</div>
 			<?php
 		}

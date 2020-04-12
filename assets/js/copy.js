@@ -10,5 +10,4 @@ jQuery(document).ready(function ($) {
 		var $wrapper = $(e.trigger).closest('li');
 		$('.success', $wrapper).addClass('visible');
 	});
-
 } );
