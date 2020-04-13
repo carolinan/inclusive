@@ -1,0 +1,41 @@
+{
+	"name": "inclusive",
+	"version": "1.0.0",
+	"description": "An Accessible WordPress theme",
+	"author": "Carolina Nymark",
+	"license": "GPL-2.0-or-later",
+	"devDependencies": {
+		"@wordpress/scripts": "^5.0.0",
+		"autoprefixer": "^9.7.5",
+		"cssnano": "^4.1.10",
+		"postcss-cli": "^6.1.3",
+		"postcss-custom-media": "^7.0.8",
+		"postcss-preset-env": "^6.7.0",
+		"rtlcss": "^2.5.0",
+		"stylelint": "^12.0.0",
+		"stylelint-config-wordpress": "^16.0.0"
+	},
+	"rtlcssConfig": {
+		"options": {
+			"autoRename": false,
+			"autoRenameStrict": false,
+			"blacklist": {},
+			"clean": true,
+			"greedy": false,
+			"processUrls": false,
+			"stringMap": []
+		},
+		"plugins": [],
+		"map": false
+	},
+	"stylelint": {
+		"extends": "stylelint-config-wordpress"
+	},
+	"scripts": {
+		"minify": "postcss assets/css/*css --no-map --dir assets/css/min/ --ext min.css",
+		"blocks": "postcss assets/css/blocks/core/src/*css --no-map --dir assets/css/blocks/core/ --ext min.css",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:pkg-json": "wp-scripts lint-pkg-json"
+	}
+}
