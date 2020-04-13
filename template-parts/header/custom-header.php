@@ -7,9 +7,9 @@
  */
 
 if ( get_theme_mod( 'show_header_title', false ) === false
-&& get_theme_mod( 'show_tagline', false ) === false
-&& ! has_header_image()
-&& get_theme_mod( 'header_content', 0 ) === 0 ) {
+	&& get_theme_mod( 'show_tagline', false ) === false
+	&& ! has_header_image()
+	&& get_theme_mod( 'header_content', 0 ) === 0 ) {
 	return;
 }
 
@@ -28,6 +28,5 @@ Inclusive\Styles::get_template_part( 'page-branding', 'css', 'assets/css/min/bra
 	Inclusive\Header::header_image();
 
 	get_template_part( 'template-parts/header/branding' );
-
 	?>
 </header><!-- #masthead -->

@@ -137,7 +137,6 @@ a.custom-logo-link:focus img {
 
 .site-description {
 	margin: 2em 1em;
-	padding: 0 1.5em 0 1.5em;
 	font-family: var(--highlight-font-family);
 	font-size: 1.3rem;
 	font-weight: inherit;

@@ -862,7 +862,6 @@ input:disabled:focus {
 	margin-left: 1rem;
 }
 
-
 /*Content*/
 
 /*--------------------------------------------------------------
@@ -1222,7 +1221,6 @@ a.more-link:hover {
 .wp-block-separator.is-style-inclusive-separator-ornament2.has-secondary-background-color,
 .wp-block-separator.is-style-inclusive-separator-ornament1.has-secondary-background-color {
 	background-color: var(--color-secondary);
-	/*color: var(--global-font-color);*/
 }
 
 .has-primary-color,
@@ -1244,7 +1242,6 @@ a.more-link:hover {
 .wp-block-separator.is-style-inclusive-separator-ornament2.has-primary-background-color,
 .wp-block-separator.is-style-inclusive-separator-ornament1.has-primary-background-color {
 	background-color: var(--color-primary);
-	/*color: var(--global-font-color);*/
 }
 
 .has-cyan-bluish-gray-background-color {
@@ -1306,7 +1303,6 @@ a.more-link:hover {
 .has-midnight-gradient-background {
 	background: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
 }
-
 
 /*--------------------------------------------------------------
 ## Custom block font sizes.

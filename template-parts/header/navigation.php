@@ -6,13 +6,7 @@
  * @since 1.0.0
  */
 
-$inclusive_gridsize = '';
-
-if ( get_theme_mod( 'menu_logo', false ) === false && get_theme_mod( 'show_header_title', false ) === false && get_theme_mod( 'menu_search', false ) === false ) {
-	$inclusive_gridsize = 'style="grid-column: 1/ span 2"';
-}
 ?>
-
 <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Main menu', 'inclusive' ); ?>">
 	<div class="menu-extras">
 		<?php
@@ -39,7 +33,7 @@ if ( get_theme_mod( 'menu_logo', false ) === false && get_theme_mod( 'show_heade
 		</button>
 	</div>
 
-	<div class="primary-menu-container" <?php echo esc_attr( $inclusive_gridsize ); ?>>
+	<div class="primary-menu-container">
 		<?php
 		wp_nav_menu(
 			array(
