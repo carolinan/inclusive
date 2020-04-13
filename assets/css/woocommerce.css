@@ -42,7 +42,7 @@
 	color: var(--color-link);
 }
 
-.woocommerce .woocommerce-breadcrumb a{
+.woocommerce .woocommerce-breadcrumb a {
 	color: var(--color-link);
 }
 
@@ -161,6 +161,9 @@ a:focus .woocommerce-loop-category__title {
 	cursor: pointer;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
+	outline-offset: 3px;
+	transition: outline 0.6s linear;
+	transition: box-shadow 0.3s ease-in-out;
 }
 
 .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled] {
@@ -193,8 +196,7 @@ a:focus .woocommerce-loop-category__title {
 .woocommerce input.button.alt:active {
 	background: var(--color-theme-active-button);
 	color: var(--color-theme-active-button-text);
-	outline: none;
-	box-shadow: 0 0 0 2px #fff, 0 0 0 4px #32373c;
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .woocommerce #respond input#submit.alt.disabled,

@@ -19,6 +19,7 @@
 	--color-link-visited-menu: #504a49;
 	--color-link-current-menu: #333;
 
+	--menu-shadow: 0 0 1em rgba(0, 0, 0, 0.04);
 	--small-shadow: 0 0 1em rgba(0, 0, 0, 0.08);
 	--text-shadow: 0.04em 0.04em 0 rgba(0, 0, 0, 0.1);
 

@@ -7,7 +7,6 @@
 }
 
 .wp-block-file.alignright {
-
 	/*rtl:ignore*/
 	text-align: right;
 }
@@ -23,13 +22,18 @@
 
 .wp-block-file a.wp-block-file__button {
 	text-decoration: none;
+	outline-offset: 3px;
+	transition: outline 0.6s linear;
+	transition: box-shadow 0.3s ease-in-out;
 }
 
 .wp-block-file__button:active,
-.wp-block-file__button:hover,
+.wp-block-file__button:hover {
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
 .wp-block-file__button:focus {
-	outline: none;
-	box-shadow: 0 0 0 2px #fff, 0 0 0 4px #32373c;
+	outline: 1px dotted var(--global-font-color);
 }
 
 .wp-block-file * + .wp-block-file__button {

@@ -54,12 +54,12 @@ class Theme_Support {
 		add_theme_support( 'post-thumbnails' );
 
 		/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
+		* Switch default core markup to output valid HTML5.
 		*/
 		add_theme_support(
 			'html5',
 			[
+				'search-form',
 				'comment-form',
 				'comment-list',
 				'gallery',

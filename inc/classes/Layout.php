@@ -87,7 +87,7 @@ class Layout {
 		$wp_customize->add_setting(
 			'boxed_width',
 			array(
-				'default'           => 80,
+				'default'           => 99,
 				'sanitize_callback' => 'absint',
 			)
 		);

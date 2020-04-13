@@ -145,8 +145,8 @@ class Styles {
 
 		$styles = '';
 
-		$style_path = get_theme_file_path( 'assets/css/min/widget-' . str_replace( '_', '-', $widget_id_base ) . '.min.css' );
-		if ( file_exists( $style_path ) ) {
+		$style_path = 'assets/css/min/widget-' . str_replace( '_', '-', $widget_id_base ) . '.min.css';
+		if ( file_exists( get_theme_file_path( $style_path ) ) ) {
 			self::get_template_part( $widget_id_base, 'css', $style_path );
 		}
 
