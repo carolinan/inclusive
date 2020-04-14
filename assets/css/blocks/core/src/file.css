@@ -23,7 +23,6 @@
 .wp-block-file a.wp-block-file__button {
 	text-decoration: none;
 	outline-offset: 3px;
-	transition: outline 0.6s linear;
 	transition: box-shadow 0.3s ease-in-out;
 }
 

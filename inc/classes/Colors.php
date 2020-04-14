@@ -320,26 +320,6 @@ class Colors {
 		);
 
 		$wp_customize->add_setting(
-			'menu_visited_link_color',
-			array(
-				'default'           => '#504a49',
-				'sanitize_callback' => 'sanitize_hex_color',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'menu_visited_link_color',
-				array(
-					'label'    => __( 'Menu Visited Link Color', 'inclusive' ),
-					'section'  => 'menu-colors',
-					'settings' => 'menu_visited_link_color',
-				)
-			)
-		);
-
-		$wp_customize->add_setting(
 			'menu_shadow',
 			array(
 				'default'           => true,
@@ -691,10 +671,6 @@ class Colors {
 
 		if ( get_theme_mod( 'menu_link_color', '#333' ) !== '#333' ) {
 			echo 'body { --color-link-menu: ' . esc_html( get_theme_mod( 'menu_link_color' ) ) . '; }';
-		}
-
-		if ( get_theme_mod( 'menu_visited_link_color', '#504a49' ) !== '#504a49' ) {
-			echo 'body { --color-link-visited-menu: ' . esc_html( get_theme_mod( 'menu_visited_link_color' ) ) . '; }';
 		}
 
 		if ( get_theme_mod( 'current_menu_link_color', '#333' ) !== '#333' ) {

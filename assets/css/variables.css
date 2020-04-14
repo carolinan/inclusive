@@ -15,8 +15,8 @@
 
 	--color-link: #333;
 	--color-link-active: #333;
+
 	--color-link-menu: #333;
-	--color-link-visited-menu: #504a49;
 	--color-link-current-menu: #333;
 
 	--menu-shadow: 0 0 1em rgba(0, 0, 0, 0.04);
@@ -34,9 +34,6 @@
 
 	--color-theme-site-info: #f9f9f9;
 	--color-theme-red: #c0392b; /* Used for required form fields.*/
-	--color-theme-light-grey: #eee; /* Used to separate the gallery widget area.*/
-	--color-quote-border: #000;
-	--color-quote-citation: #6c7781;
 
 	/* Button elements*/
 	--color-theme-button: #f9f9f9;

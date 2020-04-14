@@ -1,6 +1,6 @@
 <?php
 /**
- * Widget area for the homepage, above the content.
+ * Widget area.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
