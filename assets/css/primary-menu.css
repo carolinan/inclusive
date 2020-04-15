@@ -76,18 +76,10 @@
 	padding: 0.3em;
 	font-family: var(--highlight-font-family);
 	font-size: var(--font-size-menu);
-	border: 2px solid var(--color-secondary);
 	border-radius: 6px;
 	background: transparent;
 	text-shadow: var(--text-shadow);
 	font-weight: 400;
-}
-
-.menu-toggle:hover,
-.menu-toggle:active,
-.menu-toggle:focus {
-	border: 2px solid var(--color-theme-hover-underline-accent);
-	background: transparent;
 }
 
 .menu-toggle .svg-icon {

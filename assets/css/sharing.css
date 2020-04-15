@@ -1,10 +1,5 @@
-/*--------------------------------------------------------------
-# Sharing
---------------------------------------------------------------*/
-
 .social-sharing {
 	line-height: 2;
-	vertical-align: middle;
 	text-align: center;
 }
 
@@ -26,10 +21,14 @@
 	border-radius: 4px;
 }
 
-.sharing-inner a:hover,
+.sharing-inner a:hover {
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0,0,0,.2);
+	transition: box-shadow .3s ease-in-out;
+}
+
 .sharing-inner a:focus {
 	outline: none;
-	border: 1px solid var(--color-link);
+	border: 1px dotted var(--color-link);
 }
 
 .sharing-inner .svg-icon {

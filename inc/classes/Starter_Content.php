@@ -201,7 +201,7 @@ And do you remember the hickie, and what you told your dad? Because I do.
 Thinking about it still makes me laugh.
 
 Do you remember how you brought me precious gifts each day?
-I still keep the necklace in the cupboard next to my bed, together with a piece of painted glass.
+I still keep the necklace on my bedside table, together with a piece of painted glass.
 
 Sometimes, I open the wooden chest in my closet, and I find the flowered box where I keep the letters you sent.
 I look at the pictures of Yer Blanc, of Sparky, of your family, and of you.

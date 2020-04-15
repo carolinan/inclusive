@@ -1,7 +1,11 @@
 <?php
 /**
  * Template part for displaying reusable blocks in the header.
+ *
+ * @package Inclusive
+ * @since 1.0.0
  */
+
 if ( get_theme_mod( 'header_content', 0 ) !== 0 ) {
 	$query = new WP_Query(
 		[

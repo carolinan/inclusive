@@ -111,7 +111,7 @@ class Colors {
 				$wp_customize,
 				'branding_bgcolor',
 				array(
-					'label'       => __( 'Brading Background Color', 'inclusive' ),
+					'label'       => __( 'Branding Background Color', 'inclusive' ),
 					'description' => __( 'Adding a background color behind the site title and tag line in the header can improve readability if you are using a background image.', 'inclusive' ),
 					'section'     => 'colors',
 					'settings'    => 'branding_bgcolor',
@@ -430,9 +430,10 @@ class Colors {
 				$wp_customize,
 				'button_bgcolor',
 				array(
-					'label'    => __( 'Button Background Color', 'inclusive' ),
-					'section'  => 'button-colors',
-					'settings' => 'button_bgcolor',
+					'label'       => __( 'Button Background Color', 'inclusive' ),
+					'description' => __( 'The options are applied on form buttons, such as submit buttons.', 'inclusive' ),
+					'section'     => 'button-colors',
+					'settings'    => 'button_bgcolor',
 				)
 			)
 		);

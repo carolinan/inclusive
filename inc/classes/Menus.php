@@ -162,17 +162,16 @@ class Menus {
 		$wp_customize->add_control(
 			'align_menu',
 			array(
-				'label'       => __( 'Menu Position', 'inclusive' ),
-				'description' => __( 'This option is most effective when then site title and search is hidden.', 'inclusive' ),
-				'section'     => 'menu_options',
-				'type'        => 'radio',
-				'choices'     =>
+				'label'    => __( 'Menu Position', 'inclusive' ),
+				'section'  => 'menu_options',
+				'type'     => 'radio',
+				'choices'  =>
 				[
 					'center' => __( 'Center (Default)', 'inclusive' ),
 					'left'   => __( 'Left', 'inclusive' ),
 					'right'  => __( 'Right', 'inclusive' ),
 				],
-				'priority'    => 40,
+				'priority'   => 40,
 			)
 		);
 

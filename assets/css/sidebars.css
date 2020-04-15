@@ -1,5 +1,6 @@
 .widget-area {
 	padding: 2em;
+	width: 100%;
 }
 
 @media screen and (min-width: 37.5em) {

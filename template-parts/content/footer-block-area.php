@@ -1,6 +1,9 @@
 <?php
 /**
  * Template part for displaying reusable blocks in the footer.
+ *
+ * @package Inclusive
+ * @since 1.0.0
  */
 
 if ( get_theme_mod( 'footer_content', 0 ) !== 0 ) {

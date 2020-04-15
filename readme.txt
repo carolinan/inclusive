@@ -7,7 +7,7 @@ License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Copyright: 2020 Carolina Nymark
 
-Inclusive is a theme in black and white with peach and beige accent colors. It has full support for the block editor, several custom block styles, and three block patterns. It has two menus, two widget areas, and a distraction free template.
+Inclusive is a theme in dark grey and white with peach and beige accent colors. It has full support for the block editor, several custom block styles, and three block patterns. It has two menus, two widget areas, and a distraction free template.
 
 == Description ==
 Inclusive is a fast, responsive and accessibility-ready theme with full support for the block editor.

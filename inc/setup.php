@@ -75,5 +75,3 @@ add_action(
 	},
 	10
 );
-
-require_once get_template_directory() . '/inc/tgm-plugin-activation-configuration.php';

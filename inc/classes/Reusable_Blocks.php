@@ -82,7 +82,7 @@ class Reusable_Blocks {
 			]
 		);
 
-		$choices = [];
+		$choices = [ 0 => __( 'Select a block', 'inclusive' ) ];
 		foreach ( $blocks as $block ) {
 			$choices[ $block->ID ] = $block->post_title;
 		}
@@ -144,7 +144,7 @@ class Reusable_Blocks {
 			]
 		);
 
-		$choices = [];
+		$choices = [ 0 => __( 'Select a block', 'inclusive' ) ];
 		foreach ( $blocks as $block ) {
 			$choices[ $block->ID ] = $block->post_title;
 		}

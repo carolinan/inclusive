@@ -79,7 +79,7 @@ class Layout {
 			'boxed_layout',
 			array(
 				'type'    => 'checkbox',
-				'label'   => __( 'Boxed layout.', 'inclusive' ),
+				'label'   => __( 'Enable boxed layout', 'inclusive' ),
 				'section' => 'layout_section',
 			)
 		);
@@ -126,7 +126,7 @@ class Layout {
 				[
 					'one-column'  => __( 'One column with excerpts (Default).', 'inclusive' ),
 					'full'        => __( 'One column with full content (Great for full width blocks).', 'inclusive' ),
-					'two-columns' => __( 'Two boxed columns with excerpts.', 'inclusive' ),
+					'two-columns' => __( 'Two column grid with excerpts.', 'inclusive' ),
 				],
 			)
 		);

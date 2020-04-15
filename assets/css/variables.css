@@ -51,7 +51,7 @@
 	--font-size-medium: calc(31 / var(--global-font-size) * 1rem);
 	--font-size-regular: calc(var(--global-font-size) / 16 * 1rem);
 	--font-size-large: calc(38.5 / var(--global-font-size) * 1rem);
-	--font-size-larger: calc(48 / var(--global-font-size) * 1rem);
+	--font-size-larger: calc(50 / var(--global-font-size) * 1rem);
 	--font-size-gigantic: calc(80 / var(--global-font-size) * 1rem);
 	--font-size-widget-title: 1.5em;
 }

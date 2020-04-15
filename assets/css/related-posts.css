@@ -1,7 +1,3 @@
-/**
-* Related Posts
-*/
-
 .related-posts {
 	margin: 4em auto;
 	padding-right: 1.5rem;
@@ -12,7 +8,6 @@
 }
 
 .related-posts h2 {
-	display: block;
 	margin: 0 auto;
 	text-align: center;
 	text-shadow: var(--text-shadow);
@@ -44,10 +39,6 @@
 }
 
 .related-posts-entries {
-	display: block;
-	list-style: none;
-	margin: 0;
-	padding: 0;
 	text-align: center;
 }
 
