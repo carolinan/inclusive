@@ -29,7 +29,7 @@ class Font_Pairs {
 		add_action( 'customize_preview_init', [ $this, 'action_customizer_fonts' ] );
 		add_action( 'customize_controls_print_styles', [ $this, 'action_customizer_fonts' ] );
 		add_action( 'customize_controls_print_styles', [ $this, 'action_font_pair_customizer_style' ] );
-		add_action( 'wp_footer', [ $this, 'action_custom_fonts_css' ], 12 );
+		add_action( 'wp_head', [ $this, 'action_custom_fonts_css' ], 12 );
 	}
 
 	/**

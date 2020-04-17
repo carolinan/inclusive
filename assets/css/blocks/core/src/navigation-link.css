@@ -8,7 +8,7 @@
 	width: 100%;
 	margin-top: 7px;
 	font-family: var(--highlight-font-family);
-	font-size: var(--font-size-menu);
+	font-size: var(--font-size-regular);
 	text-shadow: var(--text-shadow);
 	padding: 0.5em;
 }

@@ -656,6 +656,7 @@ a:hover,
 a:focus,
 a:active {
 	color: var(--color-link-active);
+	text-decoration: none;
 }
 
 a:focus {
@@ -666,12 +667,6 @@ a:hover,
 a:active {
 	outline: 0;
 }
-
-a:hover,
-a:focus {
-	text-decoration: none;
-}
-
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -956,7 +951,6 @@ a.post-thumbnail:focus img {
 .archive-description {
 	font-family: var(--highlight-font-family);
 	margin-bottom: 4em;
-	font-size: var(--font-size-menu);
 }
 
 .entry-content {

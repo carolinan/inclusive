@@ -9,7 +9,8 @@
 	line-height: 2.1;
 }
 
-a {
+a,
+.block-editor-rich-text__editable a {
 	color: var(--color-link);
 	text-decoration: underline;
 }
@@ -22,6 +23,7 @@ a:hover,
 a:focus,
 a:active {
 	color: var(--color-link-active);
+	text-decoration: none;
 }
 
 a:focus {
@@ -31,11 +33,6 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
-}
-
-a:hover,
-a:focus {
-	text-decoration: none;
 }
 
 .editor-post-title__block .editor-post-title__input {

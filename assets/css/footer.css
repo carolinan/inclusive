@@ -56,6 +56,12 @@
 	padding: 0.2em 0 0 0;
 }
 
+.footer-privacy-policy {
+	grid-column: 1;
+	grid-row: 3;
+	margin-top: 1em;
+}
+
 .footer-privacy-policy a {
 	display: block;
 	text-decoration: underline;
