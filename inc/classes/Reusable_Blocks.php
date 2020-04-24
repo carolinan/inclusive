@@ -24,7 +24,7 @@ class Reusable_Blocks {
 	 * @access public
 	 */
 	public function __construct() {
-		add_action( 'customize_register', array( $this, 'action_register_customizer_control' ) );
+		add_action( 'customize_register', [ $this, 'action_register_customizer_control' ] );
 	}
 
 	/**
@@ -37,11 +37,11 @@ class Reusable_Blocks {
 
 		$wp_customize->add_section(
 			'block_areas',
-			array(
+			[
 				'title'    => __( 'Block areas', 'inclusive' ),
 				'panel'    => 'theme_options',
 				'priority' => 2,
-			)
+			]
 		);
 
 		/**

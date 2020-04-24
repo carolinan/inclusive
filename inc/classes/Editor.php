@@ -22,8 +22,8 @@ class Editor {
 	 * @access public
 	 */
 	public function __construct() {
-		add_action( 'enqueue_block_assets', array( $this, 'action_block_styles' ) );
-		add_action( 'enqueue_block_editor_assets', array( $this, 'action_editor_google_fonts' ) );
+		add_action( 'enqueue_block_assets', [ $this, 'action_block_styles' ] );
+		add_action( 'enqueue_block_editor_assets', [ $this, 'action_editor_google_fonts' ] );
 	}
 
 	/**
@@ -38,7 +38,12 @@ class Editor {
 			$google_fonts = '//fonts.googleapis.com/css?family=' . $font_option[0] . ':400,700|' . $font_option[1] . ':400,700&display=swap';
 		}
 		if ( ! empty( $google_fonts ) ) {
-			wp_enqueue_style( 'inclusive-editor-fonts', $google_fonts, array(), null ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+			wp_enqueue_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+				'inclusive-editor-fonts',
+				$google_fonts,
+				[],
+				null
+			);
 		}
 	}
 

@@ -47,8 +47,14 @@
 	</div>
 
 	<?php
-	if ( get_theme_mod( 'menu_search', false ) === true ) {
-		echo '<div class="topsearch">' . get_search_form( false ) . '</div>';
+	if ( get_theme_mod( 'menu_search', true ) === true ) {
+		?>
+		<details class="desktop-search">
+			<summary><span class="screen-reader-text"><?php esc_html_e( 'Toggle search', 'inclusive' ); ?></span><?php echo Inclusive\Icons::search_button_icon() ?></summary>
+			<?php get_search_form(); ?>
+		</details>
+		<?php
+		echo '<div class="mobile-search">' . get_search_form( false ) . '</div>';
 	}
 	?>
 </nav><!-- #site-navigation -->

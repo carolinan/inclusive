@@ -26,8 +26,8 @@ class Menus {
 	 */
 	public function __construct() {
 		add_filter( 'walker_nav_menu_start_el', [ $this, 'filter_add_nav_sub_menu_buttons' ], 10, 4 );
-		add_action( 'wp_enqueue_scripts', [ $this, 'action_menu_scripts' ] );
 		add_filter( 'body_class', [ $this, 'filter_body_classes' ] );
+		add_action( 'wp_enqueue_scripts', [ $this, 'action_menu_scripts' ] );
 		add_action( 'customize_register', [ $this, 'action_register_customizer_control' ] );
 	}
 
@@ -97,6 +97,10 @@ class Menus {
 			$classes[] = 'has-left-align-menu';
 		} elseif ( get_theme_mod( 'align_menu', 'center' ) == 'right' ) {
 			$classes[] = 'has-right-align-menu';
+		}
+
+		if ( get_theme_mod( 'menu_search', true ) === true ) {
+			$classes[] = 'has-menu-search';
 		}
 
 		return $classes;
@@ -229,7 +233,7 @@ class Menus {
 		$wp_customize->add_setting(
 			'menu_search',
 			array(
-				'default'           => false,
+				'default'           => true,
 				'sanitize_callback' => 'Inclusive\Customizer::sanitize_checkbox',
 			)
 		);
@@ -237,7 +241,7 @@ class Menus {
 		$wp_customize->add_control(
 			'menu_search',
 			array(
-				'label'   => __( 'Homepage only: Display a search bar below the menu.', 'inclusive' ),
+				'label'   => __( 'Display search.', 'inclusive' ),
 				'section' => 'menu_options',
 				'type'    => 'checkbox',
 			)

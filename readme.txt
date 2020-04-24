@@ -2,7 +2,7 @@
 Contributors: Poena
 Requires at least: 5.4
 Tested up to: 5.4
-Requires PHP: 7
+Requires PHP: 7.3
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Copyright: 2020 Carolina Nymark
@@ -27,6 +27,18 @@ Accessibility features include: Accessible menus, forms and controls. Semantic H
 1. Unzip `inclusive.zip` to the `/wp-content/themes/` directory
 2. Activate the theme through the 'Appearance' menu in WordPress
 
+== Requirements and limitations ==
+The theme supports PHP version 7.3 as recommended by the WordPress community.
+The theme supports WordPress version 5.4 and later.
+
+When no menu is set as the primary menu, a list of pages will show instead.
+The page list will only display parents, not child pages, when in desktop view.
+
+Browser support
+This theme supports all modern browsers but does not support Internet Explorer.
+Some layout features are not supported by Opera Mini.
+
+
 == Change log ==
 
 
@@ -41,6 +53,7 @@ Gutenberg: Gutenberg block styles and svg icons by the WordPress Community (http
 Dashicons: https://developer.wordpress.org/resource/dashicons/ License: GNU General Public License v2 or later. (C) WordPress.org.
 Matterial Icons: https://material.io/resources/icons/ License: Apache 2.0 https://www.apache.org/licenses/LICENSE-2.0.html or CC-BY 4.0 https://creativecommons.org/licenses/by/4.0/legalcode.
 Clipboard, Copyright Zeno Rocha, https://clipboardjs.com/, License: MIT
+Normalize, Copyright Nicolas Gallagher and Jonathan Neal. MIT License | github.com/necolas/normalize.css
 
 Sanitization (C) 2015-2020, WordPress Theme Review Team
 https://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License, v2 (or newer)

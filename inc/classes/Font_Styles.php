@@ -25,7 +25,8 @@ class Font_Styles {
 	 * @access public
 	 */
 	public function __construct() {
-		add_action( 'customize_register', array( $this, 'action_register_customizer_control' ) );
+		add_action( 'customize_register', [ $this, 'action_register_customizer_control' ] );
+		add_action( 'wp_head', [ $this, 'action_custom_css' ], 11 );
 	}
 
 	/**
@@ -62,7 +63,7 @@ class Font_Styles {
 				'section'     => 'font_styles',
 				'type'        => 'number',
 				'input_attrs' => [
-					'min'  => 0.3,
+					'min'  => 0.5,
 					'max'  => 7,
 					'step' => 0.1,
 				],
@@ -115,6 +116,37 @@ class Font_Styles {
 				'description' => __( 'Show a text shadow.', 'inclusive' ),
 				'section'     => 'font_styles',
 				'type'        => 'checkbox',
+			]
+		);
+
+		$wp_customize->add_setting(
+			'menu_font_size',
+			[
+				'default'           => '1.25',
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_text_field',
+			]
+		);
+
+		$wp_customize->add_control(
+			'menu_font_size',
+			[
+				'label'       => __( 'Menu font size', 'inclusive' ),
+				'description' => __( 'Adjust the font size using the rem unit. ', 'inclusive' ),
+				'section'     => 'font_styles',
+				'type'        => 'number',
+				'input_attrs' => [
+					'min'  => 1,
+					'max'  => 2,
+					'step' => 0.1,
+				],
+			]
+		);
+
+		$wp_customize->selective_refresh->add_partial(
+			'menu_font_size',
+			[
+				'selector' => '.entry-title',
 			]
 		);
 
@@ -318,6 +350,65 @@ class Font_Styles {
 			]
 		);
 
+	}
+
+	/**
+	 * Output our custom font styles.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 */
+	public function action_custom_css() {
+		echo '<style id="inclusive-font-css">';
+
+		if ( get_theme_mod( 'site_title_shadow', true ) === false ) {
+			echo '.site-title, .site-title a { text-shadow: none;}';
+		}
+
+		if ( get_theme_mod( 'widgetarea_title_shadow', true ) === false ) {
+			echo '.widget-title { text-shadow: none !important;}';
+		}
+
+		if ( get_theme_mod( 'entry_title_shadow', true ) === false ) {
+			echo '.entry-title { text-shadow: none !important;}';
+		}
+
+		if ( get_theme_mod( 'site_title_font_size', '3' ) !== '3' ) {
+			echo '.site-title, .site-title a { font-size:' . esc_html( get_theme_mod( 'site_title_font_size' ) ) . 'rem; }';
+		}
+
+		if ( get_theme_mod( 'site_title_font_weight', '700' ) !== '700' ) {
+			echo '.site-title, .site-title a { font-weight:' . esc_html( get_theme_mod( 'site_title_font_weight' ) ) . '; }';
+		}
+
+		if ( get_theme_mod( 'menu_font_size', '1.25' ) !== '1.25' ) {
+			echo '.main-navigation { font-size:' . esc_html( get_theme_mod( 'menu_font_size' ) ) . 'rem; }';
+		}
+
+		if ( get_theme_mod( 'widgetarea_title_font_size', '1.5' ) !== '1.5' ) {
+			echo 'body { --font-size-widget-title: ' . esc_html( get_theme_mod( 'widgetarea_title_font_size' ) ) . 'em; }';
+		}
+
+		if ( get_theme_mod( 'widgetarea_title_font_weight', '400' ) !== '400' ) {
+			echo '.widget-title { font-weight:' . esc_html( get_theme_mod( 'widgetarea_title_font_weight' ) ) . ' !important; }';
+		}
+
+		if ( get_theme_mod( 'entry_title_font_size', '2.5' ) !== '2.5' ) {
+			echo '.entry-header .entry-title { font-size: ' . esc_html( get_theme_mod( 'entry_title_font_size' ) ) . 'rem !important; }';
+		}
+
+		if ( get_theme_mod( 'entry_title_font_weight', '700' ) !== '700' ) {
+			echo '.entry-title { font-weight:' . esc_html( get_theme_mod( 'entry_title_font_weight' ) ) . '; }';
+		}
+
+		if ( get_theme_mod( 'meta_font_size', '1' ) !== '1' ) {
+			echo '.posted-by, .posted-on, .entry-meta, .entry-comments-link { font-size: ' . esc_html( get_theme_mod( 'meta_font_size' ) ) . 'rem !important; }';
+		}
+
+		if ( get_theme_mod( 'site_info_font_size', '0.9' ) !== '0.9' ) {
+			echo '.footer-copyright, .go-to-top { font-size: ' . esc_html( get_theme_mod( 'site_info_font_size' ) ) . 'rem !important; }';
+		}
+		echo '</style>';
 	}
 
 }

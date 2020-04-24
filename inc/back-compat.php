@@ -30,9 +30,9 @@ add_action( 'after_switch_theme', 'inclusive_switch_theme' );
  * @global string $wp_version WordPress version.
  */
 function inclusive_upgrade_notice() {
-	/* translators: %s: WordPress version. */
-	$message = sprintf( __( 'Inclusive requires at least WordPress version 5.4. You are running version %s. Please upgrade and try again.', 'inclusive' ), $GLOBALS['wp_version'] );
-	printf( '<div class="error"><p>%s</p></div>', $message );
+	/* translators: %1$s: WordPress version. %2$s PHP version.*/
+	$message = sprintf( esc_html__( 'Inclusive requires at least WordPress version 5.4 and PHP version 7.3. You are running WordPress version %1$s and PHP version %2$s. Please upgrade and try again.', 'inclusive' ), $GLOBALS['wp_version'], PHP_VERSION );
+	printf( '<div class="error"><p>%s</p></div>', $message ); // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 /**
@@ -46,13 +46,13 @@ function inclusive_customize() {
 	wp_die(
 		sprintf(
 			/* translators: %s: WordPress version. */
-			__( 'Inclusive requires at least WordPress version 5.4. You are running version %s. Please upgrade and try again.', 'inclusive' ),
-			$GLOBALS['wp_version']
+			esc_html__( 'Inclusive requires at least WordPress version 5.4. You are running version %s. Please upgrade and try again.', 'inclusive' ),
+			esc_html( $GLOBALS['wp_version'] )
 		),
 		'',
-		array(
+		[
 			'back_link' => true,
-		)
+		]
 	);
 }
 add_action( 'load-customize.php', 'inclusive_customize' );
@@ -67,7 +67,7 @@ add_action( 'load-customize.php', 'inclusive_customize' );
 function inclusive_preview() {
 	if ( isset( $_GET['preview'] ) ) {
 		/* translators: %s: WordPress version. */
-		wp_die( sprintf( __( 'Inclusive requires at least WordPress version 5.4. You are running version %s. Please upgrade and try again.', 'inclusive' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( esc_html__( 'Inclusive requires at least WordPress version 5.4. You are running version %s. Please upgrade and try again.', 'inclusive' ), esc_html( $GLOBALS['wp_version'] ) ) );
 	}
 }
 add_action( 'template_redirect', 'inclusive_preview' );

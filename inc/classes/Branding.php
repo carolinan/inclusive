@@ -24,7 +24,7 @@ class Branding {
 	 * @access public
 	 */
 	public function __construct() {
-		add_action( 'customize_register', array( $this, 'action_register_customizer_control' ) );
+		add_action( 'customize_register', [ $this, 'action_register_customizer_control' ] );
 		add_filter( 'body_class', [ $this, 'filter_body_classes' ] );
 	}
 
@@ -58,7 +58,7 @@ class Branding {
 	public function action_register_customizer_control( WP_Customize_Manager $wp_customize ) {
 		/* Rename options */
 		$wp_customize->get_section( 'title_tagline' )->title       = __( 'Site Identity & Branding', 'inclusive' );
-		$wp_customize->get_control( 'display_header_text' )->label = __( 'Display Site Title in the menu bar.', 'inclusive' );
+		$wp_customize->get_control( 'display_header_text' )->label = __( 'Display Site Title in the primary menu.', 'inclusive' );
 
 		$wp_customize->add_setting(
 			'show_header_title',

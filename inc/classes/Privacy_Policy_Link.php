@@ -24,7 +24,7 @@ class Privacy_Policy_Link {
 	 * @access public
 	 */
 	public function __construct() {
-		add_action( 'customize_register', array( $this, 'action_register_customizer_control' ) );
+		add_action( 'customize_register', [ $this, 'action_register_customizer_control' ] );
 	}
 
 	/**
@@ -38,27 +38,27 @@ class Privacy_Policy_Link {
 
 		$wp_customize->add_setting(
 			'show_privacy_policy_link',
-			array(
+			[
 				'default'           => true,
 				'sanitize_callback' => 'Inclusive\Customizer::sanitize_checkbox',
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			'show_privacy_policy_link',
-			array(
+			[
 				'type'    => 'checkbox',
 				'label'   => __( 'Show the privacy policy link (Requires a Privacy Policy page).', 'inclusive' ),
 				'section' => 'footer_options',
-			)
+			]
 		);
 
 		$wp_customize->selective_refresh->add_partial(
 			'show_privacy_policy_link',
-			array(
+			[
 				'selector'            => '.footer-privacy-policy',
 				'container_inclusive' => true,
-			)
+			]
 		);
 	}
 

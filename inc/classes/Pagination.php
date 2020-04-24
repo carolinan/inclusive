@@ -24,7 +24,7 @@ class Pagination {
 	 * @access public
 	 */
 	public function __construct() {
-		add_action( 'customize_register', array( $this, 'action_register_customizer_control' ) );
+		add_action( 'customize_register', [ $this, 'action_register_customizer_control' ] );
 	}
 
 	/**
@@ -36,16 +36,16 @@ class Pagination {
 
 		$wp_customize->add_setting(
 			'pagination',
-			array(
+			[
 				'default'           => 'numeric',
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'Inclusive\Customizer::sanitize_select',
-			)
+			]
 		);
 
 		$wp_customize->add_control(
 			'pagination',
-			array(
+			[
 				'label'       => __( 'Pagination', 'inclusive' ),
 				'description' => __( 'Select the pagination type.', 'inclusive' ),
 				'section'     => 'blog_options',
@@ -56,15 +56,15 @@ class Pagination {
 					'text_only'       => __( 'Text only: Older Posts - Newer Posts', 'inclusive' ),
 					'hide_pagination' => __( 'Hide -Do not show pagination', 'inclusive' ),
 				],
-			)
+			]
 		);
 
 		$wp_customize->selective_refresh->add_partial(
 			'pagination',
-			array(
+			[
 				'selector'            => '.navigation',
 				'container_inclusive' => true,
-			)
+			]
 		);
 
 	}

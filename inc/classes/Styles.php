@@ -82,28 +82,18 @@ class Styles {
 			INCLUSIVE_VERSION
 		);
 
-		/* Temporary solution*/
-		wp_enqueue_style(
-			'inclusive-navigation-block',
-			get_template_directory_uri() . '/assets/css/blocks/core/navigation.min.css',
-			null,
-			INCLUSIVE_VERSION
-		);
-
-		wp_enqueue_style(
-			'inclusive-navigation-link-block',
-			get_template_directory_uri() . '/assets/css/blocks/core/navigation-link.min.css',
-			null,
-			INCLUSIVE_VERSION
-		);
-
 		// Enqueue Google Fonts.
 		if ( get_theme_mod( 'font_pairing', 'Libre Baskerville+Roboto' ) !== 'system' ) {
 			$font_option  = explode( '+', get_theme_mod( 'font_pairing', 'Libre Baskerville+Roboto' ) );
 			$google_fonts = '//fonts.googleapis.com/css?family=' . $font_option[0] . ':400,700|' . $font_option[1] . ':400,700&display=swap';
 		}
 		if ( ! empty( $google_fonts ) ) {
-			wp_enqueue_style( 'inclusive-fonts', $google_fonts, array(), null ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+			wp_enqueue_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+				'inclusive-fonts',
+				$google_fonts,
+				[],
+				null
+			);
 		}
 	}
 

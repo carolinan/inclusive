@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
 	line-height: 1.15;	/* 1 */
 	-webkit-text-size-adjust: 100%;	/* 2 */
@@ -204,6 +204,12 @@ button:-moz-focusring,
 	outline: 1px dotted ButtonText;
 }
 
+textarea:-moz-focusring,
+select:-moz-focusring,
+input:-moz-focusring {
+	outline: 1px solid var(--global-font-color);
+}
+
 /**
  * Correct the padding in Firefox.
  */
@@ -403,9 +409,11 @@ q {
 	quotes: """";
 }
 
+.entry-content blockquote,
 blockquote {
 	border-left: 4px solid #000;
 	margin: 0;
+	padding-left: 1em;
 }
 
 blockquote cite {
@@ -454,13 +462,13 @@ big {
 	font-size: 125%;
 }
 
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 /* stylelint-disable */
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 /* stylelint-enable */
@@ -518,7 +526,7 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 
-img {
+img:not(.custom-logo) {
 	height: auto;
 	max-width: 100%;
 }
@@ -818,7 +826,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	outline-color: var(--global-font-color);
+	outline: thin solid var(--global-font-color);
 }
 
 select {
@@ -996,8 +1004,7 @@ a.post-thumbnail:focus img {
 
 .posted-on,
 .posted-by,
-.entry-meta,
-.entry-comments-link {
+.entry-meta {
 	font-family: var(--highlight-font-family);
 	font-size: var(--font-size-small);
 	display: inline;
@@ -1035,7 +1042,9 @@ a.post-thumbnail:focus img {
 
 .entry-comments-link {
 	display: block;
-	margin-top: 1.5em;
+	margin: 1.5em 0;
+	font-family: var(--highlight-font-family);
+	font-size: var(--font-size-small);
 }
 
 .entry-content ul,
@@ -1073,12 +1082,12 @@ a.post-thumbnail:focus img {
 .entry-comments-link a,
 .entry-content .lead a,
 .edit-link a:not(.comment-edit-link) {
-	color: var(	--color-meta);
+	color: var(--color-meta);
 }
 
 .page-links {
 	clear: both;
-	padding-top: 0.5em;
+	padding-top: 1em;
 	margin-bottom: 1.5em;
 	font-family: var(--highlight-font-family);
 }
@@ -1116,9 +1125,6 @@ a.more-link:hover {
 }
 
 .edit-link a:not(.comment-edit-link) {
-	display: inline-block;
-	clear: both;
-	margin: 1.5em 0 0 0;
 	font-size: var(--font-size-small);
 }
 
@@ -1329,5 +1335,5 @@ a.more-link:hover {
 .wp-caption,
 .wp-caption-text,
 .sticky {
-
+	/* The theme does not style these but they are required by Theme Check. */
 }

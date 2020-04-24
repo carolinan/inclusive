@@ -13,7 +13,8 @@ if ( ! is_front_page() && is_page() && get_theme_mod( 'show_header_area_on_pages
 if ( get_theme_mod( 'show_header_title', false ) === false
 	&& get_theme_mod( 'show_tagline', false ) === false
 	&& ! has_header_image()
-	&& get_theme_mod( 'header_content', 0 ) === 0 ) {
+	&& get_theme_mod( 'header_content', 0 ) === 0
+	&& ! has_custom_logo() ) {
 	return;
 }
 

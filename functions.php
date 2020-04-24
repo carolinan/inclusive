@@ -13,8 +13,8 @@
  */
 define( 'INCLUSIVE_VERSION', wp_get_theme()->get( 'Version' ) );
 
-/** Check if the version is 5.4 or higher. If not, do not activate. */
-if ( version_compare( $GLOBALS['wp_version'], '5.4', '<' ) ) {
+/** Check if the WordPress version is 5.4 or higher, and if the PHP version is at least 7.3. If not, do not activate. */
+if ( version_compare( $GLOBALS['wp_version'], '5.4', '<' ) || version_compare( PHP_VERSION, '7.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }

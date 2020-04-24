@@ -25,8 +25,8 @@ class Admin {
 	 * @return void
 	 */
 	public function __construct() {
-		add_action( 'admin_menu', array( $this, 'action_admin_page_menu' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'action_admin_scripts' ) );
+		add_action( 'admin_menu', [ $this, 'action_admin_page_menu' ] );
+		add_action( 'admin_enqueue_scripts', [ $this, 'action_admin_scripts' ] );
 
 	}
 

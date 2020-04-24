@@ -25,7 +25,7 @@ class Related_Posts {
 	 * @access public
 	 */
 	public function __construct() {
-		add_action( 'customize_register', array( $this, 'action_register_customizer_control' ) );
+		add_action( 'customize_register', [ $this, 'action_register_customizer_control' ] );
 		add_action( 'related_posts', [ $this, 'related_posts' ], 10, 1 );
 	}
 
@@ -153,7 +153,7 @@ class Related_Posts {
 		if ( get_theme_mod( 'show_related_posts', true ) === true ) {
 			$categories = get_the_category( $post_id );
 			if ( $categories ) {
-				$category_ids = array();
+				$category_ids = [];
 				$category     = get_category( $category_ids );
 				$categories   = get_the_category( $post_id );
 
@@ -169,14 +169,14 @@ class Related_Posts {
 					<div class="related-posts">
 					<h2><?php echo esc_html( get_theme_mod( 'related_section_heading', __( 'Related Posts', 'inclusive' ) ) ); ?></h2>
 					<?php
-					$cat_post_args = array(
+					$cat_post_args = [
 						'category__in'        => $category_ids,
-						'post__not_in'        => array( $post_id ),
+						'post__not_in'        => [ $post_id ],
 						'post_type'           => 'post',
 						'posts_per_page'      => get_theme_mod( 'number_of_related_posts', 3 ),
 						'post_status'         => 'publish',
 						'ignore_sticky_posts' => true,
-					);
+					];
 					$related_posts_query = new WP_Query( $cat_post_args );
 
 					while ( $related_posts_query->have_posts() ) {

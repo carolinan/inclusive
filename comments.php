@@ -54,10 +54,10 @@ Inclusive\Styles::get_template_part( 'content', 'comments', 'assets/css/min/comm
 			<ol class="comment-list">
 			<?php
 			wp_list_comments(
-				array(
+				[
 					'style'      => 'ol',
 					'short_ping' => true,
-				)
+				]
 			);
 			?>
 		</ol><!-- .comment-list -->

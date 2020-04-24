@@ -9,11 +9,13 @@
 if ( get_theme_mod( 'show_header_title', false ) === false
 	&& get_theme_mod( 'show_tagline', false ) === false
 	&& ! has_header_image()
-	&& get_theme_mod( 'header_content', 0 ) === 0 ) {
+	&& get_theme_mod( 'header_content', 0 ) === 0
+	&& ! has_custom_logo() ) {
 	return;
 }
 
-if ( is_archive() && get_theme_mod( 'show_header_area_on_archives', false ) === false ||
+if ( is_paged() && get_theme_mod( 'show_header_area_on_archives', false ) === false ||
+	is_archive() && get_theme_mod( 'show_header_area_on_archives', false ) === false ||
 	is_404() && get_theme_mod( 'show_header_area_on_archives', false ) === false ||
 	is_search() && get_theme_mod( 'show_header_area_on_archives', false ) === false ||
 	is_single() && get_theme_mod( 'show_header_area_on_posts', false ) === false ||

@@ -633,18 +633,6 @@ class Colors {
 			echo 'body { --color-theme-active-button-text: ' . esc_html( get_theme_mod( 'button_hover_color' ) ) . ';}';
 		}
 
-		if ( get_theme_mod( 'site_title_shadow', true ) === false ) {
-			echo '.site-title, .site-title a { text-shadow: none;}';
-		}
-
-		if ( get_theme_mod( 'widgetarea_title_shadow', true ) === false ) {
-			echo '.widget-title { text-shadow: none !important;}';
-		}
-
-		if ( get_theme_mod( 'entry_title_shadow', true ) === false ) {
-			echo '.entry-title { text-shadow: none !important;}';
-		}
-
 		if ( get_theme_mod( 'button_border_color', '#ccc' ) !== '#ccc' ) {
 			echo 'body { --color-theme-button-border: ' . esc_html( get_theme_mod( 'button_border_color' ) ) . '; }';
 		}
@@ -680,38 +668,6 @@ class Colors {
 
 		if ( get_theme_mod( 'menu_shadow', true ) === false ) {
 			echo '.main-navigation { box-shadow: none; }';
-		}
-
-		if ( get_theme_mod( 'site_title_font_size', '3' ) !== '3' ) {
-			echo '.site-title, .site-title a { font-size:' . esc_html( get_theme_mod( 'site_title_font_size' ) ) . 'rem; }';
-		}
-
-		if ( get_theme_mod( 'site_title_font_weight', '700' ) !== '700' ) {
-			echo '.site-title, .site-title a { font-weight:' . esc_html( get_theme_mod( 'site_title_font_weight' ) ) . '; }';
-		}
-
-		if ( get_theme_mod( 'widgetarea_title_font_size', '1.5' ) !== '1.5' ) {
-			echo 'body { --font-size-widget-title: ' . esc_html( get_theme_mod( 'widgetarea_title_font_size' ) ) . 'em; }';
-		}
-
-		if ( get_theme_mod( 'widgetarea_title_font_weight', '400' ) !== '400' ) {
-			echo '.widget-title { font-weight:' . esc_html( get_theme_mod( 'widgetarea_title_font_weight' ) ) . ' !important; }';
-		}
-
-		if ( get_theme_mod( 'entry_title_font_size', '2.5' ) !== '2.5' ) {
-			echo '.entry-header .entry-title { font-size: ' . esc_html( get_theme_mod( 'entry_title_font_size' ) ) . 'rem !important; }';
-		}
-
-		if ( get_theme_mod( 'entry_title_font_weight', '700' ) !== '700' ) {
-			echo '.entry-title { font-weight:' . esc_html( get_theme_mod( 'entry_title_font_weight' ) ) . '; }';
-		}
-
-		if ( get_theme_mod( 'meta_font_size', '1' ) !== '1' ) {
-			echo '.posted-by, .posted-on, .entry-meta, .entry-comments-link { font-size: ' . esc_html( get_theme_mod( 'meta_font_size' ) ) . 'rem !important; }';
-		}
-
-		if ( get_theme_mod( 'site_info_font_size', '0.9' ) !== '0.9' ) {
-			echo '.footer-copyright, .go-to-top { font-size: ' . esc_html( get_theme_mod( 'site_info_font_size' ) ) . 'rem !important; }';
 		}
 
 		/* Footer */

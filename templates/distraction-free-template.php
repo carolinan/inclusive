@@ -10,7 +10,6 @@
  */
 
 ?>
-
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -38,8 +37,7 @@ Inclusive\Styles::get_template_part( 'distraction-free', 'css', 'assets/css/min/
 				get_template_part( 'template-parts/content/entry-header' );
 				get_template_part( 'template-parts/content/the-content' );
 				?>
-			</article><!-- #post-<?php the_ID(); ?> -->
-
+			</article>
 			<?php
 			if ( get_theme_mod( 'author_information_distraction_free', false ) === true ) {
 				Inclusive\Biography::author_biography();

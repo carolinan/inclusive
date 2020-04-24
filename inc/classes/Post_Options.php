@@ -24,7 +24,7 @@ class Post_Options {
 	 * @access public
 	 */
 	public function __construct() {
-		add_action( 'customize_register', array( $this, 'action_register_customizer_control' ) );
+		add_action( 'customize_register', [ $this, 'action_register_customizer_control' ] );
 		add_filter( 'body_class', [ $this, 'filter_body_classes' ] );
 	}
 

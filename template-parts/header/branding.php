@@ -59,7 +59,7 @@ if ( has_custom_logo()
 	}
 	?>
 	</div><!-- .inner-branding -->
-<?php 
+	<?php
 }
 get_template_part( 'template-parts/header/block-area' );
 ?>
