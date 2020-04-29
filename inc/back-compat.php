@@ -45,9 +45,10 @@ function inclusive_upgrade_notice() {
 function inclusive_customize() {
 	wp_die(
 		sprintf(
-			/* translators: %s: WordPress version. */
-			esc_html__( 'Inclusive requires at least WordPress version 5.4. You are running version %s. Please upgrade and try again.', 'inclusive' ),
-			esc_html( $GLOBALS['wp_version'] )
+			/* translators: %1$s: WordPress version. %2$s PHP version.*/
+			esc_html__( 'Inclusive requires at least WordPress version 5.4 and PHP version 7.3. You are running WordPress version %1$s and PHP version %2$s. Please upgrade and try again.', 'inclusive' ),
+			esc_html( $GLOBALS['wp_version'] ),
+			esc_html( PHP_VERSION )
 		),
 		'',
 		[
@@ -66,8 +67,14 @@ add_action( 'load-customize.php', 'inclusive_customize' );
  */
 function inclusive_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		/* translators: %s: WordPress version. */
-		wp_die( sprintf( esc_html__( 'Inclusive requires at least WordPress version 5.4. You are running version %s. Please upgrade and try again.', 'inclusive' ), esc_html( $GLOBALS['wp_version'] ) ) );
+		wp_die(
+			sprintf(
+				/* translators: %1$s: WordPress version. %2$s PHP version.*/
+				esc_html__( 'Inclusive requires at least WordPress version 5.4 and PHP version 7.3. You are running WordPress version %1$s and PHP version %2$s. Please upgrade and try again.', 'inclusive' ),
+				esc_html( $GLOBALS['wp_version'] ),
+				esc_html( PHP_VERSION )
+			)
+		);
 	}
 }
 add_action( 'template_redirect', 'inclusive_preview' );

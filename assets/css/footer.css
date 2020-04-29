@@ -9,7 +9,7 @@
 	font-size: var(--font-size-small);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 0;
+	grid-gap: 1em;
 	background: var(--color-theme-site-info);
 }
 

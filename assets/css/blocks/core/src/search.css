@@ -4,7 +4,7 @@
 	display: block;
 }
 
-.wp-block-search.aligncenter .wp-block-search__label{
+.wp-block-search.aligncenter .wp-block-search__label {
 	text-align: center;
 }
 
@@ -31,4 +31,5 @@
 	padding: .8em;
 	cursor: pointer;
 	font-family: var(--highlight-font-family);
+	margin-left: 1em;
 }

@@ -51,14 +51,6 @@ hr {
    ========================================================================== */
 
 /**
- * Remove the gray background on active links in IE 10.
- */
-
-a {
-	background-color: transparent;
-}
-
-/**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
@@ -118,17 +110,6 @@ sub {
 
 sup {
 	top: -0.5em;
-}
-
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove the border on images inside links in IE 10.
- */
-
-img {
-	border-style: none;
 }
 
 /* Forms
@@ -363,10 +344,6 @@ h6 {
 	clear: both;
 }
 
- h1 {
-	font-size: 2.44em;
-}
-	
 h2 {
 	font-size: 1.95em;
 }
@@ -651,28 +628,28 @@ object {
 /*--------------------------------------------------------------
 # Links
 --------------------------------------------------------------*/
-a {
+.site a {
 	color: var(--color-link);
 	text-decoration: underline;
+	outline: 2px dotted transparent;
 }
 
-a:visited {
+.site a:visited {
 	color: var(--color-link);
 }
 
-a:hover,
-a:focus,
-a:active {
+.site a:hover,
+.site a:focus,
+.site a:active {
 	color: var(--color-link-active);
 	text-decoration: none;
 }
 
-a:focus {
-	outline: thin dotted;
+.site a:focus {
+	outline: 2px dotted var(--color-link);
 }
 
-a:hover,
-a:active {
+.site a:active {
 	outline: 0;
 }
 
@@ -761,6 +738,11 @@ input[type="submit"] {
 	transition: box-shadow 0.3s ease-in-out;
 }
 
+.has-menu-search details.desktop-search .svg-icon {
+	padding: 5px .2em .2em;
+	border-radius: var(--button-border-radius);
+}
+
 button:active,
 button:hover,
 input[type="button"]:active,
@@ -768,7 +750,10 @@ input[type="reset"]:active,
 input[type="submit"]:active,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.has-menu-search details.desktop-search .svg-icon:active,
+.has-menu-search details.desktop-search .svg-icon:hover,
+.has-menu-search details.desktop-search .svg-icon:focus {
 	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
 	outline: none;
 	background: var(--color-theme-active-button);
@@ -783,6 +768,10 @@ input[type="submit"]:focus {
 	outline: 1px dotted var(--color-theme-active-button-text);
 	background: var(--color-theme-active-button);
 	color: var(--color-theme-active-button-text);
+}
+
+.has-menu-search summary:focus {
+	outline: transparent;
 }
 
 input[type="text"],
@@ -882,7 +871,7 @@ a.post-thumbnail {
 
 a.post-thumbnail img:hover,
 a.post-thumbnail:focus img {
-	outline: 1px solid;
+	outline: 2px dotted var(--color-link);
 }
 
 .page-content,
@@ -988,7 +977,6 @@ a.post-thumbnail:focus img {
 		padding-left: 0;
 		padding-right: 0;
 	}
-
 }
 
 .entry-title a {
@@ -1077,10 +1065,15 @@ a.post-thumbnail:focus img {
 .entry-comments-link,
 .entry-content .lead,
 .posted-on a,
+.posted-on a:visited,
 .posted-by a,
+.posted-by a:visited,
 .entry-meta a,
+.entry-meta a:visited,
 .entry-comments-link a,
+.entry-comments-link a:visited,
 .entry-content .lead a,
+.entry-content .lead a:visited,
 .edit-link a:not(.comment-edit-link) {
 	color: var(--color-meta);
 }

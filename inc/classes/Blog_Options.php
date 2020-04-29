@@ -28,6 +28,7 @@ class Blog_Options {
 		add_filter( 'excerpt_length', [ $this, 'filter_excerpt_length' ], 999 );
 		add_filter( 'excerpt_more', [ $this, 'filter_excerpt_more' ], 999 );
 		add_filter( 'the_title', [ $this, 'filter_post_title' ], 999 );
+		add_filter( 'the_content_more_link', [ $this, 'filter_read_more_tag' ] );
 	}
 
 	/**
@@ -249,6 +250,18 @@ class Blog_Options {
 		} else {
 			return $title;
 		}
+	}
+
+	/**
+	 * Add a wrapper to the read more, so that we can position it correctly.
+	 *
+	 * @param string $html The default output HTML for the more tag.
+	 *
+	 * @return string $html
+	 */
+	public function filter_read_more_tag( $html ) {
+		$html = '<div class="read-more-wrap">' . $html . '</div>';
+		return $html;
 	}
 
 }

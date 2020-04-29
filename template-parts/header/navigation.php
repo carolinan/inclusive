@@ -12,12 +12,13 @@
 		<?php
 		if ( get_theme_mod( 'menu_logo', false ) === true && has_custom_logo() ) {
 			$image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) );
+			// The alt attribute has been left blank on purpose.
 			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="menu-custom-logo-link" rel="home"><img src="' . esc_url( $image[0] ) . '" width="40px" alt="" class="custom-logo"></a>';
 		}
 
 		if ( display_header_text() ) {
 			echo '<div class="menu-title">';
-			echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a>';
+			echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo '</div>';
 		}
 		?>
@@ -26,7 +27,7 @@
 		onClick="ToggleButtonClick('toggle-primary')" data-uid="toggle-primary" aria-controls="primary-menu" aria-expanded="false">
 		<?php
 		if ( Inclusive\Icons::nav_menu_button_icon() ) {
-			echo Inclusive\Icons::nav_menu_button_icon();
+			echo Inclusive\Icons::nav_menu_button_icon(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 		esc_html_e( 'Menu', 'inclusive' );
 		?>
@@ -50,7 +51,7 @@
 	if ( get_theme_mod( 'menu_search', true ) === true ) {
 		?>
 		<details class="desktop-search">
-			<summary><span class="screen-reader-text"><?php esc_html_e( 'Toggle search', 'inclusive' ); ?></span><?php echo Inclusive\Icons::search_button_icon() ?></summary>
+			<summary><span class="screen-reader-text"><?php esc_html_e( 'Toggle search', 'inclusive' ); ?></span><?php echo Inclusive\Icons::search_button_icon(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></summary> 
 			<?php get_search_form(); ?>
 		</details>
 		<?php

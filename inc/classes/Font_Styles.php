@@ -73,7 +73,7 @@ class Font_Styles {
 		$wp_customize->selective_refresh->add_partial(
 			'site_title_font_size',
 			[
-				'selector' => '.site-title, .site-title a',
+				'selector' => '.site-title a',
 			]
 		);
 
@@ -362,7 +362,7 @@ class Font_Styles {
 		echo '<style id="inclusive-font-css">';
 
 		if ( get_theme_mod( 'site_title_shadow', true ) === false ) {
-			echo '.site-title, .site-title a { text-shadow: none;}';
+			echo '.site-title a { text-shadow: none;}';
 		}
 
 		if ( get_theme_mod( 'widgetarea_title_shadow', true ) === false ) {
@@ -374,11 +374,11 @@ class Font_Styles {
 		}
 
 		if ( get_theme_mod( 'site_title_font_size', '3' ) !== '3' ) {
-			echo '.site-title, .site-title a { font-size:' . esc_html( get_theme_mod( 'site_title_font_size' ) ) . 'rem; }';
+			echo '.site-title a { font-size:' . esc_html( get_theme_mod( 'site_title_font_size' ) ) . 'rem; }';
 		}
 
 		if ( get_theme_mod( 'site_title_font_weight', '700' ) !== '700' ) {
-			echo '.site-title, .site-title a { font-weight:' . esc_html( get_theme_mod( 'site_title_font_weight' ) ) . '; }';
+			echo '.site-title a { font-weight:' . esc_html( get_theme_mod( 'site_title_font_weight' ) ) . '; }';
 		}
 
 		if ( get_theme_mod( 'menu_font_size', '1.25' ) !== '1.25' ) {

@@ -73,3 +73,7 @@ pre {
 	border: 2px solid #000;
 	padding: 0.5rem;
 }
+
+.wp-block[data-align=wide] {
+	max-width: calc(50% + var(--content-width) / 2);
+}

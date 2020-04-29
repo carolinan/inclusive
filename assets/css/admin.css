@@ -1,57 +1,28 @@
 
-.appearance_page_inclusive-theme .welcome-panel,
-.appearance_page_inclusive-theme .welcome-panel ul li {
+.appearance_page_inclusive_theme .welcome-panel,
+.appearance_page_inclusive_theme .welcome-panel ul li {
 	font-size: 1rem;
 }
 
-.appearance_page_inclusive-theme .welcome-panel h2 {
+.appearance_page_inclusive_theme .welcome-panel h2 {
 	font-size: 1.5rem;
 	font-weight: 400;
 }
 
-.appearance_page_inclusive-theme .welcome-panel h3 {
+.appearance_page_inclusive_theme .welcome-panel h3 {
 	font-size: 1.4rem;
 	font-weight: 400;
 }
 
-.appearance_page_inclusive-theme .inclusive-grey {
+.appearance_page_inclusive_theme .inclusive-grey {
 	background: #fafafa;
 }
 
-.appearance_page_inclusive-theme .success {
+.appearance_page_inclusive_theme .success {
 	display: none;
 }
 
-.appearance_page_inclusive-theme .success.visible {
+.appearance_page_inclusive_theme .success.visible {
 	display: inline-block;
 	height: 30px;
-}
-
-.appearance_page_inclusive-theme ul.tabs{
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
-}
-
-.appearance_page_inclusive-theme ul.tabs li{
-	background: none;
-	color: #222;
-	display: inline-block;
-	padding: 10px 15px;
-	cursor: pointer;
-}
-
-.appearance_page_inclusive-theme ul.tabs li.current{
-	background: #ededed;
-	color: #222;
-}
-
-.appearance_page_inclusive-theme .tab-content{
-	display: none;
-	background: #ededed;
-	padding: 15px;
-}
-
-.appearance_page_inclusive-theme .tab-content.current{
-	display: inherit;
 }

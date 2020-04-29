@@ -6,8 +6,8 @@
 	text-align: right;
 }
 
-.wp-block-button__link,
-.wp-block-button__link:visited {
+.site .wp-block-button__link,
+.site .wp-block-button__link:visited {
 	border: none;
 	border-radius: 6px;
 	box-shadow: none;
@@ -24,55 +24,55 @@
 	transition: box-shadow 0.3s ease-in-out;
 }
 
-.wp-block-button__link:not(.has-background) {
+.site .wp-block-button__link:not(.has-background) {
 	background-color: #32373c;
 }
 
-.wp-block-button__link:not(.has-text-color) {
+.site .wp-block-button__link:not(.has-text-color) {
 	color: #fff;
 }
 
-.wp-block-button__link:active,
-.wp-block-button__link:hover {
+.site .wp-block-button__link:active,
+.site .wp-block-button__link:hover {
 	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
 	transition: box-shadow 0.3s ease-in-out;
 }
 
-.wp-block-button__link:focus {
+.site .wp-block-button__link:focus {
 	outline: 1px dotted var(--global-font-color);
 }
 
-.is-style-outline .wp-block-button__link,
-.is-style-outline.wp-block-button__link {
+.site .is-style-outline .wp-block-button__link,
+.site .is-style-outline.wp-block-button__link {
 	border-color: #32373c;
 	color: var(--global-font-color);
 	border: 2px solid;
 }
 
-.is-style-outline .wp-block-button__link:not(.has-text-color),
-.is-style-outline.wp-block-button__link:not(.has-text-color) {
+.site .is-style-outline .wp-block-button__link:not(.has-text-color),
+.site .is-style-outline.wp-block-button__link:not(.has-text-color) {
 	color: var(--global-font-color);
 }
 
-.is-style-outline .wp-block-button__link:not(.has-background),
-.is-style-outline.wp-block-button__link:not(.has-background) {
+.site .is-style-outline .wp-block-button__link:not(.has-background),
+.site .is-style-outline.wp-block-button__link:not(.has-background) {
 	background-color: transparent;
 }
 
-.no-border-radius.wp-block-button__link {
+.site .no-border-radius.wp-block-button__link {
 	border-radius: 0 !important;
 }
 
-.is-style-inclusive-large-button .wp-block-button__link,
-.is-style-inclusive-large-button.wp-block-button__link {
+.site .is-style-inclusive-large-button .wp-block-button__link,
+.site .is-style-inclusive-large-button.wp-block-button__link {
 	padding: 1em 3em;
 	margin: 1.5em;
 }
 
 @media screen and (max-width: 27.5em) {
 
-	.is-style-inclusive-large-button .wp-block-button__link,
-	.is-style-inclusive-large-button.wp-block-button__link {
+	.site .is-style-inclusive-large-button .wp-block-button__link,
+	.site .is-style-inclusive-large-button.wp-block-button__link {
 		padding: 0.5em;
 	}
 }

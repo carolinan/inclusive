@@ -19,7 +19,7 @@ if ( is_singular( get_post_type() ) ) {
 } else {
 	// Add a link to the post or page.
 	?>
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 		<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 	</a><!-- .post-thumbnail -->
 	<?php

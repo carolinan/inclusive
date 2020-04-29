@@ -62,7 +62,6 @@
 	}
 
 	.inner-branding {
-		width: min-content;
 		margin: auto;
 		padding: 2rem;
 		border-radius: 3px;
@@ -83,21 +82,21 @@ a.custom-logo-link:focus img {
 	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-.site-title {
+.site-title a {
 	display: inline-block;
-	margin: 0 1em;
 	font-family: var(--highlight-font-family);
 	font-size: 3em;
 	font-weight: 700;
 	text-shadow: var(--text-shadow);
 	color:#333;
+	word-wrap: break-word;
 }
 
 @media screen and (max-width: 37.5em) {
 
-	.site-title {
+	.site-title a {
 		margin: 0 auto;
-		font-size: 2.44em !important;
+		font-size: 2.44rem !important;
 	}
 
 	.has-left-align-branding .site-title,

@@ -3,7 +3,7 @@
 }
 
 .wp-block-separator.is-style-dots {
-	background-color: none;
+	background: none !important;
 	border: none;
 	text-align: center;
 	max-width: none;

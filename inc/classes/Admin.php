@@ -38,7 +38,7 @@ class Admin {
 	 * @return void
 	 */
 	public function action_admin_page_menu() {
-		add_theme_page( __( 'Inclusive Setup Help', 'inclusive' ), __( 'Inclusive Setup Help', 'inclusive' ), 'edit_theme_options', 'inclusive-theme', [ $this, 'docs' ] );
+		add_theme_page( __( 'Inclusive Setup Help', 'inclusive' ), __( 'Inclusive Setup Help', 'inclusive' ), 'edit_theme_options', 'inclusive_theme', [ $this, 'docs' ] );
 	}
 
 	/**
@@ -49,7 +49,7 @@ class Admin {
 	 * @return void
 	 */
 	public function action_admin_scripts( $hook ) {
-		if ( 'appearance_page_inclusive-theme' !== $hook ) {
+		if ( 'appearance_page_inclusive_theme' !== $hook ) {
 			return;
 		}
 		wp_enqueue_style(
@@ -81,8 +81,8 @@ class Admin {
 		<div class="welcome-panel">
 		<div class="welcome-panel-content">
 		<h1><?php esc_html_e( 'Inclusive Setup Help', 'inclusive' ); ?></h1><br>
-		<?php esc_html_e( 'Thank you for chosing Inclusive', 'inclusive' ); ?><br>
-		<?php esc_html_e( 'For support, please email support@themesbycarolina.com.', 'inclusive' ); ?><br><br>
+		<?php esc_html_e( 'Thank you for chosing Inclusive <3', 'inclusive' ); ?><br>
+		<?php esc_html_e( 'For support, please email support@themesbycarolina.com and I will reply as soon as I can.', 'inclusive' ); ?><br><br>
 		<div class="welcome-panel-column-container">
 		<h2><?php esc_html_e( 'Personalize your theme', 'inclusive' ); ?></h2>
 		<a class="button button-primary button-hero load-customize" href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=custom_logo' ) ); ?>">
@@ -97,112 +97,135 @@ class Admin {
 			<br><h2><?php esc_html_e( 'Block patterns', 'inclusive' ); ?></h2><br>
 			<?php esc_html_e( 'Block patterns are available in the editor if you have enabled Gutenberg. You can copy the patterns below if you do not want to install the plugin.', 'inclusive' ); ?><br>
 			<?php esc_html_e( 'These patterns can be added to any post or page.', 'inclusive' ); ?><br>
-			<?php esc_html_e( 'Click the "Copy" button to copy the pattern.', 'inclusive' ); ?> <?php esc_html_e( 'Open or create a new page. Open the Code Editor mode. Paste the code into your page and preview the results.', 'inclusive' ); ?><br>
-			<?php esc_html_e( "Don't forget to save your changes.", 'inclusive' ); ?><br>
+			<ol>
+				<li><?php esc_html_e( 'Click the "Copy block code" button to copy the pattern.', 'inclusive' ); ?>
+				<li><?php esc_html_e( 'Open or create a new post or page.', 'inclusive' ); ?></li>
+				<li><?php esc_html_e( 'Open the Code Editor mode.', 'inclusive' ); ?></li>
+				<li><?php esc_html_e( 'Paste the code into your page and preview the results.', 'inclusive' ); ?></li>
+				<li><?php esc_html_e( "Don't forget to save your changes.", 'inclusive' ); ?></li>
+			</ol>
 			<ul>
 				<li>
 					<h3><?php esc_html_e( 'Heading with two colors', 'inclusive' ); ?></h3><br>
 					<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/heading-preview.png' ) ); ?>" alt="<?php esc_attr_e( 'A preview of a heading block with two colors, black and dark pink.', 'inclusive' ); ?>" width="300"><br>
-					<?php esc_html_e( 'Code:', 'inclusive' ); ?><br>
-					<div id="inclusive-heading-preview">
-						<code>&lt!-- wp:heading {"level":2,"className":"inclusive-split-heading is-style-inclusive-text-shadow"} --&gt;
-							&lth2 class="is-style-inclusive is-style-inclusive-text-shadow"&gt
-							<?php
-							printf(
-								__( 'Heading with %1$stwo colors', 'inclusive' ),
-								'&ltspan style="color:#b6007c" class="has-inline-color"&gt;'
-							);
-							?>
-							&lt/span&gt;&lt/h2>&lt!-- /wp:heading --&gt
-						</code>
-					</div>
-					<br><a class="button button-primary inclusive-copy" data-clipboard-target="#inclusive-heading-preview"><?php esc_html_e( 'Copy', 'inclusive' ); ?></a>
+					<br><a class="button button-primary inclusive-copy" data-clipboard-text='<!-- wp:heading {"level":2,"className":"inclusive-split-heading is-style-inclusive-text-shadow"} --> <h2 class="is-style-inclusive is-style-inclusive-text-shadow"><?php _e( 'Heading with <span style="color:#b6007c" class="has-inline-color">two colors</span>', 'inclusive' ); ?></h2><!-- /wp:heading -->'>
+					<?php esc_html_e( 'Copy block code', 'inclusive' ); ?></a>
 					<div class="success" aria-hidden="true"><?php esc_html_e( 'Copied!', 'inclusive' ); ?></div>
 				</li>
 				<li>
 					<h3><?php esc_html_e( 'Cover block with background image, heading and button', 'inclusive' ); ?></h3><br>
 					<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/coverblock-preview.png' ) ); ?>" alt="<?php esc_attr_e( 'A preview of a cover block with a flower background image, a blue overlay, a heading and a button.', 'inclusive' ); ?>" width="300"><br>
-					<?php esc_html_e( 'Code:', 'inclusive' ); ?>
-					<br>
-					<div id="inclusive-cover-preview">
-						<code>
-							&lt;!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/flora.png' ) ); ?>","id":48,"customOverlayColor":"#e3eff5","className":"inclusive-cover-block-with-large-button"} --&gt;
-							&lt;div class="wp-block-cover has-background-dim inclusive-cover-block-with-large-button" style="background-image:url(' <?php echo esc_url( get_theme_file_uri( 'assets/images/flora.png' ) ); ?>');background-color:#e3eff5"&gt;
-							&lt;div class="wp-block-cover__inner-container"&gt;
-							&lt;!-- wp:heading {"align":"center","level":2,"customTextColor":"#000000","className":"is-style-inclusive-text-shadow"} --&gt;
-							&lt;h2 class="has-text-color has-text-align-center is-style-inclusive-text-shadow" style="color:#000000"&gt;<?php echo _x( 'Inclusive', 'Theme starter content, theme name', 'inclusive' ); ?>&lt;/h2&gt;
-							&lt;!-- /wp:heading --&gt;
-							&lt;!-- wp:buttons {"align":"center"} --&gt;
-							&lt;div class="wp-block-buttons aligncenter"&gt;&lt;!-- wp:button {"className":"is-style-inclusive-large-button"} --&gt;
-							&lt;div class="wp-block-button is-style-inclusive-large-button">&lt;a href="#" class="wp-block-button__link"&gt;<?php echo _x( 'Sign up for our Newsletter', 'Theme starter content', 'inclusive' ); ?>&lt;/a&gt;&lt;/div&gt;
-							&lt;!-- /wp:button --&gt;&lt;/div&gt;
-							&lt;!-- /wp:buttons --&gt;&lt;/div&gt;&lt;/div&gt;
-							&lt;!-- /wp:cover --&gt;
-						</code>
-					</div>
-					<br><a class="button button-primary inclusive-copy" data-clipboard-target="#inclusive-cover-preview"><?php esc_html_e( 'Copy', 'inclusive' ); ?></a>
+					<br><a class="button button-primary inclusive-copy" data-clipboard-text='<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/flora.png' ) ); ?>","id":48,"customOverlayColor":"#e3eff5","className":"inclusive-cover-block-with-large-button"} -->
+					<div class="wp-block-cover has-background-dim inclusive-cover-block-with-large-button" style="background-image:url(<?php echo esc_url( get_theme_file_uri( 'assets/images/flora.png' ) ); ?>);background-color:#e3eff5">
+					<div class="wp-block-cover__inner-container">
+					<!-- wp:heading {"align":"center","level":2,"customTextColor":"#000000","className":"is-style-inclusive-text-shadow"} -->
+					<h2 class="has-text-color has-text-align-center is-style-inclusive-text-shadow" style="color:#000000"><?php echo _x( 'Example heading', 'Theme starter content', 'inclusive' ); ?></h2>
+					<!-- /wp:heading -->
+					<!-- wp:buttons {"align":"center"} -->
+					<div class="wp-block-buttons aligncenter"><!-- wp:button {"className":"is-style-inclusive-large-button"} -->
+					<div class="wp-block-button is-style-inclusive-large-button"><a href="#" class="wp-block-button__link"><?php echo _x( 'Sign up for our Newsletter', 'Theme starter content', 'inclusive' ); ?></a></div>
+					<!-- /wp:button --></div>
+					<!-- /wp:buttons --></div></div>
+					<!-- /wp:cover -->'>
+					<?php esc_html_e( 'Copy block code', 'inclusive' ); ?></a>
+					<div class="success" aria-hidden="true"><?php esc_html_e( 'Copied!', 'inclusive' ); ?></div>
+				</li>
+				<li>
+					<h3><?php esc_html_e( 'Presentation', 'inclusive' ); ?></h3><br>
+					<?php esc_html_e( 'A two column block with an image, a heading and styled paragraphs.', 'inclusive' ); ?></a><br>
+					<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/presentation-preview.png' ) ); ?>" alt="<?php esc_attr_e( 'A preview of a column block with two colums. The left column has an image and the right column has a heading and a couple of styled paragraphs.', 'inclusive' ); ?>" width="400"><br>
+					<br><a class="button button-primary inclusive-copy" data-clipboard-text='
+					<!-- wp:columns {"align":"wide"} -->
+					<div class="wp-block-columns alignwide"><!-- wp:column {"width":25} -->
+					<div class="wp-block-column" style="flex-basis:25%"><!-- wp:image {"align":"center","id":71,"sizeSlug":"large"} -->
+					<div class="wp-block-image"><figure class="aligncenter size-large"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/flora-narrow.png' ) ); ?>" alt="<?php echo _x( 'A pencil drawing of three peonies.', 'Block pattern content', 'inclusive' ); ?>" class="wp-image-71"/></figure></div>
+					<!-- /wp:image --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"width":74} -->
+					<div class="wp-block-column" style="flex-basis:74%"><!-- wp:heading {"className":"is-style-inclusive-text-shadow","style":{"typography":{"lineHeight":"1.8"}}} -->
+					<h2 class="is-style-inclusive-text-shadow" style="line-height:1.8"><?php echo _x( 'Presentation', 'Block pattern content', 'inclusive' ); ?></h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"2"}}} -->
+					<p style="line-height:2"><strong><?php echo _x(' This is an example place holder text. Edit it to make it your own.', 'Block pattern content', 'inclusive' ); ?></strong></p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph -->
+					<p><?php echo _x( 'You can change the image by selecting the block and clicking "Replace".', 'Block pattern content', 'inclusive' ); ?></p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph {"className":"is-style-inclusive-rounded-corner-paragraph","backgroundColor":"secondary"} -->
+					<p class="is-style-inclusive-rounded-corner-paragraph has-secondary-background-color has-background"><?php echo _x( 'This paragraph block uses the secondary background color and the "Rounded corners" style.', 'Block pattern content', 'inclusive' ); ?></p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph -->
+					<p><?php echo _x( 'Did you know that you can adjust how wide you want your columns to be?', 'Block pattern content', 'inclusive' ); ?></p>
+					<!-- /wp:paragraph --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->
+					'><?php esc_html_e( 'Copy block code', 'inclusive' ); ?></a>
 					<div class="success" aria-hidden="true"><?php esc_html_e( 'Copied!', 'inclusive' ); ?></div>
 				</li>
 				<li>
 					<h3><?php esc_html_e( 'Event list', 'inclusive' ); ?></h3><br>
 					<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/eventlist-preview.png' ) ); ?>" alt="<?php esc_attr_e( 'A preview of an event list with descriptions, date, live stream buttons, and separators between each event.', 'inclusive' ); ?>" width="400"><br>
-					<?php esc_html_e( 'Code:', 'inclusive' ); ?>
-					<br>
-					<div id="inclusive-eventlist-preview">
-						<code>
-							&lt;!-- wp:group --&gt;
-							&lt;div class="wp-block-group"&gt;&lt;div class="wp-block-group__inner-container"&gt;&lt;!-- wp:columns {"verticalAlignment":"top","align":"full"} --&gt;
-							&lt;div class="wp-block-columns alignfull are-vertically-aligned-top"&gt;&lt;!-- wp:column {"verticalAlignment":"top","width":70} --&gt;
-							&lt;div class="wp-block-column is-vertically-aligned-top" style="flex-basis:70%"&gt;&lt;!-- wp:paragraph --&gt;
-							&lt;p&gt;&lt;strong&gt;<?php echo _x( 'June 4', 'Block pattern content', 'inclusive' ); ?>&lt;/strong&gt; <?php echo _x( 'WordCamp Europe Online', 'Block pattern content', 'inclusive' ); ?>&lt;/p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/div&gt;
-							&lt;!-- /wp:column --&gt;
-							&lt;!-- wp:column {"verticalAlignment":"top"} --&gt;
-							&lt;div class="wp-block-column is-vertically-aligned-top"&gt;&lt;!-- wp:button --&gt;
-							&lt;div class="wp-block-button"&gt;&lt;a class="wp-block-button__link" href="#"&gt;<?php echo _x( 'View Live Stream', 'Block pattern content', 'inclusive' ); ?>&lt;/a&gt;&lt;/div&gt;
-							&lt;!-- /wp:button --&gt;&lt;/div&gt;
-							&lt;!-- /wp:column --&gt;&lt;/div&gt;
-							&lt;!-- /wp:columns --&gt;
-							&lt;!-- wp:separator {"className":"is-style-wide"} --&gt;
-							&lt;hr class="wp-block-separator is-style-wide"/&gt;
-							&lt;!-- /wp:separator --&gt;&lt;/div&gt;&lt;/div&gt;
-							&lt;!-- /wp:group --&gt;
+					<br><a class="button button-primary inclusive-copy" data-clipboard-text='
+					<!-- wp:group -->
+					<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns {"verticalAlignment":"top","align":"full"} -->
+					<div class="wp-block-columns alignfull are-vertically-aligned-top"><!-- wp:column {"verticalAlignment":"top","width":100} -->
+					<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:100%"><!-- wp:paragraph --><?php echo _x( '<p><strong>June 4, </strong> WordCamp Europe Online</p>', 'Block pattern content', 'inclusive' ); ?><!-- /wp:paragraph --></div>
+					<!-- /wp:column -->
 
-							&lt;!-- wp:group --&gt;
-							&lt;div class="wp-block-group"&gt;&lt;div class="wp-block-group__inner-container"&gt;&lt;!-- wp:columns {"verticalAlignment":"top","align":"full"} --&gt;
-							&lt;div class="wp-block-columns alignfull are-vertically-aligned-top"&gt;&lt;!-- wp:column {"verticalAlignment":"top","width":70} --&gt;
-							&lt;div class="wp-block-column is-vertically-aligned-top" style="flex-basis:70%"&gt;&lt;!-- wp:paragraph --&gt;
-							&lt;p&gt;&lt;strong&gt;<?php echo _x( 'June 5', 'Block pattern content', 'inclusive' ); ?>&lt;/strong&gt; <?php echo _x( 'WordCamp Europe Online', 'Block pattern content', 'inclusive' ); ?>&lt;/p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/div&gt;
-							&lt;!-- /wp:column --&gt;
-							&lt;!-- wp:column {"verticalAlignment":"top"} --&gt;
-							&lt;div class="wp-block-column is-vertically-aligned-top"&gt;&lt;!-- wp:button --&gt;
-							&lt;div class="wp-block-button"&gt;&lt;a class="wp-block-button__link" href="#"&gt;<?php echo _x( 'View Live Stream', 'Block pattern content', 'inclusive' ); ?>&lt;/a&gt;&lt;/div&gt;
-							&lt;!-- /wp:button --&gt;&lt;/div&gt;
-							&lt;!-- /wp:column --&gt;&lt;/div&gt;
-							&lt;!-- /wp:columns --&gt;
-							&lt;!-- wp:separator {"className":"is-style-wide"} --&gt;
-							&lt;hr class="wp-block-separator is-style-wide"/&gt;
-							&lt;!-- /wp:separator --&gt;&lt;/div&gt;&lt;/div&gt;
-							&lt;!-- /wp:group --&gt;
+					<!-- wp:column {"verticalAlignment":"top"} -->
+					<div class="wp-block-column is-vertically-aligned-top"><!-- wp:button -->
+					<div class="wp-block-button"><a class="wp-block-button__link" href="#"><?php echo _x( 'View Live Stream', 'Block pattern content', 'inclusive' ); ?></a></div>
+					<!-- /wp:button --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->
 
-							&lt;!-- wp:group --&gt;
-							&lt;div class="wp-block-group"&gt;&lt;div class="wp-block-group__inner-container"&gt;&lt;!-- wp:columns {"verticalAlignment":"top","align":"full"} --&gt;
-							&lt;div class="wp-block-columns alignfull are-vertically-aligned-top"&gt;&lt;!-- wp:column {"verticalAlignment":"top","width":70} --&gt;
-							&lt;div class="wp-block-column is-vertically-aligned-top" style="flex-basis:70%"&gt;&lt;!-- wp:paragraph --&gt;
-							&lt;p&gt;&lt;strong&gt;<?php echo _x( 'June 6', 'Block pattern content', 'inclusive' ); ?>&lt;/strong&gt; <?php echo _x( 'WordCamp Europe Online', 'Block pattern content', 'inclusive' ); ?>&lt;/p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/div&gt;
-							&lt;!-- /wp:column --&gt;
-							&lt;!-- wp:column {"verticalAlignment":"top"} --&gt;
-							&lt;div class="wp-block-column is-vertically-aligned-top"&gt;&lt;!-- wp:button --&gt;
-							&lt;div class="wp-block-button"&gt;&lt;a class="wp-block-button__link" href="#"&gt;<?php echo _x( 'View Live Stream', 'Block pattern content', 'inclusive' ); ?>&lt;/a&gt;&lt;/div&gt;
-							&lt;!-- /wp:button --&gt;&lt;/div&gt;
-							&lt;!-- /wp:column --&gt;&lt;/div&gt;
-							&lt;!-- /wp:columns --&gt;
-							&lt;!-- wp:separator {"className":"is-style-wide"} --&gt;
-							&lt;hr class="wp-block-separator is-style-wide"/&gt;
-							&lt;!-- /wp:separator --&gt;&lt;/div&gt;&lt;/div&gt;
-							&lt;!-- /wp:group --&gt;
-						</code>
-					</div>
-					<br><a class="button button-primary inclusive-copy" data-clipboard-target="#inclusive-eventlist-preview"><?php esc_html_e( 'Copy', 'inclusive' ); ?></a>
+					<!-- wp:separator {"className":"is-style-wide"} -->
+					<hr class="wp-block-separator is-style-wide"/>
+					<!-- /wp:separator --></div></div>
+					<!-- /wp:group -->
+
+					<!-- wp:group -->
+					<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns {"verticalAlignment":"top","align":"full"} -->
+					<div class="wp-block-columns alignfull are-vertically-aligned-top"><!-- wp:column {"verticalAlignment":"top","width":100} -->
+					<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:100%"><!-- wp:paragraph -->
+					<?php echo _x( '<p><strong>June 5, </strong> WordCamp Europe Online</p>', 'Block pattern content', 'inclusive' ); ?><!-- /wp:paragraph --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"verticalAlignment":"top"} -->
+					<div class="wp-block-column is-vertically-aligned-top"><!-- wp:button -->
+					<div class="wp-block-button"><a class="wp-block-button__link" href="#"><?php echo _x( 'View Live Stream', 'Block pattern content', 'inclusive' ); ?></a></div>
+					<!-- /wp:button --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->
+
+					<!-- wp:separator {"className":"is-style-wide"} -->
+					<hr class="wp-block-separator is-style-wide"/>
+					<!-- /wp:separator --></div></div>
+					<!-- /wp:group -->
+
+					<!-- wp:group -->
+					<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:columns {"verticalAlignment":"top","align":"full"} -->
+					<div class="wp-block-columns alignfull are-vertically-aligned-top"><!-- wp:column {"verticalAlignment":"top","width":100} -->
+					<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:100%"><!-- wp:paragraph -->
+					<?php echo _x( '<p><strong>June 6, </strong> WordCamp Europe Online</p>', 'Block pattern content', 'inclusive' ); ?><!-- /wp:paragraph --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"verticalAlignment":"top"} -->
+					<div class="wp-block-column is-vertically-aligned-top"><!-- wp:button -->
+					<div class="wp-block-button"><a class="wp-block-button__link" href="#"><?php echo _x( 'View Live Stream', 'Block pattern content', 'inclusive' ); ?></a></div>
+					<!-- /wp:button --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->
+					<!-- wp:separator {"className":"is-style-wide"} -->
+					<hr class="wp-block-separator is-style-wide"/>
+					<!-- /wp:separator --></div></div>
+					<!-- /wp:group -->
+					'><?php esc_html_e( 'Copy block code', 'inclusive' ); ?></a>
 					<div class="success" aria-hidden="true"><?php esc_html_e( 'Copied!', 'inclusive' ); ?></div>
 				</li>
 			<ul>
@@ -239,7 +262,8 @@ class Admin {
 					<br><br>
 					<?php
 					if ( ! class_exists( 'WooCommerce' ) ) {
-						esc_html_e( 'If you would like to add an online store, please install and activate WooCommerce.', 'inclusive' ); ?>
+						esc_html_e( 'If you would like to add an online store, please install and activate WooCommerce.', 'inclusive' );
+						?>
 						<br><a class="button button-primary button-hero load-customize" href="<?php echo esc_url( 'https://wordpress.org/plugins/woocommerce/' ); ?>"><?php esc_html_e( 'WooCommerce', 'inclusive' ); ?></a>
 						<br><br>
 						<?php
@@ -263,5 +287,4 @@ class Admin {
 		</div>
 		<?php
 	}
-
 }

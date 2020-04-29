@@ -217,7 +217,7 @@ class Theme_Support {
 		// Has the text been hidden?
 		if ( ! display_header_text() ) {
 			?>
-			.site-title {
+			.site-title a {
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}

@@ -26,27 +26,26 @@ class Block_Styles {
 	private static $block_styles_added = [];
 
 	/**
+	 * A string containing all blocks styles
+	 *
+	 * @static
+	 * @access private
+	 * @since 3.0.0
+	 * @var string
+	 */
+	private static $footer_block_styles = '';
+
+	/**
 	 * Constructor.
 	 *
 	 * @since 1.0.0
 	 * @access public
 	 */
 	public function __construct() {
-
 		add_action( 'wp_enqueue_scripts', [ $this, 'action_dequeue_scripts' ] );
-
-		/**
-		 * Use a filter to figure out which blocks are used.
-		 * We'll use this to populate the $blocks property of this object
-		 * and enque the CSS needed for them.
-		 */
 		add_filter( 'render_block', [ $this, 'filter_add_inline_styles' ], 10, 2 );
-		add_filter( 'render_block', [ $this, 'filter_cover_styles' ], 10, 2 );
-
-		/**
-		 * Add admin styles for blocks.
-		 */
 		add_action( 'enqueue_block_assets', [ $this, 'enqueue_block_assets' ] );
+		add_action( 'wp_footer', [ $this, 'action_add_footer_styles' ] );
 	}
 
 	/**
@@ -74,7 +73,7 @@ class Block_Styles {
 			'core/latest-comments',
 			'core/latest-posts',
 			'core/media-text',
-			// 'core/navigation-link', placed inside core/navigation.min.css
+			// 'core/navigation-link' is now placed inside core/navigation.min.css
 			'core/navigation',
 			'core/paragraph',
 			'core/preformatted',
@@ -120,9 +119,10 @@ class Block_Styles {
 	 */
 	public function filter_add_inline_styles( $block_content, $block ) {
 		$block_attr = $block['attrs'];
+
 		if ( isset( $block_attr['className'] ) ) {
 			$block_classnames = $block_attr['className'];
-			// Add ornament class to block name.
+			// Add the ornament class to block names.
 			if ( strpos( $block_classnames, 'is-style-inclusive-separator-ornament' ) !== false ) {
 				$block['blockName'] = 'core/ornament';
 			}
@@ -138,50 +138,18 @@ class Block_Styles {
 
 				$styles_path = get_theme_file_path( "/assets/css/blocks/{$block['blockName']}.min.css" );
 
+				ob_start();
+
 				if ( file_exists( $styles_path ) ) {
-
-					if ( 'core/navigation' === $block['blockName'] ) {
-						echo '<style id="inclusive-block-styles-' . esc_attr( str_replace( '/', '-', $block['blockName'] ) ) . '">';
-						include $styles_path;
-						echo '</style>';
-					} else {
-						$block_content .= '<style id="incusive-block-styles-' . esc_attr( str_replace( '/', '-', $block['blockName'] ) ) . '">';
-						ob_start();
-						include $styles_path;
-						$block_content .= ob_get_clean();
-						$block_content .= '</style>';
-					}
+					include $styles_path;
 				}
+				self::$footer_block_styles .= ob_get_clean();
 			}
 		}
+
 		return $block_content;
 	}
 
-	/**
-	 * Filters the content of a single block.
-	 *
-	 * Add CSS-Variables (--dimRatio) to the cover block.
-	 *
-	 * @since 1.0.0
-	 * @access public
-	 * @param string $block_content The block content about to be appended.
-	 * @param array  $block         The full block, including name and attributes.
-	 * @return string               Returns $block_content with our modifications.
-	 */
-	public function filter_cover_styles( $block_content, $block ) {
-		if ( 'core/cover' === $block['blockName'] ) {
-			$extra_styles = '';
-			if ( isset( $block['attrs'] ) && isset( $block['attrs']['dimRatio'] ) ) {
-				$extra_styles = '--dimRatio:' . ( absint( $block['attrs']['dimRatio'] ) / 100 ) . ';';
-			}
-			$block_content = str_replace(
-				'style="',
-				'style="' . $extra_styles,
-				$block_content
-			);
-		}
-		return $block_content;
-	}
 
 	/**
 	 * Enqueue block assets.
@@ -223,6 +191,17 @@ class Block_Styles {
 				INCLUSIVE_VERSION
 			);
 		}
+	}
+
+	/**
+	 * Print block styles in the footer.
+	 *
+	 * @access public
+	 * @since 1.0.1
+	 * @return void
+	 */
+	public function action_add_footer_styles() {
+		echo '<style id="inclusive-block-styles">' . wp_strip_all_tags( self::$footer_block_styles ) . '</style>';
 	}
 
 	/**
@@ -279,6 +258,7 @@ class Block_Styles {
 				'name'         => 'inclusive-separator-ornament2',
 				'label'        => __( 'Ornament 2', 'inclusive' ),
 				'inline_style' => '.wp-block-separator.is-style-inclusive-separator-ornament2 {
+					background: #ccc;
 					width: 70px;
 					height: 70px !important;
 					padding-left: 0;
@@ -375,7 +355,7 @@ class Block_Styles {
 					<div class="wp-block-cover has-background-dim inclusive-cover-block-with-large-button" style="background-image:url(' . esc_url( get_theme_file_uri( 'assets/images/flora.png' ) ) . ');background-color:#e3eff5">
 					<div class="wp-block-cover__inner-container">
 					<!-- wp:heading {"align":"center","level":2,"customTextColor":"#000000","className":"is-style-inclusive-text-shadow"} -->
-					<h2 class="has-text-color has-text-align-center is-style-inclusive-text-shadow" style="color:#000000">' . _x( 'Inclusive', 'Theme starter content, theme name', 'inclusive' ) . '</h2>
+					<h2 class="has-text-color has-text-align-center is-style-inclusive-text-shadow" style="color:#000000">' . _x( 'Example heading', 'Theme starter content', 'inclusive' ) . '</h2>
 					<!-- /wp:heading -->
 					<!-- wp:buttons {"align":"center"} -->
 					<div class="wp-block-buttons aligncenter"><!-- wp:button {"className":"is-style-inclusive-large-button"} -->
@@ -450,7 +430,42 @@ class Block_Styles {
 				)
 			);
 
+			register_pattern(
+				'inclusive/presentation',
+				array(
+					'title'   => __( 'Inclusive: Presentation', 'inclusive' ),
+					'content' => '<!-- wp:columns {"align":"wide"} -->
+					<div class="wp-block-columns alignwide"><!-- wp:column {"width":25} -->
+					<div class="wp-block-column" style="flex-basis:25%"><!-- wp:image {"align":"center","id":71,"sizeSlug":"large"} -->
+					<div class="wp-block-image"><figure class="aligncenter size-large"><img src="' . esc_url( get_theme_file_uri( 'assets/images/flora-narrow.png' ) ) . '" alt="' . _x( 'A pencil drawing of three peonies.', 'Block pattern content', 'inclusive' ) . '" class="wp-image-71"/></figure></div>
+					<!-- /wp:image --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"width":74} -->
+					<div class="wp-block-column" style="flex-basis:74%"><!-- wp:heading {"className":"is-style-inclusive-text-shadow","style":{"typography":{"lineHeight":"1.8"}}} -->
+					<h2 class="is-style-inclusive-text-shadow" style="line-height:1.8">' . _x( 'Presentation', 'Block pattern content', 'inclusive' ) . '</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"2"}}} -->
+					<p style="line-height:2"><strong>' . _x(' This is an example place holder text. Edit it to make it your own.', 'Block pattern content', 'inclusive' ) . '</strong></p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph -->
+					<p>' . _x( 'You can change the image by selecting the block and clicking "Replace".', 'Block pattern content', 'inclusive' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph {"className":"is-style-inclusive-rounded-corner-paragraph","backgroundColor":"secondary"} -->
+					<p class="is-style-inclusive-rounded-corner-paragraph has-secondary-background-color has-background">' . _x( 'This paragraph block uses the secondary background color and the "Rounded corners" style.', 'Block pattern content', 'inclusive' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph -->
+					<p>' . _x( 'Did you know that you can adjust how wide you want your columns to be?', 'Block pattern content', 'inclusive' ) . '</p>
+					<!-- /wp:paragraph --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->
+				',
+				)
+			);
 		}
 	}
-
 }

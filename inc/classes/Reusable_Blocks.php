@@ -99,7 +99,7 @@ class Reusable_Blocks {
 				'label'       => esc_html__( 'Select Header Content', 'inclusive' ),
 				'description' => sprintf(
 					/* Translators: %s: URL to the reusable-blocks admin page. */
-					__( 'You can edit or create your header content in the <a href="%s" target="_blank">Reusable Blocks</a> manager.', 'inclusive' ),
+					__( 'You can edit or create your header content in the <a href="%s" target="_blank">Reusable Blocks manager (opens in a new window)</a>.', 'inclusive' ),
 					esc_url_raw( admin_url( 'edit.php?post_type=wp_block' ) )
 				),
 				'choices'     => $choices,
@@ -161,7 +161,7 @@ class Reusable_Blocks {
 				'label'       => esc_html__( 'Select Footer Content', 'inclusive' ),
 				'description' => sprintf(
 					/* Translators: %s: URL to the reusable-blocks admin page. */
-					__( 'You can edit or create your footer content in the <a href="%s" target="_blank">Reusable Blocks</a> manager.', 'inclusive' ),
+					__( 'You can edit or create your footer content in the <a href="%s" target="_blank">Reusable Blocks manager (opens in a new window).</a>', 'inclusive' ),
 					esc_url_raw( admin_url( 'edit.php?post_type=wp_block' ) )
 				),
 				'choices'     => $choices,

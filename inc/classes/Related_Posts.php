@@ -169,7 +169,7 @@ class Related_Posts {
 					<div class="related-posts">
 					<h2><?php echo esc_html( get_theme_mod( 'related_section_heading', __( 'Related Posts', 'inclusive' ) ) ); ?></h2>
 					<?php
-					$cat_post_args = [
+					$cat_post_args       = [
 						'category__in'        => $category_ids,
 						'post__not_in'        => [ $post_id ],
 						'post_type'           => 'post',
@@ -187,8 +187,8 @@ class Related_Posts {
 						<?php
 						if ( has_post_thumbnail() && get_theme_mod( 'show_related_posts_image', true ) && ! post_password_required() ) {
 							?>
-							<figure class="related-posts-image post-thumbnail">
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
+							<figure class="related-posts-image post-thumbnail" aria-hidden="true">
+								<a href="<?php the_permalink(); ?>" tabindex="-1"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
 							</figure>
 							<?php
 						}

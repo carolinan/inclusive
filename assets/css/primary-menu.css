@@ -55,8 +55,8 @@
 /*--------------------------------------------------------------
 # Toggle for the responsive menu
 --------------------------------------------------------------*/
-
 .menu-toggle {
+	display: flex;
 	margin-left: auto;
 	padding: 7px 0.4em 0.4em 0.4em;
 	border-radius: 6px;
@@ -69,6 +69,7 @@
 .menu-toggle .svg-icon {
 	margin-right: 10px;
 	fill: var(--color-link);
+	align-self: center;
 }
 
 .main-navigation .primary-menu {
@@ -262,12 +263,15 @@
 
 	.has-menu-search details.desktop-search {
 		display: flex;
-		margin-top: 18px;
+		position: relative;
+		margin-top: 14px;
+		/*margin-top:8px;*/
 	}
 
 	.has-menu-search details[open] {
 		grid-column: 3 / span 2;
 		float: right;
+		margin-top: 8px;
 	}
 
 	.has-menu-search .desktop-search summary {
@@ -279,8 +283,13 @@
 		display: none;
 	}
 
+	.has-menu-search .desktop-search[open] summary .svg-icon {
+		position: absolute;
+		right: 400px;
+		top: 6px;
+	}
+
 	.has-menu-search .desktop-search form {
-		margin: -2em 0 0 0;
 		float: right;
 		display: none;
 	}
@@ -290,6 +299,7 @@
 	}
 
 	.has-menu-search .desktop-search .search-field {
+		width: 250px;
 		margin-left: 2.5em;
 	}
 

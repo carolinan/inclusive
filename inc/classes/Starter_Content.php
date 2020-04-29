@@ -9,7 +9,7 @@
 namespace Inclusive;
 
 /**
- * Starter Content
+ * Starter Content for fresh sites.
  *
  * @since 1.0.0
  */
@@ -31,42 +31,42 @@ class Starter_Content {
 	public function action_starter_content_theme_support() {
 		add_theme_support(
 			'starter-content',
-			array(
+			[
 				// Default to a static front page and assign the front and posts pages.
-				'options' => array(
+				'options'   => [
 					'show_on_front'  => 'page',
 					'page_on_front'  => '{{front}}',
 					'page_for_posts' => '{{blog}}',
-				),
-				'nav_menus' => array(
-					'menu-1' => array(
+				],
+				'nav_menus' => [
+					'menu-1' => [
 						'name'  => __( 'Primary', 'inclusive' ),
-						'items' => array(
+						'items' => [
 							'page_news',
 							'page_about',
 							'page_contact',
-						),
-					),
-					'social' => array(
+						],
+					],
+					'social' => [
 						'name'  => __( 'Social', 'inclusive' ),
-						'items' => array(
+						'items' => [
 							'link_facebook',
 							'link_twitter',
 							'link_instagram',
-						),
-					),
-				),
-				'posts' => array(
+						],
+					],
+				],
+				'posts'     => [
 					'about',
 					'contact',
 					'blog',
 					'news',
-					'front' => array(
+					'front' => [
 						'post_type'    => 'page',
 						'post_title'   => _x( 'Example homepage with blocks', 'Theme starter content', 'inclusive' ),
 						'post_content' => join(
 							'',
-							array(
+							[
 								'<!-- wp:columns {"align":"wide"} -->
 								<div class="wp-block-columns alignwide"><!-- wp:column {"width":58} -->
 								<div class="wp-block-column" style="flex-basis:58%">
@@ -85,7 +85,7 @@ class Starter_Content {
 								<!-- /wp:paragraph -->
 
 								<!-- wp:heading {"align":"center","level":2,"customTextColor":"#000000","className":"is-style-inclusive-text-shadow"} -->
-								<h2 class="has-text-color has-text-align-center is-style-inclusive-text-shadow" style="color:#000000">' . _x( 'Inclusive', 'Theme starter content, theme name', 'inclusive' ) . '</h2>
+								<h2 class="has-text-color has-text-align-center is-style-inclusive-text-shadow" style="color:#000000">' . _x( 'Example heading', 'Theme starter content, theme name', 'inclusive' ) . '</h2>
 								<!-- /wp:heading -->
 
 								<!-- wp:buttons {"align":"center"} -->
@@ -139,14 +139,14 @@ class Starter_Content {
 								<div class="wp-block-column"><!-- wp:paragraph -->
 								<p>' . _x( 'Suspendisse ullamcorper risus sit amet massa consectetur lobortis. Pellentesque non nisi nec lorem sodales cursus. 
 								Pellentesque vitae pretium tellus. Nullam vulputate, ipsum ut sodales accumsan, nunc est euismod magna, 
-								a rutrum neque tortor vitae nisi. ', 'Theme starter content -Lorem Ipsum, do not translate.', 'inclusive' ) . '</p>
+								a rutrum neque tortor vitae nisi. ', 'Theme starter content -Lorem Ipsum.', 'inclusive' ) . '</p>
 								<!-- /wp:paragraph --></div>
 								<!-- /wp:column -->
 
 								<!-- wp:column -->
 								<div class="wp-block-column"><!-- wp:paragraph -->
 								<p>' . _x( 'In hac habitasse platea dictumst. Integer eu purus quis lectus cursus feugiat feugiat aliquam purus. 
-								Ut fermentum nunc purus, vitae ultricies ipsum vehicula et.', 'Theme starter content -Lorem Ipsum, do not translate.', 'inclusive' ) . '</p>
+								Ut fermentum nunc purus, vitae ultricies ipsum vehicula et.', 'Theme starter content -Lorem Ipsum.', 'inclusive' ) . '</p>
 								<!-- /wp:paragraph --></div>
 								<!-- /wp:column --></div>
 								<!-- /wp:columns -->
@@ -214,23 +214,19 @@ For nineteen years I have remembered you.', 'Theme starter content', 'inclusive'
 								<hr class="wp-block-separator is-style-inclusive-separator-ornament1"/>
 								<!-- /wp:separator -->
 								',
-							)
+							]
 						),
-					),
-				),
-				'widgets'       => array(
+					],
+				],
+				'widgets'   => [
 					// Place three core-defined widgets in the footer area.
-					'sidebar-1' => array(
+					'sidebar-1' => [
 						'text_business_info',
 						'text_about',
 						'search',
-					),
-
-				),
-			)
+					],
+				],
+			]
 		);
-
 	}
 }
-
-

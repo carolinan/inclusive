@@ -1,7 +1,7 @@
 .widget_recent_entries ul {
 	list-style: none;
 	list-style-type: none;
-	margin: 0;
+	margin: 0 0 0 0.5em;
 	padding: 0;
 }
 
