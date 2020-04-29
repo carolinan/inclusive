@@ -141,7 +141,7 @@ class Block_Styles {
 				ob_start();
 
 				if ( file_exists( $styles_path ) ) {
-					include $styles_path;
+					include $styles_path; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 				}
 				self::$footer_block_styles .= ob_get_clean();
 			}
@@ -201,14 +201,19 @@ class Block_Styles {
 	 * @return void
 	 */
 	public function action_add_footer_styles() {
-		echo '<style id="inclusive-block-styles">' . wp_strip_all_tags( self::$footer_block_styles ) . '</style>';
+		/** Stripping tags is enough to escape the content in the CSS files. */
+		echo '<style id="inclusive-block-styles">' . wp_strip_all_tags( self::$footer_block_styles ) . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
 	 * Add custom block styles for core blocks.
+	 * Note to reviewer: Registering block styles is allowed. Registering blocks are not <3
+	 *
+	 * @access public
+	 * @since 1.0.0
 	 */
 	public static function register_custom_block_styles() {
-		register_block_style(
+		register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
 			'core/gallery',
 			array(
 				'name'         => 'inclusive-hide-caption',
@@ -217,7 +222,7 @@ class Block_Styles {
 			)
 		);
 
-		register_block_style(
+		register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
 			'core/gallery',
 			array(
 				'name'         => 'inclusive-gallery-rounded',
@@ -226,7 +231,7 @@ class Block_Styles {
 			)
 		);
 
-		register_block_style(
+		register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
 			'core/separator',
 			array(
 				'name'         => 'inclusive-separator-ornament1',
@@ -252,7 +257,7 @@ class Block_Styles {
 			)
 		);
 
-		register_block_style(
+		register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
 			'core/separator',
 			array(
 				'name'         => 'inclusive-separator-ornament2',
@@ -278,7 +283,7 @@ class Block_Styles {
 			)
 		);
 
-		register_block_style(
+		register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
 			'core/button',
 			array(
 				'name'         => 'inclusive-large-button',
@@ -289,7 +294,7 @@ class Block_Styles {
 			)
 		);
 
-		register_block_style(
+		register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
 			'core/paragraph',
 			array(
 				'name'         => 'inclusive-rounded-corner-paragraph',
@@ -300,7 +305,7 @@ class Block_Styles {
 			)
 		);
 
-		register_block_style(
+		register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
 			'core/paragraph',
 			array(
 				'name'         => 'inclusive-box-shadow',
@@ -313,7 +318,7 @@ class Block_Styles {
 			)
 		);
 
-		register_block_style(
+		register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
 			'core/paragraph',
 			array(
 				'name'         => 'inclusive-border',
@@ -325,7 +330,7 @@ class Block_Styles {
 			)
 		);
 
-		register_block_style(
+		register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
 			'core/heading',
 			array(
 				'name'         => 'inclusive-text-shadow',
@@ -447,7 +452,7 @@ class Block_Styles {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"2"}}} -->
-					<p style="line-height:2"><strong>' . _x(' This is an example place holder text. Edit it to make it your own.', 'Block pattern content', 'inclusive' ) . '</strong></p>
+					<p style="line-height:2"><strong>' . _x( 'This is an example placeholder text. Edit it to make it your own.', 'Block pattern content', 'inclusive' ) . '</strong></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph -->
