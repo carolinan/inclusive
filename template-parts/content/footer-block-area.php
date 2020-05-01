@@ -21,6 +21,6 @@ if ( get_theme_mod( 'footer_content', 0 ) !== 0 ) {
 			the_content();
 			echo '</div>';
 		}
-		wp_reset_postdata();
 	}
+	wp_reset_postdata();
 }
