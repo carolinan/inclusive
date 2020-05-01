@@ -103,8 +103,7 @@
 	border: none;
 	flex-shrink: 0;
 	background: #fff;
-	padding-top: 8px;
-	padding-bottom: 0;
+	padding: 8px 0.8em 0 0.8em;
 	transition: box-shadow 0.3s ease-in-out;
 }
 

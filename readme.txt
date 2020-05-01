@@ -42,6 +42,10 @@ Some layout features are not supported by Opera Mini.
 
 
 == Change log ==
+Version 1.0.2
+Fixed an issue with the query reset for the reusable blocks.
+Slight increase of the clickable area for toggle buttons in the responsive menu.
+
 Version 1.0.1
 Updated PHP requirements.
 Updated the menu search.
