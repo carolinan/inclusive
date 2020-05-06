@@ -6,9 +6,9 @@
  * @since 1.0.0
  */
 
-if ( has_custom_logo()
-	|| get_theme_mod( 'show_header_title', false ) === true
-	|| get_theme_mod( 'show_tagline', false ) === true ) {
+if ( has_custom_logo() ||
+	get_theme_mod( 'show_header_title', false ) === true ||
+	get_theme_mod( 'show_tagline', false ) === true ) {
 
 	$inclusive_description = get_bloginfo( 'description', 'display' );
 	?>

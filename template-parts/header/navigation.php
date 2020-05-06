@@ -11,20 +11,17 @@
 	<div class="menu-extras">
 		<?php
 		if ( get_theme_mod( 'menu_logo', false ) === true && has_custom_logo() ) {
-			$image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) );
-			// The alt attribute has been left blank on purpose.
-			echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="menu-custom-logo-link" rel="home"><img src="' . esc_url( $image[0] ) . '" width="40px" alt="" class="custom-logo"></a>';
+			$inclusive_logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) );
+			// Note: Home is used as a link text here, not as a way to describe the image.
+			echo '<a href="' , esc_url( home_url( '/' ) ) , '" class="menu-custom-logo-link" rel="home"><img src="' , esc_url( $inclusive_logo[0] ) , '" width="40px" alt="' , esc_attr_e( 'Home', 'inclusive' ) , '" class="custom-logo"></a>';
 		}
 
 		if ( display_header_text() ) {
-			echo '<div class="menu-title">';
-			echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo '</div>';
+			echo '<div class="menu-title"><a href="' , esc_url( home_url( '/' ) ) , '" rel="home">' , wp_kses_post( get_bloginfo( 'name' ) ) , '</a></div>';
 		}
 		?>
 
-		<button class="menu-toggle" aria-label="<?php esc_attr_e( 'Open menu', 'inclusive' ); ?>" 
-		onClick="ToggleButtonClick('toggle-primary')" data-uid="toggle-primary" aria-controls="primary-menu" aria-expanded="false">
+		<button class="menu-toggle" aria-label="<?php esc_attr_e( 'Open menu', 'inclusive' ); ?>" onClick="ToggleButtonClick('toggle-primary')" data-uid="toggle-primary" aria-controls="primary-menu" aria-expanded="false">
 		<?php
 		if ( Inclusive\Icons::nav_menu_button_icon() ) {
 			echo Inclusive\Icons::nav_menu_button_icon(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -55,7 +52,7 @@
 			<?php get_search_form(); ?>
 		</details>
 		<?php
-		echo '<div class="mobile-search">' . get_search_form( false ) . '</div>';
+		echo '<div class="mobile-search">' , get_search_form( false ) , '</div>';
 	}
 	?>
 </nav><!-- #site-navigation -->

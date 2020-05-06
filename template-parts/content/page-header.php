@@ -9,17 +9,13 @@
 if ( is_404() ) {
 	?>
 	<header class="page-header">
-		<h1 class="page-title">
-			<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'inclusive' ); ?>
-		</h1>
+		<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'inclusive' ); ?></h1>
 	</header><!-- .page-header -->
 	<?php
 } elseif ( is_home() && ! have_posts() ) {
 	?>
 	<header class="page-header">
-		<h1 class="page-title">
-			<?php esc_html_e( 'Nothing Found', 'inclusive' ); ?>
-		</h1>
+		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'inclusive' ); ?></h1>
 	</header><!-- .page-header -->
 	<?php
 } elseif ( is_search() ) {

@@ -9,7 +9,7 @@
 ?>
 <div class="entry-meta">
 	<?php
-	/* Translators: Used before tag names */
+	/* translators: Used before tag names */
 	$separator = ' ' . get_theme_mod( 'tag_separator', __( '#', 'inclusive' ) );
 
 	$tags_list = get_the_tag_list( esc_html( $separator ), esc_html( $separator ), '' );

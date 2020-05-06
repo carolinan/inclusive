@@ -177,11 +177,11 @@ class Related_Posts {
 						'post_status'         => 'publish',
 						'ignore_sticky_posts' => true,
 					];
-					$related_posts_query = new WP_Query( $cat_post_args );
+					$inclusive_related_posts_query = new WP_Query( $cat_post_args );
 
-					while ( $related_posts_query->have_posts() ) {
+					while ( $inclusive_related_posts_query->have_posts() ) {
 						echo '<div class="related-posts-entries">';
-						$related_posts_query->the_post();
+						$inclusive_related_posts_query->the_post();
 						?>
 						<h3 class="related-posts-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<?php

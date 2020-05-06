@@ -88,7 +88,7 @@ class Post_Options {
 			'show_author',
 			array(
 				'type'        => 'checkbox',
-				'label'       => __( 'Show "Written by" And [author name]".', 'inclusive' ),
+				'label'       => __( 'Show "Written by" and [author name]".', 'inclusive' ),
 				'description' => __( 'Show or hide the text and the author name below the title. ', 'inclusive' ),
 				'section'     => 'post_options',
 			)

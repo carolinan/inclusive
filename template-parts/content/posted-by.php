@@ -72,7 +72,7 @@ if ( ! empty( $time_string ) && is_single() && get_theme_mod( 'show_date', true 
 
 		if ( ! empty( $updated_time_string ) && get_theme_mod( 'show_latest_update', false ) === true ) {
 			echo '&nbsp; ';
-			/* Translators: %s: Date and time of last update. */
+			/* translators: %s: Date and time of last update. */
 			$updated_on = __( 'Updated %s', 'inclusive' );
 			printf(
 				$updated_on, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

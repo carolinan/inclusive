@@ -7,19 +7,17 @@
  */
 
 if ( get_theme_mod( 'footer_content', 0 ) !== 0 ) {
-	$query = new WP_Query(
+	$inclusive_footer_block_query = new WP_Query(
 		[
 			'p'         => get_theme_mod( 'footer_content' ),
 			'post_type' => 'wp_block',
 		]
 	);
 
-	if ( $query->have_posts() ) {
-		while ( $query->have_posts() ) {
-			$query->the_post();
-			echo '<div class="entry-content">';
-			the_content();
-			echo '</div>';
+	if ( $inclusive_footer_block_query->have_posts() ) {
+		while ( $inclusive_footer_block_query->have_posts() ) {
+			$inclusive_footer_block_query->the_post();
+			echo '<div class="entry-content">', the_content(), '</div>';
 		}
 	}
 	wp_reset_postdata();

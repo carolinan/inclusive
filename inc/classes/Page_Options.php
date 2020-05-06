@@ -55,7 +55,7 @@ class Page_Options {
 			'page_show_author',
 			[
 				'type'        => 'checkbox',
-				'label'       => __( 'Show "Written by" And [author name]".', 'inclusive' ),
+				'label'       => __( 'Show "Written by" and [author name]".', 'inclusive' ),
 				'description' => __( 'Show or hide the text and the author name below the title. ', 'inclusive' ),
 				'section'     => 'page_options',
 			]

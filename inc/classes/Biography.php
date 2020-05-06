@@ -187,14 +187,10 @@ class Biography {
 
 		echo '<div class="author-info">';
 		if ( get_theme_mod( 'gravatar_style', 'circle' ) !== 'hide' ) {
-			echo '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">';
-			echo get_avatar( get_the_author_meta( 'ID' ), '90' );
-			echo '</a>';
+			echo '<a href="' , esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) , '">', get_avatar( get_the_author_meta( 'ID' ), '90' ) , '</a>';
 		}
 
-		echo '<h2 class="entry-title">';
-		the_author_posts_link();
-		echo '</h2>';
+		echo '<h2 class="entry-title">' , the_author_posts_link() , '</h2>';
 
 		echo '<div class="author-description">';
 		if ( get_theme_mod( 'author_bio', true ) === true ) {
@@ -202,9 +198,7 @@ class Biography {
 		}
 
 		if ( get_theme_mod( 'author_website', true ) === true && get_the_author_meta( 'user_url' ) ) {
-			echo '<p><a href="' . esc_url( get_the_author_meta( 'user_url' ) ) . '">';
-				esc_html_e( 'Visit the authors website', 'inclusive' );
-			echo '</a></p>';
+			echo '<p><a href="' , esc_url( get_the_author_meta( 'user_url' ) ) , '">' , esc_html__( 'Visit the authors website', 'inclusive' ) , '</a></p>';
 		}
 		echo '</div></div>';
 	}

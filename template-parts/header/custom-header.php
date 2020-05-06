@@ -6,11 +6,11 @@
  * @since 1.0.0
  */
 
-if ( get_theme_mod( 'show_header_title', false ) === false
-	&& get_theme_mod( 'show_tagline', false ) === false
-	&& ! has_header_image()
-	&& get_theme_mod( 'header_content', 0 ) === 0
-	&& ! has_custom_logo() ) {
+if ( get_theme_mod( 'show_header_title', false ) === false &&
+	get_theme_mod( 'show_tagline', false ) === false &&
+	! has_header_image() &&
+	get_theme_mod( 'header_content', 0 ) === 0 &&
+	! has_custom_logo() ) {
 	return;
 }
 

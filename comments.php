@@ -25,7 +25,6 @@ Inclusive\Styles::get_template_part( 'content', 'comments', 'assets/css/min/comm
 ?>
 <div id="comments" class="comments-area">
 	<?php
-	// You can start editing here -- including this comment!
 	if ( have_comments() ) {
 		?>
 		<h2 class="comments-title">

@@ -11,10 +11,11 @@
  * because that would leave an empty header tag in the markup.
  */
 if ( is_singular( get_post_type() ) ) {
-	if ( is_front_page() && 'page' === get_option( 'show_on_front' )
-	&& get_theme_mod( 'page_hide_title', true ) === true
-	&& ! has_post_thumbnail()
-	&& get_theme_mod( 'page_show_author', false ) === false ) {
+	if ( is_front_page() &&
+	'page' === get_option( 'show_on_front' ) &&
+	get_theme_mod( 'page_hide_title', true ) === true &&
+	! has_post_thumbnail() &&
+	get_theme_mod( 'page_show_author', false ) === false ) {
 		return;
 	}
 }

@@ -16,9 +16,8 @@ Inclusive\Styles::get_template_part( 'footer', 'css', 'assets/css/min/footer.min
 
 		<?php
 		get_template_part( 'template-parts/content/footer-block-area' );
+		get_sidebar();
 		?>
-
-		<?php get_sidebar(); ?>
 		<div class="site-info">
 			<?php
 			if ( has_nav_menu( 'social' ) ) {

@@ -220,10 +220,7 @@ class Blog_Options {
 
 		if ( get_theme_mod( 'archive_show_continue_reading', true ) === true ) {
 			$more = sprintf(
-				/**
-				* Translators: %1$s: Link to current post.
-				* %3$s: Name of current post. Only visible to screen readers
-				*/
+				// translators: %1$s: Link to current post. %3$s: Name of current post. Only visible to screen readers.
 				'&hellip; <br><a class="more-link" href="%1$s">%2$s<span class="screen-reader-text">%3$s</span></a>',
 				esc_url( get_permalink( get_the_ID() ) ),
 				__( 'Continue reading ', 'inclusive' ),

@@ -44,7 +44,10 @@ Some layout features are not supported by Opera Mini.
 == Change log ==
 Version 1.0.2
 Fixed an issue with the query reset for the reusable blocks.
-Slight increase of the clickable area for toggle buttons in the responsive menu.
+Added a prefix to the queries.
+Slight increase of the clickable area for toggle buttons in the responsive menu. 
+The buttons should now be atleast 44x44 pixels again.
+Fixed the miniature logo link text in the menu.
 
 Version 1.0.1
 Updated PHP requirements.

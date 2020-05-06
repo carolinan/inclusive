@@ -135,7 +135,7 @@ class Meta_Options {
 			[
 				'type'        => 'text',
 				'label'       => __( 'Separator before tags', 'inclusive' ),
-				'description' => __( 'Add an optional separater before the tags. Examples: #, |, / . ', 'inclusive' ),
+				'description' => __( 'Add an optional separator before the tags. Examples: #, |, / . ', 'inclusive' ),
 				'section'     => 'meta_options',
 			]
 		);
