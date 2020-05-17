@@ -69,6 +69,10 @@ Inclusive\Styles::get_template_part( 'content', 'comments', 'assets/css/min/comm
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'inclusive' ); ?></p>
 			<?php
 		}
+	} else {
+		?>
+		<h2 class="comments-title"><?php esc_html_e( 'Be the first to leave a comment', 'inclusive' ); ?> </h2>
+		<?php
 	}
 
 	comment_form();

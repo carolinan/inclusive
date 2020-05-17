@@ -85,7 +85,7 @@ class Starter_Content {
 								<!-- /wp:paragraph -->
 
 								<!-- wp:heading {"align":"center","level":2,"customTextColor":"#000000","className":"is-style-inclusive-text-shadow"} -->
-								<h2 class="has-text-color has-text-align-center is-style-inclusive-text-shadow" style="color:#000000">' . _x( 'Example heading', 'Theme starter content, theme name', 'inclusive' ) . '</h2>
+								<h2 class="has-text-color has-text-align-center is-style-inclusive-text-shadow" style="color:#000000">' . _x( 'Example heading', 'Theme starter content,', 'inclusive' ) . '</h2>
 								<!-- /wp:heading -->
 
 								<!-- wp:buttons {"align":"center"} -->

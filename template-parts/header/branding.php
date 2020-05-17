@@ -31,7 +31,7 @@ if ( has_custom_logo() ||
 			<?php
 		}
 	} else {
-		if ( is_front_page() && is_home() ) {
+		if ( is_front_page() || is_home() ) {
 			the_custom_logo();
 
 			if ( get_theme_mod( 'show_header_title', false ) === true ) {

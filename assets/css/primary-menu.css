@@ -19,6 +19,7 @@
 .main-navigation .menu-title {
 	margin-top: 8px;
 	max-height: 43px;
+	font-size: var(--font-size-regular);
 }
 
 .main-navigation .menu-title a {

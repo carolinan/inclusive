@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Inclusive\n"
-"POT-Creation-Date: 2020-05-17 17:59+0200\n"
+"POT-Creation-Date: 2020-05-17 19:55+0200\n"
 "PO-Revision-Date: 2020-05-03 13:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -46,6 +46,10 @@ msgstr[1] ""
 
 #: comments.php:69
 msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:74
+msgid "Be the first to leave a comment"
 msgstr ""
 
 #: header.php:23
@@ -1457,7 +1461,7 @@ msgid ""
 msgstr ""
 
 #: inc/classes/Starter_Content.php:88
-msgctxt "Theme starter content, theme name"
+msgctxt "Theme starter content,"
 msgid "Example heading"
 msgstr ""
 
@@ -1739,15 +1743,15 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: template-parts/header/navigation.php:24
+#: template-parts/header/navigation.php:28
 msgid "Open menu"
 msgstr ""
 
-#: template-parts/header/navigation.php:29
+#: template-parts/header/navigation.php:33
 msgid "Menu"
 msgstr ""
 
-#: template-parts/header/navigation.php:51
+#: template-parts/header/navigation.php:55
 msgid "Toggle search"
 msgstr ""
 

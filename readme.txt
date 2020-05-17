@@ -51,7 +51,8 @@ Fixed CSS problems.
 Added two new block patterns.
 Updated register_pattern to register_block_pattern due to the name change in Gutenberg.
 Added language file.
-Added Tested up to to style.css
+Updated H1 headings and added a missing H2 heading in the comment area.
+Added "Tested up to" to style.css
 
 Version 1.0.1
 Updated PHP requirements.
