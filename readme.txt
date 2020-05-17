@@ -12,8 +12,8 @@ Inclusive is a theme with a white background and grey, peach and beige accent co
 == Description ==
 Inclusive is a fast, responsive and accessibility-ready theme with full support for the block editor.
 With this theme, you can place blocks not only in your content but also in the footer and header.
-The theme comes with eight custom block styles and four block patterns.
-The block patterns are: Event list, split heading with two colors, a presentation pattern with two columns, and a cover block with a beautiful feminine flower background.
+The theme comes with eight custom block styles and several block patterns.
+The block patterns are: Right or left sidebar, event list, split heading with two colors, a presentation pattern with two columns, and a cover block with a beautiful feminine flower background.
 You can select them in the editor, or copy paste them into your content.
 Inclusive has beautiful typography, purposefully large text size, and a font pairing option so that you don’t need to think about whether your fonts will match.
 The theme’s base colors are white, dark grey and peach with a comfortable contrast between the text and background.
@@ -45,9 +45,13 @@ Some layout features are not supported by Opera Mini.
 Version 1.0.2
 Fixed an issue with the query reset for the reusable blocks.
 Added a prefix to the queries.
-Slight increase of the clickable area for toggle buttons in the responsive menu. 
-The buttons should now be atleast 44x44 pixels again.
+Slight increase of the clickable area for toggle buttons in the responsive menu. The buttons should now be atleast 44x44 pixels again.
 Fixed the miniature logo link text in the menu.
+Fixed CSS problems.
+Added two new block patterns.
+Updated register_pattern to register_block_pattern due to the name change in Gutenberg.
+Added language file.
+Added Tested up to to style.css
 
 Version 1.0.1
 Updated PHP requirements.

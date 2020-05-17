@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Inclusive\n"
-"POT-Creation-Date: 2020-05-03 13:38+0200\n"
+"POT-Creation-Date: 2020-05-17 17:59+0200\n"
 "PO-Revision-Date: 2020-05-03 13:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -130,223 +130,246 @@ msgid "Don't forget to save your changes."
 msgstr ""
 
 #: inc/classes/Admin.php:109
-msgid "Heading with two colors"
+msgid "Left sidebar"
 msgstr ""
 
-#: inc/classes/Admin.php:110
+#: inc/classes/Admin.php:110 inc/classes/Admin.php:139
+#: inc/classes/Admin.php:171
 msgid "A preview of a heading block with two colors, black and dark pink."
 msgstr ""
 
-#: inc/classes/Admin.php:111
+#: inc/classes/Admin.php:125 inc/classes/Admin.php:144
+#: inc/classes/Block_Styles.php:500 inc/classes/Block_Styles.php:520
+msgctxt "Block pattern content"
+msgid "Example -Main column"
+msgstr ""
+
+#: inc/classes/Admin.php:129 inc/classes/Admin.php:148
+#: inc/classes/Block_Styles.php:504 inc/classes/Block_Styles.php:524
+msgctxt "Block pattern content"
+msgid "This is a content placeholder."
+msgstr ""
+
+#: inc/classes/Admin.php:134 inc/classes/Admin.php:166
+#: inc/classes/Admin.php:173 inc/classes/Admin.php:191
+#: inc/classes/Admin.php:228 inc/classes/Admin.php:289
+msgid "Copy block code"
+msgstr ""
+
+#: inc/classes/Admin.php:135 inc/classes/Admin.php:167
+#: inc/classes/Admin.php:174 inc/classes/Admin.php:192
+#: inc/classes/Admin.php:229 inc/classes/Admin.php:290
+msgid "Copied!"
+msgstr ""
+
+#: inc/classes/Admin.php:138
+msgid "Right sidebar"
+msgstr ""
+
+#: inc/classes/Admin.php:170
+msgid "Heading with two colors"
+msgstr ""
+
+#: inc/classes/Admin.php:172
 msgid ""
 "Heading with <span style=\"color:#b6007c\" class=\"has-inline-color\">two "
 "colors</span>"
 msgstr ""
 
-#: inc/classes/Admin.php:112 inc/classes/Admin.php:130
-#: inc/classes/Admin.php:167 inc/classes/Admin.php:228
-msgid "Copy block code"
-msgstr ""
-
-#: inc/classes/Admin.php:113 inc/classes/Admin.php:131
-#: inc/classes/Admin.php:168 inc/classes/Admin.php:229
-msgid "Copied!"
-msgstr ""
-
-#: inc/classes/Admin.php:116
+#: inc/classes/Admin.php:177
 msgid "Cover block with background image, heading and button"
 msgstr ""
 
-#: inc/classes/Admin.php:117
+#: inc/classes/Admin.php:178
 msgid ""
 "A preview of a cover block with a flower background image, a blue overlay, a "
 "heading and a button."
 msgstr ""
 
-#: inc/classes/Admin.php:122 inc/classes/Block_Styles.php:363
+#: inc/classes/Admin.php:183 inc/classes/Block_Styles.php:370
 msgctxt "Theme starter content"
 msgid "Example heading"
 msgstr ""
 
-#: inc/classes/Admin.php:126 inc/classes/Block_Styles.php:367
+#: inc/classes/Admin.php:187 inc/classes/Block_Styles.php:374
 #: inc/classes/Starter_Content.php:93
 msgctxt "Theme starter content"
 msgid "Sign up for our Newsletter"
 msgstr ""
 
-#: inc/classes/Admin.php:134
+#: inc/classes/Admin.php:195
 msgid "Presentation"
 msgstr ""
 
-#: inc/classes/Admin.php:135
+#: inc/classes/Admin.php:196
 msgid "A two column block with an image, a heading and styled paragraphs."
 msgstr ""
 
-#: inc/classes/Admin.php:136
+#: inc/classes/Admin.php:197
 msgid ""
 "A preview of a column block with two colums. The left column has an image "
 "and the right column has a heading and a couple of styled paragraphs."
 msgstr ""
 
-#: inc/classes/Admin.php:141 inc/classes/Block_Styles.php:445
+#: inc/classes/Admin.php:202 inc/classes/Block_Styles.php:452
 msgctxt "Block pattern content"
 msgid "A pencil drawing of three peonies."
 msgstr ""
 
-#: inc/classes/Admin.php:147 inc/classes/Block_Styles.php:451
+#: inc/classes/Admin.php:208 inc/classes/Block_Styles.php:458
 msgctxt "Block pattern content"
 msgid "Presentation"
 msgstr ""
 
-#: inc/classes/Admin.php:151
+#: inc/classes/Admin.php:212
 msgctxt "Block pattern content"
 msgid " This is an example place holder text. Edit it to make it your own."
 msgstr ""
 
-#: inc/classes/Admin.php:155 inc/classes/Block_Styles.php:459
+#: inc/classes/Admin.php:216 inc/classes/Block_Styles.php:466
 msgctxt "Block pattern content"
 msgid ""
 "You can change the image by selecting the block and clicking \"Replace\"."
 msgstr ""
 
-#: inc/classes/Admin.php:159 inc/classes/Block_Styles.php:463
+#: inc/classes/Admin.php:220 inc/classes/Block_Styles.php:470
 msgctxt "Block pattern content"
 msgid ""
 "This paragraph block uses the secondary background color and the \"Rounded "
 "corners\" style."
 msgstr ""
 
-#: inc/classes/Admin.php:163 inc/classes/Block_Styles.php:467
+#: inc/classes/Admin.php:224 inc/classes/Block_Styles.php:474
 msgctxt "Block pattern content"
 msgid "Did you know that you can adjust how wide you want your columns to be?"
 msgstr ""
 
-#: inc/classes/Admin.php:171
+#: inc/classes/Admin.php:232
 msgid "Event list"
 msgstr ""
 
-#: inc/classes/Admin.php:172
+#: inc/classes/Admin.php:233
 msgid ""
 "A preview of an event list with descriptions, date, live stream buttons, and "
 "separators between each event."
 msgstr ""
 
-#: inc/classes/Admin.php:177 inc/classes/Block_Styles.php:382
+#: inc/classes/Admin.php:238 inc/classes/Block_Styles.php:389
 msgctxt "Block pattern content"
 msgid "<p><strong>June 4, </strong> WordCamp Europe Online</p>"
 msgstr ""
 
-#: inc/classes/Admin.php:182 inc/classes/Admin.php:201
-#: inc/classes/Admin.php:220 inc/classes/Block_Styles.php:387
-#: inc/classes/Block_Styles.php:406 inc/classes/Block_Styles.php:425
+#: inc/classes/Admin.php:243 inc/classes/Admin.php:262
+#: inc/classes/Admin.php:281 inc/classes/Block_Styles.php:394
+#: inc/classes/Block_Styles.php:413 inc/classes/Block_Styles.php:432
 msgctxt "Block pattern content"
 msgid "View Live Stream"
 msgstr ""
 
-#: inc/classes/Admin.php:196 inc/classes/Block_Styles.php:401
+#: inc/classes/Admin.php:257 inc/classes/Block_Styles.php:408
 msgctxt "Block pattern content"
 msgid "<p><strong>June 5, </strong> WordCamp Europe Online</p>"
 msgstr ""
 
-#: inc/classes/Admin.php:215 inc/classes/Block_Styles.php:420
+#: inc/classes/Admin.php:276 inc/classes/Block_Styles.php:427
 msgctxt "Block pattern content"
 msgid "<p><strong>June 6, </strong> WordCamp Europe Online</p>"
 msgstr ""
 
-#: inc/classes/Admin.php:235 inc/classes/Admin.php:236
+#: inc/classes/Admin.php:296 inc/classes/Admin.php:297
 msgid "Custom Block Styles"
 msgstr ""
 
-#: inc/classes/Admin.php:237
+#: inc/classes/Admin.php:298
 msgid ""
 "The following custom block styles are available in the editor. You can also "
 "use some of the CSS classes for other blocks, using the \"Additional CSS "
 "class(es)\" option."
 msgstr ""
 
-#: inc/classes/Admin.php:240
+#: inc/classes/Admin.php:301
 msgid "Gallery: Hide captions"
 msgstr ""
 
-#: inc/classes/Admin.php:241
+#: inc/classes/Admin.php:302
 msgid "Gallery: Rounded corners"
 msgstr ""
 
-#: inc/classes/Admin.php:242
+#: inc/classes/Admin.php:303
 msgid "Separator: Ornaments one and two"
 msgstr ""
 
-#: inc/classes/Admin.php:243
+#: inc/classes/Admin.php:304
 msgid "Button: Large"
 msgstr ""
 
-#: inc/classes/Admin.php:244
+#: inc/classes/Admin.php:305
 msgid "Paragraph: Rounced corners (Requires a background color to be visible)"
 msgstr ""
 
-#: inc/classes/Admin.php:245
+#: inc/classes/Admin.php:306
 msgid "Paragraph: Box shadow"
 msgstr ""
 
-#: inc/classes/Admin.php:246
+#: inc/classes/Admin.php:307
 msgid "Paragraph: Border"
 msgstr ""
 
-#: inc/classes/Admin.php:247
+#: inc/classes/Admin.php:308
 msgid "Heading: Text shadow"
 msgstr ""
 
-#: inc/classes/Admin.php:256
+#: inc/classes/Admin.php:317
 msgid "Recommended Plugins"
 msgstr ""
 
-#: inc/classes/Admin.php:259
+#: inc/classes/Admin.php:320
 msgid ""
 "To make use of additional blocks and block patterns, please install and "
 "activate Gutenberg."
 msgstr ""
 
-#: inc/classes/Admin.php:261
+#: inc/classes/Admin.php:322
 msgid "Gutenberg"
 msgstr ""
 
-#: inc/classes/Admin.php:265
+#: inc/classes/Admin.php:326
 msgid ""
 "If you would like to add an online store, please install and activate "
 "WooCommerce."
 msgstr ""
 
-#: inc/classes/Admin.php:267
+#: inc/classes/Admin.php:328
 msgid "WooCommerce"
 msgstr ""
 
-#: inc/classes/Admin.php:277
+#: inc/classes/Admin.php:338
 msgid "Tips for creating an accessible website"
 msgstr ""
 
-#: inc/classes/Admin.php:279
+#: inc/classes/Admin.php:340
 msgid ""
 "Add alt texts to images. You can do this in the media library or by "
 "selecting the image in the edtior."
 msgstr ""
 
-#: inc/classes/Admin.php:280
+#: inc/classes/Admin.php:341
 msgid "Add text alternatives for videos and sound."
 msgstr ""
 
-#: inc/classes/Admin.php:281
+#: inc/classes/Admin.php:342
 msgid ""
 "When adding headings, do not skip heading levels. H2 should be followed by "
 "H3 and so on."
 msgstr ""
 
-#: inc/classes/Admin.php:282
+#: inc/classes/Admin.php:343
 msgid ""
 "Keep your text simple. Paragraphs with more than four lines are more "
 "difficult to read. Use lists and spacing in your content."
 msgstr ""
 
-#: inc/classes/Admin.php:283
+#: inc/classes/Admin.php:344
 msgid "Adding images to posts and pages makes your content easier to remember."
 msgstr ""
 
@@ -421,68 +444,76 @@ msgstr ""
 msgid "Visit the authors website"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:220
+#: inc/classes/Block_Styles.php:227
 msgid "Hide caption"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:229
+#: inc/classes/Block_Styles.php:236
 msgid "Rounded corners"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:238
+#: inc/classes/Block_Styles.php:245
 msgid "Ornament"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:264
+#: inc/classes/Block_Styles.php:271
 msgid "Ornament 2"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:290 inc/classes/Theme_Support.php:160
+#: inc/classes/Block_Styles.php:297 inc/classes/Theme_Support.php:160
 msgid "Large"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:301
+#: inc/classes/Block_Styles.php:308
 msgid "Rounced corners (Requires background color)"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:312
+#: inc/classes/Block_Styles.php:319
 msgid "Box shadow"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:325
+#: inc/classes/Block_Styles.php:332
 msgid "Border"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:337
+#: inc/classes/Block_Styles.php:344
 msgid "Text shadow"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:348
+#: inc/classes/Block_Styles.php:355
 msgid "Inclusive: Heading with two colors"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:351
+#: inc/classes/Block_Styles.php:358
 msgctxt "Block pattern content"
 msgid ""
 "Heading with <span style=\"color:#b6007c\" class=\"has-inline-color\">two "
 "colors</span></h2>"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:358
+#: inc/classes/Block_Styles.php:365
 msgid "Inclusive: Cover block with heading and large button"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:377
+#: inc/classes/Block_Styles.php:384
 msgid "Inclusive: Event list"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:441
+#: inc/classes/Block_Styles.php:448
 msgid "Inclusive: Presentation"
 msgstr ""
 
-#: inc/classes/Block_Styles.php:455
+#: inc/classes/Block_Styles.php:462
 msgctxt "Block pattern content"
 msgid "This is an example placeholder text. Edit it to make it your own."
+msgstr ""
+
+#: inc/classes/Block_Styles.php:485
+msgid "Inclusive: Left sidebar"
+msgstr ""
+
+#: inc/classes/Block_Styles.php:514
+msgid "Inclusive: Right sidebar"
 msgstr ""
 
 #: inc/classes/Blog_Options.php:46
@@ -1636,28 +1667,28 @@ msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content/none.php:37
+#: template-parts/content/none.php:36
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: template-parts/content/none.php:43
+#: template-parts/content/none.php:40
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: template-parts/content/page-header.php:13
+#: template-parts/content/page-header.php:12
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: template-parts/content/page-header.php:21
+#: template-parts/content/page-header.php:18
 msgid "Nothing Found"
 msgstr ""
 
 #. translators: %s: search query
-#: template-parts/content/page-header.php:32
+#: template-parts/content/page-header.php:28
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""

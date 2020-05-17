@@ -90,6 +90,8 @@ class Block_Styles {
 			'core/text-columns',
 			'core/verse',
 			'core/video',
+			// This is a fake block to help me load styles in the editor.
+			'core/sidebar',
 		];
 	}
 
@@ -125,6 +127,11 @@ class Block_Styles {
 			// Add the ornament class to block names.
 			if ( strpos( $block_classnames, 'is-style-inclusive-separator-ornament' ) !== false ) {
 				$block['blockName'] = 'core/ornament';
+			}
+
+			// Add the sidebar class to block names.
+			if ( strpos( $block_classnames, 'is-style-inclusive-sidebar' ) !== false ) {
+				$block['blockName'] = 'core/sidebar';
 			}
 		}
 
@@ -341,8 +348,8 @@ class Block_Styles {
 			)
 		);
 
-		if ( function_exists( 'register_pattern' ) ) {
-			register_pattern(
+		if ( function_exists( 'register_block_pattern' ) ) {
+			register_block_pattern(
 				'inclusive/split-heading',
 				array(
 					'title'   => __( 'Inclusive: Heading with two colors', 'inclusive' ),
@@ -352,7 +359,7 @@ class Block_Styles {
 				)
 			);
 
-			register_pattern(
+			register_block_pattern(
 				'inclusive/cover-block-with-large-button',
 				array(
 					'title'   => __( 'Inclusive: Cover block with heading and large button', 'inclusive' ),
@@ -371,7 +378,7 @@ class Block_Styles {
 				)
 			);
 
-			register_pattern(
+			register_block_pattern(
 				'inclusive/event-list',
 				array(
 					'title'   => __( 'Inclusive: Event list', 'inclusive' ),
@@ -435,7 +442,7 @@ class Block_Styles {
 				)
 			);
 
-			register_pattern(
+			register_block_pattern(
 				'inclusive/presentation',
 				array(
 					'title'   => __( 'Inclusive: Presentation', 'inclusive' ),
@@ -471,6 +478,69 @@ class Block_Styles {
 				',
 				)
 			);
+
+			register_block_pattern(
+				'inclusive/left-sidebar',
+				array(
+					'title'   => __( 'Inclusive: Left sidebar', 'inclusive' ),
+					'content' => '
+						<!-- wp:columns {"align":"full"} -->
+						<div class="wp-block-columns alignfull"><!-- wp:column {"width":20,"className":"is-style-inclusive-sidebar"} -->
+						<div class="wp-block-column is-style-inclusive-sidebar" style="flex-basis:20%"><!-- wp:group {"style":{"color":{"background":"#fafafa"}}} -->
+						<div class="wp-block-group has-background" style="background-color:#fafafa"><div class="wp-block-group__inner-container"><!-- wp:search /-->
+
+						<!-- wp:latest-posts /-->
+
+						<!-- wp:latest-comments {"commentsToShow":3} /--></div></div>
+						<!-- /wp:group --></div>
+						<!-- /wp:column -->
+
+						<!-- wp:column {"width":80,"className":"is-inclusive-main-column"} -->
+						<div class="wp-block-column is-inclusive-main-column" style="flex-basis:80%"><!-- wp:heading {"className":"is-style-inclusive-text-shadow"} -->
+						<h2 class="is-style-inclusive-text-shadow">' . _x( 'Example -Main column', 'Block pattern content', 'inclusive' ) . '</h2>
+						<!-- /wp:heading -->
+
+						<!-- wp:paragraph -->
+						<p><em>' . _x( 'This is a content placeholder.', 'Block pattern content', 'inclusive' ) . '</em></p>
+						<!-- /wp:paragraph -->
+						</div><!-- /wp:column -->
+						</div><!-- /wp:columns -->',
+				)
+			);
+
+			register_block_pattern(
+				'inclusive/right-sidebar',
+				array(
+					'title'   => __( 'Inclusive: Right sidebar', 'inclusive' ),
+					'content' => '
+						<!-- wp:columns {"align":"full"} -->
+						<div class="wp-block-columns alignfull"><!-- wp:column {"width":80,"className":"is-inclusive-main-column"} -->
+						<div class="wp-block-column is-inclusive-main-column" style="flex-basis:80%"><!-- wp:group -->
+						<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:heading {"className":"is-style-inclusive-text-shadow"} -->
+						<h2 class="is-style-inclusive-text-shadow">' . _x( 'Example -Main column', 'Block pattern content', 'inclusive' ) . '</h2>
+						<!-- /wp:heading -->
+
+						<!-- wp:paragraph -->
+						<p><em>' . _x( 'This is a content placeholder.', 'Block pattern content', 'inclusive' ) . '</em></p>
+						<!-- /wp:paragraph -->
+
+						</div></div>
+						<!-- /wp:group --></div>
+						<!-- /wp:column -->
+
+						<!-- wp:column {"width":20,"className":"is-style-inclusive-sidebar is-inclusive-right-sidebar"} -->
+						<div class="wp-block-column is-style-inclusive-sidebar is-inclusive-right-sidebar" style="flex-basis:20%"><!-- wp:group {"style":{"color":{"background":"#fafafa"}}} -->
+						<div class="wp-block-group has-background" style="background-color:#fafafa"><div class="wp-block-group__inner-container"><!-- wp:search /-->
+						
+						<!-- wp:latest-posts /-->
+
+						<!-- wp:latest-comments {"commentsToShow":3} /--></div></div>
+						<!-- /wp:group --></div>
+						<!-- /wp:column --></div>
+						<!-- /wp:columns -->',
+				)
+			);
+
 		}
 	}
 }

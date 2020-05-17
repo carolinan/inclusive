@@ -106,6 +106,67 @@ class Admin {
 			</ol>
 			<ul>
 				<li>
+					<h3><?php esc_html_e( 'Left sidebar', 'inclusive' ); ?></h3><br>
+					<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/left-column-preview.png' ) ); ?>" alt="<?php esc_attr_e( 'A preview of a heading block with two colors, black and dark pink.', 'inclusive' ); ?>" width="300"><br>
+					<br><a class="button button-primary inclusive-copy" data-clipboard-text='
+					<!-- wp:columns {"align":"full"} -->
+						<div class="wp-block-columns alignfull"><!-- wp:column {"width":20,"className":"is-style-inclusive-sidebar"} -->
+						<div class="wp-block-column is-style-inclusive-sidebar" style="flex-basis:20%"><!-- wp:group {"style":{"color":{"background":"#fafafa"}}} -->
+						<div class="wp-block-group has-background" style="background-color:#fafafa"><div class="wp-block-group__inner-container"><!-- wp:search /-->
+
+						<!-- wp:latest-posts /-->
+
+						<!-- wp:latest-comments {"commentsToShow":3} /--></div></div>
+						<!-- /wp:group --></div>
+						<!-- /wp:column -->
+
+						<!-- wp:column {"width":80,"className":"is-inclusive-main-column"} -->
+						<div class="wp-block-column is-inclusive-main-column" style="flex-basis:80%"><!-- wp:heading {"className":"is-style-inclusive-text-shadow"} -->
+						<h2 class="is-style-inclusive-text-shadow"><?php echo _x( 'Example -Main column', 'Block pattern content', 'inclusive' ); ?></h2>
+						<!-- /wp:heading -->
+
+						<!-- wp:paragraph -->
+						<p><em><?php echo _x( 'This is a content placeholder.', 'Block pattern content', 'inclusive' ); ?></em></p>
+						<!-- /wp:paragraph -->
+						</div><!-- /wp:column -->
+						</div><!-- /wp:columns -->
+					'>
+					<?php esc_html_e( 'Copy block code', 'inclusive' ); ?></a>
+					<div class="success" aria-hidden="true"><?php esc_html_e( 'Copied!', 'inclusive' ); ?></div>
+				</li>
+				<li>
+					<h3><?php esc_html_e( 'Right sidebar', 'inclusive' ); ?></h3><br>
+					<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/right-column-preview.png' ) ); ?>" alt="<?php esc_attr_e( 'A preview of a heading block with two colors, black and dark pink.', 'inclusive' ); ?>" width="300"><br>
+					<br><a class="button button-primary inclusive-copy" data-clipboard-text='<!-- wp:columns {"align":"full"} -->
+						<div class="wp-block-columns alignfull"><!-- wp:column {"width":80,"className":"is-inclusive-main-column"} -->
+						<div class="wp-block-column is-inclusive-main-column" style="flex-basis:80%"><!-- wp:group -->
+						<div class="wp-block-group"><div class="wp-block-group__inner-container"><!-- wp:heading {"className":"is-style-inclusive-text-shadow"} -->
+						<h2 class="is-style-inclusive-text-shadow"><?php echo _x( 'Example -Main column', 'Block pattern content', 'inclusive' ); ?></h2>
+						<!-- /wp:heading -->
+
+						<!-- wp:paragraph -->
+						<p><em><?php echo _x( 'This is a content placeholder.', 'Block pattern content', 'inclusive' ); ?></em></p>
+						<!-- /wp:paragraph -->
+
+						</div></div>
+						<!-- /wp:group --></div>
+						<!-- /wp:column -->
+
+						<!-- wp:column {"width":20,"className":"is-style-inclusive-sidebar is-inclusive-right-sidebar"} -->
+						<div class="wp-block-column is-style-inclusive-sidebar is-inclusive-right-sidebar" style="flex-basis:20%"><!-- wp:group {"style":{"color":{"background":"#fafafa"}}} -->
+						<div class="wp-block-group has-background" style="background-color:#fafafa"><div class="wp-block-group__inner-container"><!-- wp:search /-->
+
+						<!-- wp:latest-posts /-->
+
+						<!-- wp:latest-comments {"commentsToShow":3} /--></div></div>
+						<!-- /wp:group --></div>
+						<!-- /wp:column --></div>
+						<!-- /wp:columns -->
+					'>
+					<?php esc_html_e( 'Copy block code', 'inclusive' ); ?></a>
+					<div class="success" aria-hidden="true"><?php esc_html_e( 'Copied!', 'inclusive' ); ?></div>
+				</li>
+				<li>
 					<h3><?php esc_html_e( 'Heading with two colors', 'inclusive' ); ?></h3><br>
 					<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/heading-preview.png' ) ); ?>" alt="<?php esc_attr_e( 'A preview of a heading block with two colors, black and dark pink.', 'inclusive' ); ?>" width="300"><br>
 					<br><a class="button button-primary inclusive-copy" data-clipboard-text='<!-- wp:heading {"level":2,"className":"inclusive-split-heading is-style-inclusive-text-shadow"} --> <h2 class="is-style-inclusive is-style-inclusive-text-shadow"><?php _e( 'Heading with <span style="color:#b6007c" class="has-inline-color">two colors</span>', 'inclusive' ); ?></h2><!-- /wp:heading -->'>
