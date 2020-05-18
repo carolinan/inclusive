@@ -281,3 +281,11 @@
 .wp-block-navigation .wp-block-navigation-link.is-editing.has-child > .block-editor-inner-blocks:focus {
 	background: var(--color-submenu-hover);
 }
+
+.wp-block-navigation.is-vertical > ul {
+	display: block;
+}
+
+.wp-block-navigation.is-vertical .wp-block-navigation-link .wp-block-navigation-link__submenu-icon {
+	position: relative;
+}
