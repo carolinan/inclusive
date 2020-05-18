@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Inclusive\n"
-"POT-Creation-Date: 2020-05-18 12:02+0200\n"
+"POT-Creation-Date: 2020-05-18 12:14+0200\n"
 "PO-Revision-Date: 2020-05-03 13:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -949,7 +949,9 @@ msgid "Site title font size"
 msgstr ""
 
 #: inc/classes/Font_Styles.php:62
-msgid "Adjust the font size using the rem unit."
+msgid ""
+"Note that these setting are applied to the site title in the header area, "
+"not the menu. Adjust the font size using the rem unit."
 msgstr ""
 
 #: inc/classes/Font_Styles.php:62

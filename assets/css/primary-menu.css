@@ -20,6 +20,7 @@
 	margin-top: 8px;
 	max-height: 43px;
 	font-size: var(--font-size-regular);
+	font-weight: 400;
 }
 
 .main-navigation .menu-title a {

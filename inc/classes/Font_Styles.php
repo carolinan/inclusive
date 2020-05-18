@@ -59,7 +59,7 @@ class Font_Styles {
 			'site_title_font_size',
 			[
 				'label'       => __( 'Site title font size', 'inclusive' ),
-				'description' => __( 'Adjust the font size using the rem unit.', 'inclusive' ) . ' ' . __( 'Different fonts may need different sizes to look their best.', 'inclusive' ) . ' ' . __( 'Sizes may also be adjusted for you, depending on screen size.', 'inclusive' ),
+				'description' => __( 'Note that these setting are applied to the site title in the header area, not the menu. Adjust the font size using the rem unit.', 'inclusive' ) . ' ' . __( 'Different fonts may need different sizes to look their best.', 'inclusive' ) . ' ' . __( 'Sizes may also be adjusted for you, depending on screen size.', 'inclusive' ),
 				'section'     => 'font_styles',
 				'type'        => 'number',
 				'input_attrs' => [
@@ -140,13 +140,6 @@ class Font_Styles {
 					'max'  => 2,
 					'step' => 0.1,
 				],
-			]
-		);
-
-		$wp_customize->selective_refresh->add_partial(
-			'menu_font_size',
-			[
-				'selector' => '.entry-title',
 			]
 		);
 
@@ -382,7 +375,7 @@ class Font_Styles {
 		}
 
 		if ( get_theme_mod( 'menu_font_size', '1.25' ) !== '1.25' ) {
-			echo '.main-navigation { font-size:' . esc_html( get_theme_mod( 'menu_font_size' ) ) . 'rem; }';
+			echo '.main-navigation, .main-navigation .menu-extras .menu-title { font-size:' . esc_html( get_theme_mod( 'menu_font_size' ) ) . 'rem; }';
 		}
 
 		if ( get_theme_mod( 'widgetarea_title_font_size', '1.5' ) !== '1.5' ) {
