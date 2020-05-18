@@ -57,7 +57,7 @@ class Editor {
 		$font         = explode( '+', get_theme_mod( 'font_pairing', 'Libre Baskerville+Roboto' ) );
 		$system_fonts = 'BlinkMacSystemFont, -apple-system, Helvetica, Arial, sans-serif';
 		$custom_css   = '';
-		if ( get_theme_mod( 'font_pairing', 'Libre Baskerville+Roboto' ) == 'system' ) {
+		if ( get_theme_mod( 'font_pairing', 'Libre Baskerville+Roboto' ) === 'system' ) {
 			$custom_css .= ' .editor-styles-wrapper > * { font-family: ' . esc_html( $system_fonts ) . ';}';
 		} else {
 			$custom_css .= '.editor-styles-wrapper > * { font-family: ' . esc_html( $font[1] . ', ' . $system_fonts ) . ';} ';

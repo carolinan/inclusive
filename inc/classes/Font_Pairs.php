@@ -73,23 +73,23 @@ class Font_Pairs {
 					'section'     => 'font_options',
 					'type'        => 'select',
 					'choices'     => array(
-						'Libre Baskerville+Roboto'              => '<span style="font-family:\'Libre Baskerville\'; font-size:28px;">' .
+						'Libre Baskerville+Roboto'  => '<span style="font-family:\'Libre Baskerville\'; font-size:28px;">' .
 						__( 'Libre Baskerville for headings', 'inclusive' ) . '</span><br><span class="body-pair" style="font-family:Roboto; font-size:16px;">' .
 						__( 'And Roboto for body text to combine elegant serif and sans-serif fonts.', 'inclusive' ) .
 						'<br>' . __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'inclusive' ) . ' ' .
 						__( 'Default.', 'inclusive' ) . '</span>',
 
-						'Open Sans+Roboto'                       => '<span style="font-family:Open Sans; font-size:28px;">' .
+						'Open Sans+Roboto'          => '<span style="font-family:Open Sans; font-size:28px;">' .
 						__( 'Open Sans for headings', 'inclusive' ) . '</span><br><span class="body-pair" style="font-family:Roboto; font-size:16px;">' .
 						__( 'And Roboto for body text for a clean professional look.', 'inclusive' ) .
 						'<br>' . __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'inclusive' ) . '</span>',
 
-						'Raleway+Montserrat'                  => '<span style="font-family:Raleway; font-size:28px;">' .
+						'Raleway+Montserrat'        => '<span style="font-family:Raleway; font-size:28px;">' .
 						__( 'Raleway for headings', 'inclusive' ) . '</span><br><span class="body-pair" style="font-family:Montserrat; font-size:16px;">' .
 						__( 'And Montserrat for body text for a light and spacious look.', 'inclusive' ) .
 						'<br>' . __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'inclusive' ) . '</span>',
 
-						'Merriweather+Merriweather'              => '<span style="font-family:Merriweather; font-size:28px;">' .
+						'Merriweather+Merriweather' => '<span style="font-family:Merriweather; font-size:28px;">' .
 						__( 'Merriweather for headings', 'inclusive' ) . '</span><br><span class="body-pair" style="font-family:Merriweather; font-size:16px;">' .
 						__( 'As well as for body text for a classic condensed look.', 'inclusive' ) .
 						'<br>' . __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'inclusive' ) . '</span>',
@@ -99,22 +99,22 @@ class Font_Pairs {
 						__( 'As well as for body text for a more personal feel.', 'inclusive' ) . '<br>' .
 						__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'inclusive' ) . '</span>',
 
-						'Roboto Slab+Roboto'                  => '<span style="font-family:\'Roboto Slab\'; font-size:28px;">' .
+						'Roboto Slab+Roboto'        => '<span style="font-family:\'Roboto Slab\'; font-size:28px;">' .
 						__( 'Roboto Slab for headings', 'inclusive' ) . '</span><br><span class="body-pair" style="font-family:Roboto; font-size:16px;">' .
 						__( 'And Roboto for body text for matching serif slab and sans serif fonts.', 'inclusive' ) . '<br>' .
 						__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'inclusive' ) . '</span>',
 
-						'Lora+Oxygen' => '<span style="font-family:Lora; font-size:28px;">' .
+						'Lora+Oxygen'               => '<span style="font-family:Lora; font-size:28px;">' .
 						__( 'Lora for headings', 'inclusive' ) . '</span><br><span class="body-pair" style="font-family:Oxygen; font-size:16px;">' .
 						__( 'And Oxygen for body text is another stunning combination of serif slab and sans serif fonts.', 'inclusive' ) . '<br>' .
 						__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'inclusive' ) . '</span>',
 
-						'Karla+Roboto'                  => '<span style="font-family:Karla; font-size:28px;">' .
+						'Karla+Roboto'              => '<span style="font-family:Karla; font-size:28px;">' .
 						__( 'Karla for headings', 'inclusive' ) . '</span><br><span class="body-pair" style="font-family:Roboto; font-size:16px;">' .
 						__( 'And Roboto for body text for a clean modern look.', 'inclusive' ) . '<br>' .
 						__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'inclusive' ) . '</span>',
 
-						'system'                              => '<span style="font-size:18px;">' .
+						'system'                    => '<span style="font-size:18px;">' .
 						__( 'System fonts', 'inclusive' ) . '</span><br>' .
 						'<span class="body-pair">' .
 						__( 'System fonts are fonts that are already installed on your computer or device. They load faster than fonts that needs to be downloaded.', 'inclusive' ) . '<br>' .
@@ -169,7 +169,7 @@ class Font_Pairs {
 		$font         = explode( '+', get_theme_mod( 'font_pairing', 'Libre Baskerville+Roboto' ) );
 		$system_fonts = 'BlinkMacSystemFont, -apple-system, Helvetica, Arial, sans-serif';
 		echo '<style id="inclusive-font-pairs">';
-		if ( get_theme_mod( 'font_pairing', 'Libre Baskerville+Roboto' ) == 'system' ) {
+		if ( get_theme_mod( 'font_pairing', 'Libre Baskerville+Roboto' ) === 'system' ) {
 			echo 'body{ --global-font-family: ' . esc_html( $system_fonts ) . ';';
 			echo ' --highlight-font-family: ' . esc_html( $system_fonts ) . ';}';
 		} else {

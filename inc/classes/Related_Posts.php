@@ -169,7 +169,7 @@ class Related_Posts {
 					<div class="related-posts">
 					<h2><?php echo esc_html( get_theme_mod( 'related_section_heading', __( 'Related Posts', 'inclusive' ) ) ); ?></h2>
 					<?php
-					$cat_post_args       = [
+					$cat_post_args                 = [
 						'category__in'        => $category_ids,
 						'post__not_in'        => [ $post_id ],
 						'post_type'           => 'post',
@@ -186,10 +186,22 @@ class Related_Posts {
 						<h3 class="related-posts-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<?php
 						if ( has_post_thumbnail() && get_theme_mod( 'show_related_posts_image', true ) && ! post_password_required() ) {
+							// Add a link to the post or page. The alt here is the link text, so it describes the target, not the image.
 							?>
-							<figure class="related-posts-image post-thumbnail" aria-hidden="true">
-								<a href="<?php the_permalink(); ?>" tabindex="-1"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
-							</figure>
+							<a href="<?php the_permalink(); ?>" class="related-posts-image post-thumbnail">
+							<?php
+							the_post_thumbnail(
+								'thumbnail',
+								[
+									'alt' => the_title_attribute(
+										[
+											'echo' => false,
+										]
+									),
+								]
+							);
+							?>
+							</a>
 							<?php
 						}
 						?>

@@ -145,8 +145,7 @@ class Starter_Content {
 
 								<!-- wp:column -->
 								<div class="wp-block-column"><!-- wp:paragraph -->
-								<p>' . _x( 'In hac habitasse platea dictumst. Integer eu purus quis lectus cursus feugiat feugiat aliquam purus. 
-								Ut fermentum nunc purus, vitae ultricies ipsum vehicula et.', 'Theme starter content -Lorem Ipsum.', 'inclusive' ) . '</p>
+								<p>' . _x( 'In hac habitasse platea dictumst. Integer eu purus quis lectus cursus feugiat feugiat aliquam purus. Ut fermentum nunc purus, vitae ultricies ipsum vehicula et.', 'Theme starter content -Lorem Ipsum.', 'inclusive' ) . '</p>
 								<!-- /wp:paragraph --></div>
 								<!-- /wp:column --></div>
 								<!-- /wp:columns -->

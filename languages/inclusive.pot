@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Inclusive\n"
-"POT-Creation-Date: 2020-05-17 19:55+0200\n"
+"POT-Creation-Date: 2020-05-18 12:02+0200\n"
 "PO-Revision-Date: 2020-05-03 13:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -227,7 +227,7 @@ msgstr ""
 
 #: inc/classes/Admin.php:212
 msgctxt "Block pattern content"
-msgid " This is an example place holder text. Edit it to make it your own."
+msgid "This is an example place holder text. Edit it to make it your own."
 msgstr ""
 
 #: inc/classes/Admin.php:216 inc/classes/Block_Styles.php:466
@@ -1133,16 +1133,16 @@ msgstr ""
 msgid "More icon (3 dots)."
 msgstr ""
 
-#: inc/classes/Menus.php:226
+#: inc/classes/Menus.php:225
 msgid ""
 "Desktop only: Display a small version of the logo to the left of the menu."
 msgstr ""
 
-#: inc/classes/Menus.php:227
+#: inc/classes/Menus.php:226
 msgid "Requires a logo. Links to the homepage."
 msgstr ""
 
-#: inc/classes/Menus.php:244
+#: inc/classes/Menus.php:243
 msgid "Display search."
 msgstr ""
 
@@ -1516,31 +1516,31 @@ msgstr ""
 msgctxt "Theme starter content -Lorem Ipsum."
 msgid ""
 "In hac habitasse platea dictumst. Integer eu purus quis lectus cursus "
-"feugiat feugiat aliquam purus. \n"
-"\t\t\t\t\t\t\t\tUt fermentum nunc purus, vitae ultricies ipsum vehicula et."
+"feugiat feugiat aliquam purus. Ut fermentum nunc purus, vitae ultricies "
+"ipsum vehicula et."
 msgstr ""
 
-#: inc/classes/Starter_Content.php:156 inc/classes/Starter_Content.php:160
+#: inc/classes/Starter_Content.php:155 inc/classes/Starter_Content.php:159
 msgctxt "Theme starter content"
 msgid "Button"
 msgstr ""
 
-#: inc/classes/Starter_Content.php:164
+#: inc/classes/Starter_Content.php:163
 msgctxt "Theme starter content"
 msgid "Large Button"
 msgstr ""
 
-#: inc/classes/Starter_Content.php:168
+#: inc/classes/Starter_Content.php:167
 msgctxt "Theme starter content"
 msgid "Gradient Button"
 msgstr ""
 
-#: inc/classes/Starter_Content.php:183
+#: inc/classes/Starter_Content.php:182
 msgctxt "Theme starter content"
 msgid "This is a full width cover block with a fixed background image."
 msgstr ""
 
-#: inc/classes/Starter_Content.php:188
+#: inc/classes/Starter_Content.php:187
 msgctxt "Theme starter content"
 msgid ""
 "I remember you\n"

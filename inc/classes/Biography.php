@@ -171,7 +171,7 @@ class Biography {
 					'circle' => __( 'Circle (Default)', 'inclusive' ),
 					'square' => __( 'Square', 'inclusive' ),
 					'hide'   => __( 'Hide Gravatar', 'inclusive' ),
-				]
+				],
 			)
 		);
 	}

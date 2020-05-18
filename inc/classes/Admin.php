@@ -209,7 +209,7 @@ class Admin {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"2"}}} -->
-					<p style="line-height:2"><strong><?php echo _x(' This is an example place holder text. Edit it to make it your own.', 'Block pattern content', 'inclusive' ); ?></strong></p>
+					<p style="line-height:2"><strong><?php echo _x( 'This is an example place holder text. Edit it to make it your own.', 'Block pattern content', 'inclusive' ); ?></strong></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph -->

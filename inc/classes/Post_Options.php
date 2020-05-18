@@ -37,7 +37,7 @@ class Post_Options {
 	public function filter_body_classes( array $classes ) : array {
 		if ( get_theme_mod( 'show_latest_update', false ) === true ) {
 			$classes[] = 'show-latest-update';
-		} 
+		}
 
 		return $classes;
 	}

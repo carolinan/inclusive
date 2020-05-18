@@ -17,10 +17,23 @@ if ( is_singular( get_post_type() ) ) {
 	</div><!-- .post-thumbnail -->
 	<?php
 } else {
-	// Add a link to the post or page.
+	// Add a link to the post or page. The alt here is the link text, so it describes the target, not the image.
 	?>
-	<figure aria-hidden="true">
-		<a class="post-thumbnail" href="<?php the_permalink(); ?>" tabindex="-1"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
-	</figure><!-- .post-thumbnail -->
+	<div class="post-thumbnail">
+		<a href="<?php the_permalink(); ?>">
+		<?php
+		the_post_thumbnail(
+			'medium',
+			[
+				'alt' => the_title_attribute(
+					[
+						'echo' => false,
+					]
+				),
+			]
+		);
+		?>
+		</a>
+	</div><!-- .post-thumbnail -->
 	<?php
 }

@@ -89,13 +89,13 @@ class Menus {
 	 * @access public
 	 */
 	public function filter_body_classes( array $classes ) : array {
-		if ( get_theme_mod( 'sticky_menu', 'static' ) == 'sticky' ) {
+		if ( get_theme_mod( 'sticky_menu', 'static' ) === 'sticky' ) {
 			$classes[] = 'has-sticky-menu';
 		}
 
-		if ( get_theme_mod( 'align_menu', 'center' ) == 'left' ) {
+		if ( get_theme_mod( 'align_menu', 'center' ) === 'left' ) {
 			$classes[] = 'has-left-align-menu';
-		} elseif ( get_theme_mod( 'align_menu', 'center' ) == 'right' ) {
+		} elseif ( get_theme_mod( 'align_menu', 'center' ) === 'right' ) {
 			$classes[] = 'has-right-align-menu';
 		}
 
@@ -175,7 +175,7 @@ class Menus {
 					'left'   => __( 'Left', 'inclusive' ),
 					'right'  => __( 'Right', 'inclusive' ),
 				],
-				'priority'   => 40,
+				'priority' => 40,
 			)
 		);
 
@@ -210,7 +210,6 @@ class Menus {
 				'priority' => 40,
 			)
 		);
-
 
 		$wp_customize->add_setting(
 			'menu_logo',
