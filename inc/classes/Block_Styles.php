@@ -304,9 +304,9 @@ class Block_Styles {
 		register_block_style( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
 			'core/paragraph',
 			array(
-				'name'         => 'inclusive-rounded-corner-paragraph',
+				'name'         => 'inclusive-rounded-corners',
 				'label'        => __( 'Rounced corners (Requires background color)', 'inclusive' ),
-				'inline_style' => 'p.is-style-inclusive-rounded-corner-paragraph {
+				'inline_style' => '.is-style-inclusive-rounded-corners {
 					border-radius: 6px;
 				}',
 			)
@@ -466,8 +466,8 @@ class Block_Styles {
 					<p>' . _x( 'You can change the image by selecting the block and clicking "Replace".', 'Block pattern content', 'inclusive' ) . '</p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:paragraph {"className":"is-style-inclusive-rounded-corner-paragraph","backgroundColor":"secondary"} -->
-					<p class="is-style-inclusive-rounded-corner-paragraph has-secondary-background-color has-background">' . _x( 'This paragraph block uses the secondary background color and the "Rounded corners" style.', 'Block pattern content', 'inclusive' ) . '</p>
+					<!-- wp:paragraph {"className":"is-style-inclusive-rounded-corners","backgroundColor":"secondary"} -->
+					<p class="is-style-inclusive-rounded-corners has-secondary-background-color has-background">' . _x( 'This paragraph block uses the secondary background color and the "Rounded corners" style.', 'Block pattern content', 'inclusive' ) . '</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph -->

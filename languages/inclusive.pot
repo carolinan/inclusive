@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Inclusive\n"
-"POT-Creation-Date: 2020-05-18 12:14+0200\n"
+"POT-Creation-Date: 2020-05-21 16:29+0200\n"
 "PO-Revision-Date: 2020-05-03 13:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -308,7 +308,7 @@ msgid "Button: Large"
 msgstr ""
 
 #: inc/classes/Admin.php:305
-msgid "Paragraph: Rounced corners (Requires a background color to be visible)"
+msgid "Rounced corners (Requires a background color to be visible)"
 msgstr ""
 
 #: inc/classes/Admin.php:306
@@ -600,38 +600,50 @@ msgstr ""
 msgid "Display Tagline in the header."
 msgstr ""
 
-#: inc/classes/Branding.php:110
-msgid "Show header area on archives and search pages."
+#: inc/classes/Branding.php:109
+msgid "Display a small version of the logo to the left of the menu."
+msgstr ""
+
+#: inc/classes/Branding.php:110 inc/classes/Branding.php:129
+msgid "Requires a logo. Links to the homepage."
 msgstr ""
 
 #: inc/classes/Branding.php:128
+msgid "Display the logo in the header."
+msgstr ""
+
+#: inc/classes/Branding.php:149
+msgid "Show header area on archives and search pages."
+msgstr ""
+
+#: inc/classes/Branding.php:167
 msgid "Show header area on single posts."
 msgstr ""
 
-#: inc/classes/Branding.php:146
+#: inc/classes/Branding.php:185
 msgid "Show header area on single pages."
 msgstr ""
 
-#: inc/classes/Branding.php:153 inc/classes/Branding.php:175
+#: inc/classes/Branding.php:192 inc/classes/Branding.php:214
 #: inc/classes/Menus.php:174 inc/classes/Meta_Options.php:64
 msgid "Center (Default)"
 msgstr ""
 
-#: inc/classes/Branding.php:154 inc/classes/Branding.php:176
+#: inc/classes/Branding.php:193 inc/classes/Branding.php:215
 #: inc/classes/Menus.php:175 inc/classes/Meta_Options.php:65
 msgid "Left"
 msgstr ""
 
-#: inc/classes/Branding.php:155 inc/classes/Branding.php:177
+#: inc/classes/Branding.php:194 inc/classes/Branding.php:216
 #: inc/classes/Menus.php:176 inc/classes/Meta_Options.php:66
 msgid "Right"
 msgstr ""
 
-#: inc/classes/Branding.php:169
+#: inc/classes/Branding.php:208
 msgid "Branding Position"
 msgstr ""
 
-#: inc/classes/Branding.php:170
+#: inc/classes/Branding.php:209
 msgid "The branding is centered by default."
 msgstr ""
 
@@ -959,7 +971,9 @@ msgid "Different fonts may need different sizes to look their best."
 msgstr ""
 
 #: inc/classes/Font_Styles.php:62
-msgid "Sizes may also be adjusted for you, depending on screen size."
+msgid ""
+"Sizes may also be adjusted for you, depending on screen size, to ensure that "
+"your website is responsive."
 msgstr ""
 
 #: inc/classes/Font_Styles.php:81
@@ -982,8 +996,8 @@ msgstr ""
 msgid "Site title text shadow"
 msgstr ""
 
-#: inc/classes/Font_Styles.php:116 inc/classes/Font_Styles.php:215
-#: inc/classes/Font_Styles.php:283
+#: inc/classes/Font_Styles.php:116 inc/classes/Font_Styles.php:158
+#: inc/classes/Font_Styles.php:226 inc/classes/Font_Styles.php:294
 msgid "Show a text shadow."
 msgstr ""
 
@@ -991,44 +1005,48 @@ msgstr ""
 msgid "Menu font size"
 msgstr ""
 
-#: inc/classes/Font_Styles.php:135 inc/classes/Font_Styles.php:235
-#: inc/classes/Font_Styles.php:303 inc/classes/Font_Styles.php:335
+#: inc/classes/Font_Styles.php:135 inc/classes/Font_Styles.php:246
+#: inc/classes/Font_Styles.php:314 inc/classes/Font_Styles.php:346
 msgid "Adjust the font size using the rem unit. "
 msgstr ""
 
-#: inc/classes/Font_Styles.php:166
+#: inc/classes/Font_Styles.php:157
+msgid "Menu text shadow"
+msgstr ""
+
+#: inc/classes/Font_Styles.php:177
 msgid "Widget title font size"
 msgstr ""
 
-#: inc/classes/Font_Styles.php:167
+#: inc/classes/Font_Styles.php:178
 msgid "Adjust the font size using the em unit."
 msgstr ""
 
-#: inc/classes/Font_Styles.php:196
+#: inc/classes/Font_Styles.php:207
 msgid "Widget title font weight"
 msgstr ""
 
-#: inc/classes/Font_Styles.php:214
+#: inc/classes/Font_Styles.php:225
 msgid "Widget title text shadow"
 msgstr ""
 
-#: inc/classes/Font_Styles.php:234
+#: inc/classes/Font_Styles.php:245
 msgid "Post & page title font size"
 msgstr ""
 
-#: inc/classes/Font_Styles.php:264
+#: inc/classes/Font_Styles.php:275
 msgid "Post & page title font weight"
 msgstr ""
 
-#: inc/classes/Font_Styles.php:282
+#: inc/classes/Font_Styles.php:293
 msgid "Post & page title text shadow"
 msgstr ""
 
-#: inc/classes/Font_Styles.php:302
+#: inc/classes/Font_Styles.php:313
 msgid "Meta information font size"
 msgstr ""
 
-#: inc/classes/Font_Styles.php:334
+#: inc/classes/Font_Styles.php:345
 msgid "Site info font size"
 msgstr ""
 
@@ -1135,16 +1153,7 @@ msgstr ""
 msgid "More icon (3 dots)."
 msgstr ""
 
-#: inc/classes/Menus.php:225
-msgid ""
-"Desktop only: Display a small version of the logo to the left of the menu."
-msgstr ""
-
 #: inc/classes/Menus.php:226
-msgid "Requires a logo. Links to the homepage."
-msgstr ""
-
-#: inc/classes/Menus.php:243
 msgid "Display search."
 msgstr ""
 
@@ -1745,15 +1754,15 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: template-parts/header/navigation.php:28
+#: template-parts/header/navigation.php:30
 msgid "Open menu"
 msgstr ""
 
-#: template-parts/header/navigation.php:33
+#: template-parts/header/navigation.php:35
 msgid "Menu"
 msgstr ""
 
-#: template-parts/header/navigation.php:55
+#: template-parts/header/navigation.php:57
 msgid "Toggle search"
 msgstr ""
 

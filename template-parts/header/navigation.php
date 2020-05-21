@@ -22,6 +22,8 @@
 			} else {
 				echo '<div class="menu-title"><a href="' , esc_url( home_url( '/' ) ) , '" rel="home">' , wp_kses_post( get_bloginfo( 'name' ) ) , '</a></div>';
 			}
+		} elseif ( get_theme_mod( 'show_header_title', false ) === false && is_front_page() || get_theme_mod( 'show_header_title', false ) === false && is_home() ) {
+			echo '<h1 class="menu-title screen-reader-text"><a href="' , esc_url( home_url( '/' ) ) , '" rel="home">' , wp_kses_post( get_bloginfo( 'name' ) ) , '</a></h1>';
 		}
 		?>
 

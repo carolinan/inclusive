@@ -216,8 +216,8 @@ class Admin {
 					<p><?php echo _x( 'You can change the image by selecting the block and clicking "Replace".', 'Block pattern content', 'inclusive' ); ?></p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:paragraph {"className":"is-style-inclusive-rounded-corner-paragraph","backgroundColor":"secondary"} -->
-					<p class="is-style-inclusive-rounded-corner-paragraph has-secondary-background-color has-background"><?php echo _x( 'This paragraph block uses the secondary background color and the "Rounded corners" style.', 'Block pattern content', 'inclusive' ); ?></p>
+					<!-- wp:paragraph {"className":"is-style-inclusive-rounded-corners","backgroundColor":"secondary"} -->
+					<p class="is-style-inclusive-rounded-corners has-secondary-background-color has-background"><?php echo _x( 'This paragraph block uses the secondary background color and the "Rounded corners" style.', 'Block pattern content', 'inclusive' ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph -->
@@ -302,7 +302,7 @@ class Admin {
 				<li><?php esc_html_e( 'Gallery: Rounded corners', 'inclusive' ); ?> <code>.is-style-inclusive-gallery-rounded img</code></li>
 				<li><?php esc_html_e( 'Separator: Ornaments one and two', 'inclusive' ); ?> <code>.wp-block-separator.is-style-inclusive-separator-ornament1</code> <code>.wp-block-separator.is-style-inclusive-separator-ornament2</code></li>
 				<li><?php esc_html_e( 'Button: Large', 'inclusive' ); ?> <code>.is-style-inclusive-large-button</code></li>
-				<li><?php esc_html_e( 'Paragraph: Rounced corners (Requires a background color to be visible)', 'inclusive' ); ?> <code>.is-style-inclusive-rounded-corner-paragraph</code></li>
+				<li><?php esc_html_e( 'Rounced corners (Requires a background color to be visible)', 'inclusive' ); ?> <code>.is-style-inclusive-rounded-corners</code></li>
 				<li><?php esc_html_e( 'Paragraph: Box shadow', 'inclusive' ); ?> <code>.is-style-inclusive-box-shadow</code></li>
 				<li><?php esc_html_e( 'Paragraph: Border', 'inclusive' ); ?> <code>.is-style-inclusive-border</code></li>
 				<li><?php esc_html_e( 'Heading: Text shadow', 'inclusive' ); ?> <code>.is-style-inclusive-text-shadow</code></li>

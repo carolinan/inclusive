@@ -59,7 +59,7 @@ class Font_Styles {
 			'site_title_font_size',
 			[
 				'label'       => __( 'Site title font size', 'inclusive' ),
-				'description' => __( 'Note that these setting are applied to the site title in the header area, not the menu. Adjust the font size using the rem unit.', 'inclusive' ) . ' ' . __( 'Different fonts may need different sizes to look their best.', 'inclusive' ) . ' ' . __( 'Sizes may also be adjusted for you, depending on screen size.', 'inclusive' ),
+				'description' => __( 'Note that these setting are applied to the site title in the header area, not the menu. Adjust the font size using the rem unit.', 'inclusive' ) . ' ' . __( 'Different fonts may need different sizes to look their best.', 'inclusive' ) . ' ' . __( 'Sizes may also be adjusted for you, depending on screen size, to ensure that your website is responsive.', 'inclusive' ),
 				'section'     => 'font_styles',
 				'type'        => 'number',
 				'input_attrs' => [
@@ -140,6 +140,24 @@ class Font_Styles {
 					'max'  => 2,
 					'step' => 0.1,
 				],
+			]
+		);
+
+		$wp_customize->add_setting(
+			'menu_text_shadow',
+			[
+				'default'           => true,
+				'sanitize_callback' => 'Inclusive\Customizer::sanitize_checkbox',
+			]
+		);
+
+		$wp_customize->add_control(
+			'menu_text_shadow',
+			[
+				'label'       => __( 'Menu text shadow', 'inclusive' ),
+				'description' => __( 'Show a text shadow.', 'inclusive' ),
+				'section'     => 'font_styles',
+				'type'        => 'checkbox',
 			]
 		);
 
@@ -356,6 +374,10 @@ class Font_Styles {
 
 		if ( get_theme_mod( 'site_title_shadow', true ) === false ) {
 			echo '.site-title { text-shadow: none;}';
+		}
+
+		if ( get_theme_mod( 'menu_text_shadow', true ) === false ) {
+			echo '.main-navigation { text-shadow: none !important;}';
 		}
 
 		if ( get_theme_mod( 'widgetarea_title_shadow', true ) === false ) {

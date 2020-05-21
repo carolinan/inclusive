@@ -347,19 +347,19 @@ h6 {
 h2 {
 	font-size: 1.95em;
 }
-	
+
 h3 {
 	font-size: 1.56em;
 }
-	
+
 h4 {
 	font-size: 1.25em;
 }
-	
+
 h5 {
 	font-size: 1em;
 }
-	
+
 h6 {
 	font-size: 0.8em;
 }
@@ -754,7 +754,7 @@ input[type="submit"]:hover,
 .has-menu-search details.desktop-search .svg-icon:active,
 .has-menu-search details.desktop-search .svg-icon:hover,
 .has-menu-search details.desktop-search summary:focus .svg-icon {
-	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #767676;
 	outline: none;
 	background: var(--color-theme-active-button);
 	color: var(--color-theme-active-button-text);
@@ -1162,7 +1162,7 @@ a.more-link:hover {
 }
 
 /*--------------------------------------------------------------
-## Block colors.
+## Block colors and block styles.
 --------------------------------------------------------------*/
 .has-secondary-color,
 .has-secondary-color a,
@@ -1215,23 +1215,23 @@ a.more-link:hover {
 }
 
 .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
-	background: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);
+	background: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
 }
 
 .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background {
-	background: linear-gradient(135deg,rgba(0,208,132,1) 0%,rgba(6,147,227,1) 100%);
+	background: linear-gradient(135deg, rgba(0, 208, 132, 1) 0%, rgba(6, 147, 227 1) 100%);
 }
 
 .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
-	background: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);
+	background: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
 }
 
 .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
-	background: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);
+	background: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
 }
 
 .has-luminous-vivid-orange-to-vivid-red-gradient-background {
-	background: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);
+	background: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
 }
 
 .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
@@ -1264,6 +1264,10 @@ a.more-link:hover {
 
 .has-midnight-gradient-background {
 	background: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+}
+
+.is-style-inclusive-rounded-corners {
+	border-radius: 6px;
 }
 
 /*--------------------------------------------------------------
@@ -1313,5 +1317,6 @@ a.more-link:hover {
 .wp-caption,
 .wp-caption-text,
 .sticky {
+
 	/* The theme does not style these but they are required by Theme Check. */
 }

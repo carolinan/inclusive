@@ -192,7 +192,7 @@ a:focus .woocommerce-loop-category__title {
 .woocommerce input.button.alt:active {
 	background: var(--color-theme-active-button);
 	color: var(--color-theme-active-button-text);
-	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #767676;
 }
 
 .woocommerce #respond input#submit.alt.disabled,

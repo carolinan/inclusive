@@ -34,7 +34,7 @@
 
 .site .wp-block-button__link:active,
 .site .wp-block-button__link:hover {
-	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #767676;
 	transition: box-shadow 0.3s ease-in-out;
 }
 

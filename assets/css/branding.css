@@ -72,14 +72,28 @@
 .inner-branding .custom-logo-link {
 	display: block;
 }
-
+/*
 .custom-logo-link img {
 	margin: 0 auto;
 }
 
 a.custom-logo-link:hover img,
 a.custom-logo-link:focus img {
-	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #767676;
+}
+*/
+a.custom-logo-link {
+	outline: none;
+}
+
+a.custom-logo-link:hover,
+a.custom-logo-link:focus {
+	border-bottom: 0;
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #767676;
+	outline: none;
+	background: var(--color-theme-active-button);
+	transition: box-shadow .3s ease-in-out;
+	border-radius: var(--button-border-radius);
 }
 
 .site-title {

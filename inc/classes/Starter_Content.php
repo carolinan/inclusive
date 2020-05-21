@@ -105,8 +105,8 @@ class Starter_Content {
 								<p class="has-medium-font-size">' . _x( 'This is an example page used to show you what you can do with your theme and the new block editor.', 'Theme starter content', 'inclusive' ) . '</p>
 								<!-- /wp:paragraph -->
 
-								<!-- wp:paragraph {"align":"center","backgroundColor":"secondary","fontSize":"medium","className":"is-style-inclusive-rounded-corner-paragraph"} -->
-								<p class="has-background has-text-align-center has-medium-font-size has-secondary-background-color is-style-inclusive-rounded-corner-paragraph">
+								<!-- wp:paragraph {"align":"center","backgroundColor":"secondary","fontSize":"medium","className":"is-style-inclusive-rounded-corners"} -->
+								<p class="has-background has-text-align-center has-medium-font-size has-secondary-background-color is-style-inclusive-rounded-corners">
 								<em><strong>' . _x( 'Edit this page to make it your own.', 'Theme starter content', 'inclusive' ) . '</strong></em></p>
 								<!-- /wp:paragraph -->
 

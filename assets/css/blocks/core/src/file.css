@@ -28,7 +28,7 @@
 
 .site .wp-block-file__button:active,
 .site .wp-block-file__button:hover {
-	box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #767676;
 }
 
 .site .wp-block-file__button:focus {

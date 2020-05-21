@@ -96,6 +96,45 @@ class Branding {
 		);
 
 		$wp_customize->add_setting(
+			'menu_logo',
+			array(
+				'default'           => false,
+				'sanitize_callback' => 'Inclusive\Customizer::sanitize_checkbox',
+			)
+		);
+
+		$wp_customize->add_control(
+			'menu_logo',
+			array(
+				'label'       => __( 'Display a small version of the logo to the left of the menu.', 'inclusive' ),
+				'description' => __( 'Requires a logo. Links to the homepage.', 'inclusive' ),
+				'section'     => 'title_tagline',
+				'type'        => 'checkbox',
+				'priority'    => 45,
+			)
+		);
+
+		$wp_customize->add_setting(
+			'show_header_logo',
+			array(
+				'default'           => true,
+				'sanitize_callback' => 'Inclusive\Customizer::sanitize_checkbox',
+			)
+		);
+
+		$wp_customize->add_control(
+			'show_header_logo',
+			array(
+				'label'       => __( 'Display the logo in the header.', 'inclusive' ),
+				'description' => __( 'Requires a logo. Links to the homepage.', 'inclusive' ),
+				'section'     => 'title_tagline',
+				'type'        => 'checkbox',
+				'priority'    => 45,
+			)
+		);
+
+
+		$wp_customize->add_setting(
 			'show_header_area_on_archives',
 			array(
 				'default'           => false,

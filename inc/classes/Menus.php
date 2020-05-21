@@ -211,23 +211,6 @@ class Menus {
 			)
 		);
 
-		$wp_customize->add_setting(
-			'menu_logo',
-			array(
-				'default'           => false,
-				'sanitize_callback' => 'Inclusive\Customizer::sanitize_checkbox',
-			)
-		);
-
-		$wp_customize->add_control(
-			'menu_logo',
-			array(
-				'label'       => __( 'Desktop only: Display a small version of the logo to the left of the menu.', 'inclusive' ),
-				'description' => __( 'Requires a logo. Links to the homepage.', 'inclusive' ),
-				'section'     => 'menu_options',
-				'type'        => 'checkbox',
-			)
-		);
 
 		$wp_customize->add_setting(
 			'menu_search',
