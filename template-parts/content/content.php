@@ -12,7 +12,7 @@
 	<?php
 	get_template_part( 'template-parts/content/entry-header', get_post_type() );
 
-	if ( is_search() || is_home() || is_archive() ) {
+	if ( is_search() || is_home() || is_archive() && ! is_post_type_archive( 'forum' ) ) {
 
 		if ( get_theme_mod( 'blog_layout', 'one-column' ) === 'two-columns' ) {
 
@@ -28,7 +28,6 @@
 
 		}
 	} else {
-
 		get_template_part( 'template-parts/content/the-content' );
 
 	}

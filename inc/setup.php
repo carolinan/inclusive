@@ -34,6 +34,7 @@ new Theme_Support();
 new Scripts();
 new Styles();
 new Admin();
+new BBPress();
 new Biography();
 new Reusable_Blocks();
 new Block_Styles();

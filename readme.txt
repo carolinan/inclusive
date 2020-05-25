@@ -40,8 +40,17 @@ Browser support
 This theme supports all modern browsers but does not support Internet Explorer.
 Some layout features are not supported by Opera Mini.
 
-
 == Change log ==
+Version 1.0.4
+Added support for BBPress with new forum templates and CSS.
+
+Version 1.0.3
+Updated logo settings.
+You can now choose if you want to display your logo in the menu or the header or both.
+Increased contrast for buttons.
+Renamed the rounded corners custom style.
+Updated language file.
+
 Version 1.0.2
 Fixed an issue with the query reset for the reusable blocks.
 Added a prefix to the queries.

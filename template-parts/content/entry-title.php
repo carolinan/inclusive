@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-if ( is_singular( get_post_type() ) ) {
+if ( is_singular( get_post_type() ) || get_post_type() === 'forum' ) {
 	if ( is_front_page() && 'page' === get_option( 'show_on_front' ) && get_theme_mod( 'page_hide_title', true ) === true ) {
 		return;
 	} else {
