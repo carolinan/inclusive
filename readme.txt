@@ -41,8 +41,22 @@ This theme supports all modern browsers but does not support Internet Explorer.
 Some layout features are not supported by Opera Mini.
 
 == Change log ==
+
+Version 1.0.6
+Updated padding in full width group blocks.
+Adjusted font sizes so that the editor and front matches better.
+Adjusted responsive font sizes for headings.
+Removed one font size.
+
+Version 1.0.5
+Fixed a problem with the logo.
+
 Version 1.0.4
 Added support for BBPress with new forum templates and CSS.
+Replaced an icon that had an incorrect license.
+Updated the copyright date format with a translation function.
+Updated language file.
+Prefixed JavaScript functions.
 
 Version 1.0.3
 Updated logo settings.
@@ -85,7 +99,6 @@ Twenty Twenty https://wordpress.org/themes/twentytwenty/ (C) 2019 WordPress.org,
 Jetpack (C) Automattic, License: GNU General Public License v2 or later
 Gutenberg: Gutenberg block styles and svg icons by the WordPress Community (https://github.com/WordPress/gutenberg), licensed under [GPL 2.0](https://www.gnu.org/licenses/gpl-2.0.html)
 Dashicons: https://developer.wordpress.org/resource/dashicons/ License: GNU General Public License v2 or later. (C) WordPress.org.
-Matterial Icons: https://material.io/resources/icons/ License: Apache 2.0 https://www.apache.org/licenses/LICENSE-2.0.html or CC-BY 4.0 https://creativecommons.org/licenses/by/4.0/legalcode.
 Clipboard, Copyright Zeno Rocha, https://clipboardjs.com/, License: MIT
 Normalize, Copyright Nicolas Gallagher and Jonathan Neal. MIT License | github.com/necolas/normalize.css
 

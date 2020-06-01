@@ -1,11 +1,11 @@
 /**
  * Handle togglers.
  */
-function ToggleButtonClick( id ) { // eslint-disable-line no-unused-vars
+function InclusiveToggleButtonClick( id ) { // eslint-disable-line no-unused-vars
 	var el = document.querySelector( 'button[data-uid="' + id + '"]' );
 	var container = document.getElementById('site-navigation');
 
-	NavToggleFocusByEl( el );
+	InclusiveNavToggleFocusByEl( el );
 
 	// Toggle the "toggled-on" class.
 	el.classList.toggle( 'toggled-on' );
@@ -23,16 +23,16 @@ window.onload = function() {
 	var NavLinks = document.querySelectorAll( '.menu-item a' ),
 		i;
 	for ( i = 0; i < NavLinks.length; i++ ) {
-		NavLinks[ i ].addEventListener( 'focus', NavToggleFocus, true );
-		NavLinks[ i ].addEventListener( 'blur', NavToggleFocus, true );
+		NavLinks[i].addEventListener('focus', InclusiveNavToggleFocus, true );
+		NavLinks[i].addEventListener('blur', InclusiveNavToggleFocus, true );
 	}
 };
 
-function NavToggleFocus() {
-	NavToggleFocusByEl( this );
+function InclusiveNavToggleFocus() {
+	InclusiveNavToggleFocusByEl( this );
 }
 
-function NavToggleFocusByEl( el ) {
+function InclusiveNavToggleFocusByEl( el ) {
 	var isMenu = el.closest( '.primary-menu' ),
 		closestSubMenu,
 		closestUl,
@@ -60,7 +60,7 @@ function NavToggleFocusByEl( el ) {
  *
  * @param {Element} el
  */
-function MenuItemExpand(el) { // eslint-disable-line no-unused-vars
+function InclusiveMenuItemExpand(el) { // eslint-disable-line no-unused-vars
 	var ul = el.parentNode.parentNode.querySelector('ul'),
 		expand = ('none' === window.getComputedStyle(ul).display);
 	ul.style.display = expand ? 'block' : 'none';

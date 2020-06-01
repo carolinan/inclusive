@@ -27,7 +27,7 @@
 		}
 		?>
 
-		<button class="menu-toggle" aria-label="<?php esc_attr_e( 'Open menu', 'inclusive' ); ?>" onClick="ToggleButtonClick('toggle-primary')" data-uid="toggle-primary" aria-controls="primary-menu" aria-expanded="false">
+		<button class="menu-toggle" aria-label="<?php esc_attr_e( 'Open menu', 'inclusive' ); ?>" onClick="InclusiveToggleButtonClick('toggle-primary')" data-uid="toggle-primary" aria-controls="primary-menu" aria-expanded="false">
 		<?php
 		if ( Inclusive\Icons::nav_menu_button_icon() ) {
 			echo Inclusive\Icons::nav_menu_button_icon(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

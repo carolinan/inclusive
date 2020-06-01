@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Inclusive\n"
-"POT-Creation-Date: 2020-05-21 16:29+0200\n"
+"POT-Creation-Date: 2020-06-01 08:32+0200\n"
 "PO-Revision-Date: 2020-05-03 13:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -612,38 +612,38 @@ msgstr ""
 msgid "Display the logo in the header."
 msgstr ""
 
-#: inc/classes/Branding.php:149
+#: inc/classes/Branding.php:148
 msgid "Show header area on archives and search pages."
 msgstr ""
 
-#: inc/classes/Branding.php:167
+#: inc/classes/Branding.php:166
 msgid "Show header area on single posts."
 msgstr ""
 
-#: inc/classes/Branding.php:185
+#: inc/classes/Branding.php:184
 msgid "Show header area on single pages."
 msgstr ""
 
-#: inc/classes/Branding.php:192 inc/classes/Branding.php:214
+#: inc/classes/Branding.php:191 inc/classes/Branding.php:213
 #: inc/classes/Menus.php:174 inc/classes/Meta_Options.php:64
 msgid "Center (Default)"
 msgstr ""
 
-#: inc/classes/Branding.php:193 inc/classes/Branding.php:215
+#: inc/classes/Branding.php:192 inc/classes/Branding.php:214
 #: inc/classes/Menus.php:175 inc/classes/Meta_Options.php:65
 msgid "Left"
 msgstr ""
 
-#: inc/classes/Branding.php:194 inc/classes/Branding.php:216
+#: inc/classes/Branding.php:193 inc/classes/Branding.php:215
 #: inc/classes/Menus.php:176 inc/classes/Meta_Options.php:66
 msgid "Right"
 msgstr ""
 
-#: inc/classes/Branding.php:208
+#: inc/classes/Branding.php:207
 msgid "Branding Position"
 msgstr ""
 
-#: inc/classes/Branding.php:209
+#: inc/classes/Branding.php:208
 msgid "The branding is centered by default."
 msgstr ""
 
@@ -809,6 +809,12 @@ msgstr ""
 
 #: inc/classes/Copyright.php:94
 msgid "Copyright"
+msgstr ""
+
+#. translators: Copyright date format, see https://www.php.net/date
+#: inc/classes/Copyright.php:96
+msgctxt "copyright date format"
+msgid "Y"
 msgstr ""
 
 #: inc/classes/Customizer.php:69
@@ -1150,7 +1156,7 @@ msgid "Hamburger menu icon (3 lines)."
 msgstr ""
 
 #: inc/classes/Menus.php:208
-msgid "More icon (3 dots)."
+msgid "Plus icon."
 msgstr ""
 
 #: inc/classes/Menus.php:226
@@ -1630,14 +1636,6 @@ msgstr ""
 
 #: inc/classes/Theme_Support.php:167
 msgid "XL"
-msgstr ""
-
-#: inc/classes/Theme_Support.php:172
-msgid "Gigantic"
-msgstr ""
-
-#: inc/classes/Theme_Support.php:173
-msgid "XXL"
 msgstr ""
 
 #: inc/classes/Widget_Areas.php:39

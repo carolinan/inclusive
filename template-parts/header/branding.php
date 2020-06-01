@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-if ( has_custom_logo() && get_theme_mod( 'show_header_logo', 'true' ) === true ||
+if ( has_custom_logo() && get_theme_mod( 'show_header_logo', true ) === true ||
 	get_theme_mod( 'show_header_title', false ) === true ||
 	get_theme_mod( 'show_tagline', false ) === true ) {
 
@@ -15,7 +15,7 @@ if ( has_custom_logo() && get_theme_mod( 'show_header_logo', 'true' ) === true |
 	<div class="inner-branding">
 	<?php
 	if ( is_front_page() && 'page' === get_option( 'show_on_front' ) && get_theme_mod( 'page_hide_title', true ) === true ) {
-		if ( has_custom_logo() && get_theme_mod( 'show_header_logo', 'true' ) === true ) {
+		if ( has_custom_logo() && get_theme_mod( 'show_header_logo', true ) === true ) {
 			the_custom_logo();
 		}
 
@@ -34,7 +34,7 @@ if ( has_custom_logo() && get_theme_mod( 'show_header_logo', 'true' ) === true |
 		}
 	} else {
 		if ( is_front_page() || is_home() ) {
-			if ( has_custom_logo() && get_theme_mod( 'show_header_logo', 'true' ) === true ) {
+			if ( has_custom_logo() && get_theme_mod( 'show_header_logo', true ) === true ) {
 				the_custom_logo();
 			}
 
@@ -44,7 +44,7 @@ if ( has_custom_logo() && get_theme_mod( 'show_header_logo', 'true' ) === true |
 				<?php
 			}
 		} else {
-			if ( has_custom_logo() && get_theme_mod( 'show_header_logo', 'true' ) === true ) {
+			if ( has_custom_logo() && get_theme_mod( 'show_header_logo', true ) === true ) {
 				the_custom_logo();
 			}
 

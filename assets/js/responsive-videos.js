@@ -1,5 +1,4 @@
-/* eslint no-useless-escape: 0 */
-function ResponsiveFullWidthVideo() {
+function InclusiveResponsiveFullWidthVideo() {
 	var iFrames = document.querySelectorAll( 'iframe' ),
 
 		// Taken from Jetpack, see the 'jetpack_responsive_videos_oembed_videos' filter.
@@ -15,7 +14,6 @@ function ResponsiveFullWidthVideo() {
 			'https?://wordpress.tv/',
 			'https?://(www\.)?funnyordie\.com/videos/',
 			'https?://vine.co/v/',
-			'https?://(www\.)?collegehumor\.com/video/',
 			'https?://(www\.|embed\.)?ted\.com/talks/'
 		];
 
@@ -50,8 +48,8 @@ function ResponsiveFullWidthVideo() {
  * @since 1.0.0
  */
 ( function() {
-	ResponsiveFullWidthVideo();
+	InclusiveResponsiveFullWidthVideo();
 	window.addEventListener( 'resize', function() {
-		ResponsiveFullWidthVideo();
+		InclusiveResponsiveFullWidthVideo();
 	});
 }() );

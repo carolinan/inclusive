@@ -32,10 +32,6 @@ p.has-text-color a {
 	font-size: var(--font-size-larger);
 }
 
-.is-gigantic-text {
-	font-size: var(--font-size-gigantic);
-}
-
 p.is-style-inclusive-rounded-corners {
 	border-radius: 6px;
 }

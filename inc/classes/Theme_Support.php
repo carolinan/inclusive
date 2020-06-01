@@ -159,7 +159,7 @@ class Theme_Support {
 				array(
 					'name'      => __( 'Large', 'inclusive' ),
 					'shortName' => __( 'L', 'inclusive' ),
-					'size'      => 31,
+					'size'      => 30,
 					'slug'      => 'large',
 				),
 				array(
@@ -167,12 +167,6 @@ class Theme_Support {
 					'shortName' => __( 'XL', 'inclusive' ),
 					'size'      => 40,
 					'slug'      => 'larger',
-				),
-				array(
-					'name'      => __( 'Gigantic', 'inclusive' ),
-					'shortName' => __( 'XXL', 'inclusive' ),
-					'size'      => 64,
-					'slug'      => 'gigantic',
 				),
 			)
 		);

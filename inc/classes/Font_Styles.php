@@ -401,7 +401,7 @@ class Font_Styles {
 		}
 
 		if ( get_theme_mod( 'widgetarea_title_font_size', '1.5' ) !== '1.5' ) {
-			echo 'body { --font-size-widget-title: ' . esc_html( get_theme_mod( 'widgetarea_title_font_size' ) ) . 'em; }';
+			echo 'body { .widget-title: ' . esc_html( get_theme_mod( 'widgetarea_title_font_size' ) ) . 'em; }';
 		}
 
 		if ( get_theme_mod( 'widgetarea_title_font_weight', '400' ) !== '400' ) {

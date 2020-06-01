@@ -91,7 +91,10 @@ class Copyright {
 			if ( get_theme_mod( 'copyright_text' ) ) {
 				echo '<div class="footer-copyright">' . esc_html( get_theme_mod( 'copyright_text' ) ) . '</div>';
 			} else {
-				echo '<div class="footer-copyright">' . esc_html__( 'Copyright', 'inclusive' ) . ' ' . esc_html( date( 'Y' ) ) . ' ' . esc_html( get_bloginfo( 'name' ) ) . '</div>';
+				echo '<div class="footer-copyright">' . esc_html__( 'Copyright', 'inclusive' ) . ' ';
+				/* translators: Copyright date format, see https://www.php.net/date */
+				echo esc_html( date_i18n( _x( 'Y', 'copyright date format', 'inclusive' ) ) );
+				echo ' ' . esc_html( get_bloginfo( 'name' ) ) . '</div>';
 			}
 		}
 	}

@@ -95,10 +95,10 @@ class Icons {
 			<path d="M3,15h14v-2H3V15z M3,5v2h14V5H3z M3,11h14V9H3V11z"/>
 		</svg>',
 
-		'more'       => /* material-design - more-vert CC BY 4.0*/ '
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-			<path d="M0 0h24v24H0z" fill="none"/>
-			<path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+		'plus'       => /* Dashicon - Plus Gpl v2 or later */ '
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+			<rect x="0" fill="none" width="20" height="20"/>
+			<path d="M17 7v3h-5v5H9v-5H4V7h5V2h3v5h5z"/>
 		</svg>',
 
 		'arrow-down' => /* Dashicons Arrow down alt 2, GPL v2 or later */ '
@@ -391,8 +391,8 @@ class Icons {
 		if ( get_theme_mod( 'menu_icon', 'none' ) === 'menu' ) {
 			return self::get_svg( 'ui', 'menu', 24 );
 		}
-		if ( get_theme_mod( 'menu_icon', 'none' ) === 'more' ) {
-			return self::get_svg( 'ui', 'more', 24 );
+		if ( get_theme_mod( 'menu_icon', 'none' ) === 'plus' ) {
+			return self::get_svg( 'ui', 'plus', 24 );
 		}
 	}
 

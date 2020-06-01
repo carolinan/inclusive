@@ -345,7 +345,7 @@ h6 {
 }
 
 h2 {
-	font-size: 1.95em;
+	font-size: var(--font-size-larger);
 }
 
 h3 {
@@ -368,7 +368,6 @@ h6 {
 .entry-header h1.entry-title,
 .page-header .page-title {
 	font-size: var(--font-size-larger);
-	line-height: 2.2;
 	margin-bottom: 2.5rem;
 	text-shadow: 0.04em 0.04em 0 rgba(0, 0, 0, 0.1);
 	word-wrap: break-word;
@@ -1270,9 +1269,20 @@ a.more-link:hover {
 	border-radius: 6px;
 }
 
+.is-style-inclusive-text-shadow {
+	text-shadow: var(--text-shadow);
+}
+
+
 /*--------------------------------------------------------------
 ## Custom block font sizes.
 --------------------------------------------------------------*/
+
+.has-normal-font-size {
+	/* stylelint-disable */
+	font-size: var(--font-size-regular);
+	/* stylelint-enable */
+}
 
 .has-small-font-size {
 	/* stylelint-disable */
@@ -1296,10 +1306,6 @@ a.more-link:hover {
 	/* stylelint-disable */
 	font-size: var(--font-size-larger);
 	/* stylelint-enable */
-}
-
-.has-gigantic-font-size {
-	font-size: var(--font-size-gigantic);
 }
 
 .has-text-align-left {

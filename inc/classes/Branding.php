@@ -133,7 +133,6 @@ class Branding {
 			)
 		);
 
-
 		$wp_customize->add_setting(
 			'show_header_area_on_archives',
 			array(

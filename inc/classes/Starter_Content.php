@@ -70,8 +70,8 @@ class Starter_Content {
 								'<!-- wp:columns {"align":"wide"} -->
 								<div class="wp-block-columns alignwide"><!-- wp:column {"width":58} -->
 								<div class="wp-block-column" style="flex-basis:58%">
-								<!-- wp:heading {"level":2,"className":"has-gigantic-font-size is-style-inclusive-text-shadow"} -->
-								<h2 class="has-gigantic-font-size is-style-inclusive-text-shadow">' .
+								<!-- wp:heading {"level":2,"className":"is-style-inclusive-text-shadow"} -->
+								<h2 class="is-style-inclusive-text-shadow">' .
 								_x( 'It is all about <span style="color:#b6007c" class="has-inline-color">You</span> <span style="color:#72009b" class="has-inline-color">&amp;</span> 
 								<span style="color:#7747fa" class="has-inline-color">the </span><strong><span style="color:#479ffa" class="has-inline-color">Blocks</span></strong></h2>', 'Theme starter content', 'inclusive' ) .
 								'<!-- /wp:heading -->

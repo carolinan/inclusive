@@ -50,7 +50,7 @@ class Menus {
 			// Skip when the item has no sub-menu.
 			if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 				$html         = '<span>';
-				$item_output .= '<button onClick="MenuItemExpand(this)"><span class="screen-reader-text">' . esc_html__( 'Toggle Child Menu', 'inclusive' ) . '</span>' . Icons::get_svg( 'ui', 'arrow-down', '20' ) . '</button>';
+				$item_output .= '<button onClick="InclusiveMenuItemExpand(this)"><span class="screen-reader-text">' . esc_html__( 'Toggle Child Menu', 'inclusive' ) . '</span>' . Icons::get_svg( 'ui', 'arrow-down', '20' ) . '</button>';
 			}
 
 			$html .= $item_output;
@@ -205,7 +205,7 @@ class Menus {
 				[
 					'none' => __( 'No icon, only text.', 'inclusive' ),
 					'menu' => __( 'Hamburger menu icon (3 lines).', 'inclusive' ),
-					'more' => __( 'More icon (3 dots).', 'inclusive' ),
+					'plus' => __( 'Plus icon.', 'inclusive' ),
 				],
 				'priority' => 40,
 			)
