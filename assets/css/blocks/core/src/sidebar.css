@@ -3,7 +3,11 @@
 	margin-bottom: 3rem;
 }
 
-.is-style-inclusive-sidebar .wp-block-search .wp-block-search__button {
+.is-style-inclusive-sidebar .wp-block-search__inside-wrapper {
+	display: block;
+}
+
+.is-style-inclusive-sidebar .wp-block-search__button {
 	margin: 1rem 0 0 0;
 }
 

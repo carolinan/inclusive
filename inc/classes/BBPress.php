@@ -51,6 +51,7 @@ class BBPress {
 				null,
 				INCLUSIVE_VERSION
 			);
+			wp_style_add_data( 'inclusive-bbpress-styles', 'rtl', 'replace' );
 		}
 	}
 

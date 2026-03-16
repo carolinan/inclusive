@@ -1,0 +1,34 @@
+#social-navigation {
+	grid-column: span 2;
+}
+
+.social-links-menu {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0 0 2em 0;
+}
+
+.social-links-menu li {
+	display: inline;
+	padding: 0 6px;
+}
+
+.social-links-menu a {
+	padding: 19px 9px 4px 9px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.social-links-menu a:hover {
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #767676;
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.social-links-menu a:focus {
+	outline: none;
+	border: 1px dotted var(--color-link);
+}
+
+.social-links-menu .svg-icon {
+	fill: var(--color-link);
+}

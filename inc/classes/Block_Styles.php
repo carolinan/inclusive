@@ -144,6 +144,10 @@ class Block_Styles {
 				self::$block_styles_added[] = $block['blockName'];
 
 				$styles_path = get_theme_file_path( "/assets/css/blocks/{$block['blockName']}.min.css" );
+				$rtl_styles_path = preg_replace( '/\.css$/', '-rtl.css', $styles_path );
+				if ( is_rtl() && ! empty( $rtl_styles_path ) && file_exists( $rtl_styles_path ) ) {
+					$styles_path = $rtl_styles_path;
+				}
 
 				ob_start();
 
@@ -178,6 +182,7 @@ class Block_Styles {
 			null,
 			INCLUSIVE_VERSION
 		);
+		wp_style_add_data( 'inclusive-editor-variables', 'rtl', 'replace' );
 
 		wp_enqueue_style(
 			'inclusive-editor-styles',
@@ -185,18 +190,21 @@ class Block_Styles {
 			null,
 			INCLUSIVE_VERSION
 		);
+		wp_style_add_data( 'inclusive-editor-styles', 'rtl', 'replace' );
 
 		// Get an array of blocks.
 		$blocks = self::get_styled_blocks();
 
 		// Add blocks styles.
 		foreach ( $blocks as $block ) {
+			$style_handle = "inclusive-$block";
 			wp_enqueue_style(
-				"inclusive-$block",
+				$style_handle,
 				get_theme_file_uri( "assets/css/blocks/$block.min.css" ),
 				null,
 				INCLUSIVE_VERSION
 			);
+			wp_style_add_data( $style_handle, 'rtl', 'replace' );
 		}
 	}
 

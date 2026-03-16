@@ -1,8 +1,8 @@
 /* stylelint-disable no-descending-specificity */
 .wp-block-latest-comments__comment {
 	list-style: none;
-	margin-bottom: 1em;
 	font-size: var(--font-size-regular);
+	margin-bottom: 0;
 }
 
 .has-avatars .wp-block-latest-comments__comment {

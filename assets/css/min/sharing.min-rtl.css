@@ -1,0 +1,35 @@
+.social-sharing {
+	line-height: 2;
+	text-align: center;
+}
+
+.sharing-inner {
+	display: inline-block;
+	padding: 0 0.8em;
+	margin: 1.5em 0;
+	line-height: 3;
+}
+
+.sharing-inner a {
+	display: inline-block;
+	line-height: 2;
+	margin: 6px;
+	vertical-align: middle;
+	padding: 9px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.sharing-inner a:hover {
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #767676;
+	transition: box-shadow .3s ease-in-out;
+}
+
+.sharing-inner a:focus {
+	outline: none;
+	border: 1px dotted var(--color-link);
+}
+
+.sharing-inner .svg-icon {
+	display: block;
+}

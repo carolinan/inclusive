@@ -1,0 +1,10 @@
+.widget_recent_entries ul {
+	list-style: none;
+	list-style-type: none;
+	margin: 0 0.5em 0 0;
+	padding: 0;
+}
+
+.widget_recent_entries .post-date {
+	font-size: var(--font-size-small);
+}

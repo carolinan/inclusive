@@ -74,6 +74,7 @@ class Styles {
 			null,
 			INCLUSIVE_VERSION
 		);
+		wp_style_add_data( 'inclusive-variables', 'rtl', 'replace' );
 
 		wp_enqueue_style(
 			'inclusive-global-styles',
@@ -81,6 +82,7 @@ class Styles {
 			null,
 			INCLUSIVE_VERSION
 		);
+		wp_style_add_data( 'inclusive-global-styles', 'rtl', 'replace' );
 
 		// Enqueue Google Fonts.
 		if ( get_theme_mod( 'font_pairing', 'Libre Baskerville+Roboto' ) !== 'system' ) {
@@ -106,6 +108,11 @@ class Styles {
 	public static function get_template_part( $slug, $name = null, $stylesheet = null ) {
 		// Print stylesheet.
 		if ( $stylesheet ) {
+			$rtl_stylesheet = preg_replace( '/\.css$/', '-rtl.css', $stylesheet );
+			if ( is_rtl() && ! empty( $rtl_stylesheet ) && file_exists( get_theme_file_path( $rtl_stylesheet ) ) ) {
+				$stylesheet = $rtl_stylesheet;
+			}
+
 			$stylename = ( $name ) ? "-$name" : '';
 			echo "<style id='inclusive-{$slug}{$stylename}'>";
 			include get_theme_file_path( $stylesheet );

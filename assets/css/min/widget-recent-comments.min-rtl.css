@@ -1,0 +1,6 @@
+.widget_recent_comments ul {
+	list-style: none;
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0.5em 0 0;
+}

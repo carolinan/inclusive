@@ -1,0 +1,118 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"layout": {
+			"contentSize": "720px",
+			"wideSize": "1200px"
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontSize": "var(--font-size-regular)",
+			"lineHeight": "1.5"
+		},
+		"color": {
+			"background": "#ffffff",
+			"text": "var(--global-font-color)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--color-link)"
+				},
+				"typography": {
+					"text-decoration": "underline"
+				},
+				"outline": {
+					"width": "2px",
+					"style": "dotted",
+					"color": "transparent"
+				},
+				":visited": {
+					"color": {
+						"text": "var(--color-link)"
+					}
+				},
+				":active": {
+						"color": {
+							"text": "var(--color-link-active)"
+						},
+						"typography": {
+							"text-decoration": "none"
+						},
+						"outline": {
+							"color": "transparent"
+						}
+				},
+				":hover": {
+						"color": {
+							"text": "var(--color-link-active)"
+						},
+						"typography": {
+							"text-decoration": "none"
+						}
+				},
+				":focus": {
+						"outline": {
+							"width": "2px",
+							"style": "dotted",
+							"color": "var(--color-link)"
+						}
+				}
+			},
+			"button": {
+				"outline": {
+					"width": "1px",
+					"style": "dotted",
+					"color": "transparent",
+					"offset": "5px"
+				},
+				"typography": {
+					"text-decoration": "none"
+				},
+				":hover": {
+					"outline": {
+						"color": "var(--global-font-color)"
+					}
+				},
+				":focus": {
+					"outline": {
+						"color": "var(--global-font-color)"
+					}
+				}
+			},
+			"caption": {
+				"color": {
+					"text": "var(--global-font-color)"
+				},
+				"typography": {
+					"fontSize": "var(--font-size-small)",
+					"lineHeight": "1.4"
+				},
+				"spacing": {
+					"margin": "0.5em 0 1em"
+				}
+			}
+		},
+		"blocks": {
+			"core/button": {
+				"css": "transition:box-shadow 0.3s ease-in-out",
+				"border": {
+					"radius": "6px"
+				},
+				"color": {
+					"text": "#fff",
+					"backgroundr": "#32373c"
+				},
+				"typography": {
+					"fontSize": "var(--font-size-regular)"
+				},
+				"spacing": {
+					"padding": "6px 12px"
+				}
+			}
+		}
+	}
+}

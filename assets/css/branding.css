@@ -72,16 +72,7 @@
 .inner-branding .custom-logo-link {
 	display: block;
 }
-/*
-.custom-logo-link img {
-	margin: 0 auto;
-}
 
-a.custom-logo-link:hover img,
-a.custom-logo-link:focus img {
-	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #767676;
-}
-*/
 a.custom-logo-link {
 	outline: none;
 }

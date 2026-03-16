@@ -76,6 +76,7 @@ class WooCommerce {
 				null,
 				INCLUSIVE_VERSION
 			);
+			wp_style_add_data( 'inclusive-woocommerce-styles', 'rtl', 'replace' );
 		}
 	}
 
@@ -170,4 +171,3 @@ class WooCommerce {
 	}
 
 }
-

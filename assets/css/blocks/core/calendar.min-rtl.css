@@ -1,0 +1,28 @@
+.wp-block-calendar {
+	text-align: center;
+}
+
+.wp-block-calendar th,
+.wp-block-calendar tbody td {
+	padding: 0.5em;
+	border: 1px solid;
+}
+
+.wp-block-calendar table th {
+	font-weight: 600;
+	background: none;
+}
+
+.wp-block-calendar tfoot td {
+	border: none;
+}
+
+.wp-block-calendar table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.wp-block-calendar table caption,
+.wp-block-calendar table tbody {
+	color: currentColor;
+}

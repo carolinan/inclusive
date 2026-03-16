@@ -1,8 +1,8 @@
 === Inclusive ===
 Contributors: Poena
-Requires at least: 5.4
-Tested up to: 5.4
-Requires PHP: 7.3
+Requires at least: 6.9
+Tested up to: 6.9
+Requires PHP: 8.3
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Copyright: 2020 Carolina Nymark
@@ -22,7 +22,7 @@ For bloggers, the theme offers optional sections for social sharing, author biog
 You can use a full width or boxed layout, and show your content in one or two columns.
 You can show excerpts or the full content, and make use of full width and wide blocks.
 Inclusive has a distraction free page template that is great for presenting long form content and blocks.
-Accessibility features include: Accessible menus, forms and controls. Semantic HTML, sufficient contrast,
+Accessibility features include: Accessible menus, forms and controls. Sufficient contrast,
 visible focus outlines, skip to content link, and aria roles.
 
 == Installation ==
@@ -30,8 +30,7 @@ visible focus outlines, skip to content link, and aria roles.
 2. Activate the theme through the 'Appearance' menu in WordPress
 
 == Requirements and limitations ==
-The theme supports PHP version 7.3 as recommended by the WordPress community.
-The theme supports WordPress version 5.4 and later.
+The theme supports WordPress version 6.9 and later.
 
 When no menu is set as the primary menu, a list of pages will show instead.
 The page list will only display parents, not child pages, when in desktop view.
@@ -42,9 +41,24 @@ Some layout features are not supported by Opera Mini.
 
 == Change log ==
 
+Version 1.0.9
+Increased the minimum required PHP version again, to 8.2, the one recommended for WordPress.
+Remove the broken admin page. Since there are screens for patterns etc now, this page is no longer needed.
+Improved rtl support.
+Removed IE browser support.
+Reduce CSS conflicts with WordPress block styles.
+
+Version 1.0.8
+Lowered the minimum required PHP version, to solve a problem with the WordPress.org previewer.
+Updated the go to top link.
+Updated the styling for the pullquote.
+
+Version 1.0.7
+Removed a JavaScript file that was causing probles for embedded videos.
+
 Version 1.0.6
 Updated padding in full width group blocks.
-Adjusted font sizes so that the editor and front matches better.
+Adjusted font sizes and line height so that the editor and front matches better.
 Adjusted responsive font sizes for headings.
 Removed one font size.
 
@@ -52,7 +66,7 @@ Version 1.0.5
 Fixed a problem with the logo.
 
 Version 1.0.4
-Added support for BBPress with new forum templates and CSS.
+Added support for BBPress with a new forum templates and CSS.
 Replaced an icon that had an incorrect license.
 Updated the copyright date format with a translation function.
 Updated language file.
@@ -92,7 +106,7 @@ Release
 
 == Resources Used In This Theme ==
 
-Customizer resuable block settings and Gridd, https://wplemon.com/gridd/ (C) Aristeidis Stathopoulos License: GNU General Public License v2.0 or later
+Customizer resuable block settings and Gridd WordPress theme, https://wplemon.com/gridd/ (C) Aristeidis Stathopoulos License: GNU General Public License v2.0 or later
 Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc. License: GNU General Public License v2 or later
 Twenty Nineteen https://wordpress.org/themes/twentynineteen/ (C) 2018 WordPress.org, GNU General Public License v2 or later
 Twenty Twenty https://wordpress.org/themes/twentytwenty/ (C) 2019 WordPress.org, GNU General Public License v2 or later
@@ -120,4 +134,4 @@ https://www.rijksmuseum.nl/nl/collectie/RP-P-1960-80
 
 == Thank you ==
 WPRig team who helped me learn how to create a theme that is more class based (I know, I know, it's not stricly OOP).
-Ari, Kafleg and Denis for patiently answering questions and helping me improve the theme.
+Ari, Kafleg and Denis for patiently answering questions and helping me improve the theme. Acosmin and William for the reviews, and Joy for providing feedback.

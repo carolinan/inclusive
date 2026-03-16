@@ -23,26 +23,7 @@ class Scripts {
 	 */
 	public function __construct() {
 		add_action( 'wp_head', [ $this, 'action_pingback' ] );
-		add_action( 'wp_print_footer_scripts', [ $this, 'action_skip_link_focus_fix' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'action_comment_reply' ] );
-	}
-
-	/**
-	 * Prints an inline script to fix skip link focus in IE11.
-	 *
-	 * The script is not enqueued because it is tiny and because it is only for IE11,
-	 * thus it does not warrant having an entire dedicated blocking script being loaded.
-	 *
-	 * Since it will never need to be changed, it is simply printed in its minified version.
-	 *
-	 * @link https://git.io/vWdr2
-	 */
-	public function action_skip_link_focus_fix() {
-		?>
-		<script>
-		/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
-		</script>
-		<?php
 	}
 
 	/**

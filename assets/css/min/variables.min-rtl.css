@@ -1,0 +1,70 @@
+/**
+* Custom font sizes, colors, shadows, button styles
+ **/
+
+:root {
+	--global-font-color: #333;
+	--global-font-family: "Roboto", sans-serif;
+	--global-font-line-height: 1.5;
+	--highlight-font-family: "Libre Baskerville", serif;
+
+	--content-width: 45rem;
+
+	--color-meta: #727272;
+
+	--color-link: #333;
+	--color-link-active: #333;
+
+	--color-link-menu: #333;
+	--color-link-current-menu: #333;
+
+	--menu-shadow: 0 0 1em rgba(0, 0, 0, 0.04);
+	--small-shadow: 0 0 1em rgba(0, 0, 0, 0.08);
+	--text-shadow: 0.04em 0.04em 0 rgba(0, 0, 0, 0.1);
+
+	--color-submenu: #fff;
+	--color-submenu-hover: #fff;
+
+	--color-primary: #fdb698;
+	--color-secondary: #fdeee1;
+
+	--color-theme-underline-accent: #fdeee1;
+	--color-theme-hover-underline-accent: #fdb698;
+
+	--color-theme-site-info: #f9f9f9;
+	--color-theme-red: #c0392b; /* Used for required form fields.*/
+
+	/* Button elements*/
+	--color-theme-button: #f9f9f9;
+	--color-theme-active-button: #fcfcfc;
+	--color-theme-button-text: #333;
+	--color-theme-active-button-text: #333;
+	--color-theme-button-border: #ccc #ccc #bbb;
+	--button-border-width: 1px;
+	--button-border-radius: 6px;
+
+	/* Custom font sizes */
+	--global-font-size: 20;
+
+	--font-size-regular: calc(var(--global-font-size) / 16 * 1rem); /* 20px, used in the "normal" custom font-size.*/
+	--font-size-smallest: calc(17.5 / var(--global-font-size) * 1rem); /* Used in footer info. 14px; */
+	--font-size-small: calc(20 / var(--global-font-size) * 1rem); /* 16px */
+	--font-size-medium: calc(31.25 / var(--global-font-size) * 1rem); /* 25px */
+	--font-size-large: calc(37.5 / var(--global-font-size) * 1rem); /* 30px */
+	--font-size-larger: calc(50 / var(--global-font-size) * 1rem); /* 40px */
+}
+
+@media screen and (max-width: 56em) {
+
+	:root {
+		--font-size-larger: calc(50 / var(--global-font-size) * 0.8rem); /* 32px */
+		--font-size-large: calc(37.5 / var(--global-font-size) * 0.9rem); /* 27px */
+	}
+}
+
+@media screen and (max-width: 27em) {
+
+	:root {
+		--font-size-larger: calc(50 / var(--global-font-size) * 0.7rem); /* 28px */
+	}
+}

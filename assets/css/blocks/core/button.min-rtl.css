@@ -1,0 +1,25 @@
+.wp-block-button.aligncenter {
+	text-align: center;
+}
+
+.wp-block-button.alignright {
+	text-align: left;
+}
+
+.no-border-radius.wp-block-button__link {
+	border-radius: 0 !important;
+}
+
+.wp-block-button.is-style-inclusive-large-button .wp-block-button__link,
+.wp-block-button.is-style-inclusive-large-button.wp-block-button__link {
+	padding: 1em 3em;
+	margin: 1.5em;
+}
+
+@media screen and (max-width: 27.5em) {
+
+	.wp-block-button.is-style-inclusive-large-button .wp-block-button__link,
+	.wp-block-button.is-style-inclusive-large-button.wp-block-button__link {
+		padding: 0.5em;
+	}
+}
