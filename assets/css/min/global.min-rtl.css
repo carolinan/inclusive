@@ -290,37 +290,17 @@ h6 {
 }
 
 dfn,
-cite,
 em,
 i {
 	font-style: italic;
-}
-
-blockquote,
-q {
-	quotes: """";
-}
-
-.entry-content blockquote,
-blockquote {
-	border-right: 4px solid #000;
-	margin: 0;
-	padding-right: 1em;
-}
-
-blockquote cite {
-	margin-top: 1em;
-	position: relative;
-	font-style: normal;
 }
 
 address {
 	margin: 0 0 1.5em;
 }
 
-pre,
 pre.wp-block-preformatted,
-pre.wp-block-verse {
+pre:not(.wp-block-verse) {
 	background: #eee;
 	font-size: 0.9375rem;
 	line-height: 1.6;

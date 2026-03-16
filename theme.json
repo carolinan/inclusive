@@ -94,6 +94,19 @@
 				"spacing": {
 					"margin": "0.5em 0 1em"
 				}
+			},
+			"cite": {
+				"color": {
+					"text": "currentColor"
+				},
+				"typography": {
+					"fontSize": "var(--font-size-small)",
+					"lineHeight": "1.4",
+					"fontStyle": "normal"
+				},
+				"spacing": {
+					"margin": "1em 0 0 0"
+				}
 			}
 		},
 		"blocks": {
@@ -111,6 +124,45 @@
 				},
 				"spacing": {
 					"padding": "6px 12px"
+				}
+			},
+			"core/code": {
+				"typography": {
+					"fontFamily": "Menlo, Consolas, monaco, monospace",
+					"fontSize": "var(--font-size-regular)"
+				},
+				"color": {
+					"text": "currentColor",
+					"background": "transparent"
+				},
+				"spacing": {
+					"padding": "0.8em 1em"
+				},
+				"border": {
+					"color": "#e2e4e7",
+					"style": "solid",
+					"width": "1px",
+					"radius": "4px"
+				}
+			},
+			"core/rss": {
+				"css": "& .wp-block-rss__item-publish-date,.wp-block-rss__item-author{color: #6c7781;}"
+			},
+			"core/verse": {
+				"typography": {
+					"fontFamily": "var(--highlight-font-family)",
+					"fontSize": "var(--font-size-regular)"
+				}
+			},
+			"core/pullquote": {
+				"elements": {
+					"cite": {
+						"typography": {
+							"textTransform": "uppercase",
+							"fontSize": "var(--font-size-small)",
+							"fontStyle": "normal"
+						}
+					}
 				}
 			}
 		}

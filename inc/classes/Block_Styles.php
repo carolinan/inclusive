@@ -58,38 +58,23 @@ class Block_Styles {
 	 */
 	public static function get_styled_blocks() {
 		return [
-			'core/audio',
 			'core/button',
 			'core/buttons',
 			'core/calendar',
-			'core/code',
-			'core/columns',
 			'core/cover',
-			'core/embed',
 			'core/file',
 			'core/gallery',
 			'core/group',
 			'core/image',
 			'core/latest-comments',
 			'core/latest-posts',
-			'core/media-text',
 			// 'core/navigation-link' is now placed inside core/navigation.min.css
 			'core/navigation',
 			'core/paragraph',
-			'core/preformatted',
 			'core/pullquote',
-			'core/quote',
-			'core/rss',
 			'core/search',
 			'core/separator',
-			'core/social-links',
-			'core/spacer',
-			'core/subhead',
 			'core/table',
-			'core/tag-cloud',
-			'core/text-columns',
-			'core/verse',
-			'core/video',
 			// This is a fake block to help me load styles in the editor.
 			'core/sidebar',
 		];

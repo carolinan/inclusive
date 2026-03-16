@@ -14,19 +14,6 @@
 	line-height: 1.6;
 }
 
-.wp-block-pullquote cite,
-.wp-block-pullquote footer {
-	position: relative;
-}
-
-.wp-block-pullquote cite,
-.wp-block-pullquote footer,
-.wp-block-pullquote__citation {
-	text-transform: uppercase;
-	font-size: var(--font-size-small);
-	font-style: normal;
-}
-
 .wp-block-pullquote .has-text-color a {
 	color: inherit;
 }

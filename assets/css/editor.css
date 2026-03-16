@@ -12,7 +12,9 @@
 	margin-bottom: 0;
 }
 
-pre {
+pre,
+pre.wp-block-preformatted,
+pre:not(.wp-block-verse) {
 	background: #eee;
 	padding: 1em;
 }
