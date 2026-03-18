@@ -1,5 +1,10 @@
 {
 	"extends": [
-		"stylelint-config-wordpress"
+		"@wordpress/stylelint-config"
+	],
+	"ignoreFiles": [
+		"assets/css/min/**/*.css",
+		"assets/css/blocks/core/*.min.css",
+		"assets/css/blocks/core/*.min-rtl.css"
 	]
 }

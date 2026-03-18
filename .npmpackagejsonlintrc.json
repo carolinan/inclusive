@@ -1,0 +1,15 @@
+{
+	"rules": {
+		"valid-values-license": [
+			"error",
+			[
+				"GPL-2.0-or-later"
+			]
+		],
+		"no-repeated-dependencies": "error",
+		"no-duplicate-properties": "error",
+		"require-name": "error",
+		"require-version": "error",
+		"require-license": "error"
+	}
+}
